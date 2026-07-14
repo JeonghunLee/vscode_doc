@@ -83,11 +83,11 @@ origin  git@github-company:Jeonghun-DYNE/Info_jetson.git (push)
 * **Remote SSH 설정변경**     
 기본 SSH설정으로 가급적 아래 처럼 사용      
 ```
-> git remote set-url origin git@github.com:Jeonghun-DYNE/Info_jetson.git
+> git remote set-url origin git@github.com:JeonghunLee/vscode_doc.git
 
 > git remote -v                                               
-origin  git@github.com:Jeonghun-DYNE/Info_jetson.git (fetch)
-origin  git@github.com:Jeonghun-DYNE/Info_jetson.git (push)
+origin  git@github.com:JeonghunLee/vscode_doc.git (fetch)
+origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 ```
 
 <br/>
