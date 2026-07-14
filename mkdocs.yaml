@@ -12,8 +12,8 @@ repo_name: JeonghunLee/vscode_doc
 nav:
   - Introduction: index.md
   - GIT:
-    - GIT_SETUP: git_management.md
-    - GIT_CHECK: git_check.md
+    - GIT SETUP: git_management.md
+    - GIT CHECK: git_check.md
 
                     
 plugins:
