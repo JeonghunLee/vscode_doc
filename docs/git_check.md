@@ -42,8 +42,3 @@ branch.main.merge=refs/heads/main
 ```
 
 
-## ssh/config 설정 
-
-```
-git config --local core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe -F C:/Users/LeeJeongHun/.ssh/config"
-```
