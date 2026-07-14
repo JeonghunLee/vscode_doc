@@ -43,6 +43,11 @@
 
 <br/>
 
+!!! tip "기본 Browser로 인증"
+    - 2개가 지원이 안될 경우, 브라우저 기본설정을 변경해서 진행 
+
+<br/>
+
 * **VSCode 의 Account** 
 ![](./imgs/vscode_00.png)
 
