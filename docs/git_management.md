@@ -127,8 +127,22 @@ git config --local core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe -F C:/Us
 Git → Git Credential Manager → OAuth 토큰 → GitHub
 ```
 
-* 로그인
+<br/>
+
+!!! tip "Browser 인증"
+    - Git Credential Manager 의 경우, Browser로 인증     
+
+[Browser 기본앱 변경](./index.md#2vscode-browser)   
+
+<br/>
+
+### 3.1 GCM
+
+<br/>
+
+* **GCM Log Out**      
 계정이 다를 경우, 다시 Brwser 기반으로 다시 인증 
 ```
 git credential-manager github logout "Jeonghun-DYNE"
 ```
+<br/>

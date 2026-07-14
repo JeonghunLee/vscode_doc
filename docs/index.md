@@ -12,11 +12,17 @@
 
 <br/>
 
-## 2.VSCODE Browser 설정
+## 2.VSCODE Browser
 
 <br/>
 
-* 기본앱 변경 
+!!! tip "기본 Browser로 인증"
+    - Window 의 기본 Browser로 인증하기 때문에 중요   
+    - Window 에서 기본 Browser 변경   
+
+<br/>
+
+* **Browser 기본앱 변경** 
     1. 설정(Settings) 열기
     2. 앱(Apps) → 기본 앱(Default apps)
     3. 검색창에 브라우저 이름 입력   
@@ -44,10 +50,17 @@
 <br/>
 
 
-### 3.1 VSCode-Github 인증관리 
+### 3.1 Github Management 
 
 <br/>
 
+!!! tip "Github Copiolot"
+    - **VSCode Github 이지 Git 설정이 아님 (Git 설정은 별도임)**   
+    - 다른 계정허용 가능   
+
+<br/>
+
+* **VS Code 내의 Github**    
 
 | 항목 | 역할 | 보통 같은 계정? |
 |------|------|:-------------------------:|
@@ -57,10 +70,13 @@
 | **GitHub Actions** | Actions 실행 및 로그 조회 | ✅ 예 |
 | **GitHub Copilot** | Copilot 인증 | ❌ 별도 가능 |
 
-!!! tip "Github Copiolot"
-    - **상위 Github 이지 Git 설정이 아님 (Git 설정은 별도임)**   
-    - 다른 계정허용 가능   
+
        
+<br/>
+
+### 3.2 Github Check 
+
+<br/>
 
 * **Account-> Sing Out**     
 VS Code 에서 Sign Out 할때 확인 가능 
