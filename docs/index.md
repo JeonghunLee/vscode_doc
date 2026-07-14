@@ -66,3 +66,25 @@
 VS Code 에서 Sign Out 할때 확인 가능 
 ![](./imgs/vscode_01.png)
 ![](./imgs/vscode_02.png)
+
+<br/>
+
+## 4. VSCode-Copliot   
+
+<br/>
+
+* Github 의 Copliot 확인 
+![](./imgs/github_setting_copliot_00.png)
+![](./imgs/github_setting_copliot_01.png)
+
+<br/>
+
+### 4.1 VSCode-Copliot-Codex   
+
+<br/>
+
+* Codex/Claude
+![](./imgs/github_setting_copliot_02.png)
+
+
+<br/>
