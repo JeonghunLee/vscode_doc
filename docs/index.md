@@ -12,18 +12,39 @@
 
 <br/>
 
-## 2.VSCode-Github 
+## 2.VSCODE Browser 설정
+
+<br/>
+
+* 기본앱 변경 
+    1. 설정(Settings) 열기
+    2. 앱(Apps) → 기본 앱(Default apps)
+    3. 검색창에 브라우저 이름 입력   
+        * Edge
+        * Chrome
+![](./imgs/win11_01.png)
+
+![](./imgs/win11_00.png)
+
+
+
+<br/>
+
+
+
+
+## 3.VSCode-Github 
 
 <br/>
 
 * **VSCode 의 Account** 
 ![](./imgs/vscode_00.png)
-![](./imgs/vscode_01.png)
+
 
 <br/>
 
 
-### 2.1 VSCode-Github 인증관리 
+### 3.1 VSCode-Github 인증관리 
 
 <br/>
 
@@ -42,5 +63,6 @@
        
 
 * **Account-> Sing Out**     
-아래와 같이 확인 
+VS Code 에서 Sign Out 할때 확인 가능 
+![](./imgs/vscode_01.png)
 ![](./imgs/vscode_02.png)
