@@ -17,14 +17,14 @@ git config --global user.email "xxxxx"
 
 <br/>
 
-* Git SSH Setup   
+* **Git SSH Setup**   
 ```
 git config --local user.name "xxxx" 
 git config --local user.email "xxxxx"  
 ```
+<br/>
 
-
-* GIT 설정확인 
+* **GIT Project 확인** 
 ```
 > git config --local --list
 
