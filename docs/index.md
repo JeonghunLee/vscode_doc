@@ -1,4 +1,4 @@
-# VSCODE
+# VSCode
 
 <br/>
 
@@ -12,7 +12,7 @@
 
 <br/>
 
-## 2.VSCODE Browser
+## 2.VSCode Browser
 
 <br/>
 
@@ -85,22 +85,40 @@ VS Code 에서 Sign Out 할때 확인 가능
 
 <br/>
 
-## 4. VSCode-Copliot   
+## 4. Github-Copliot   
 
 <br/>
 
-* Github 의 Copliot 확인 
+* **Github 의 Copliot 확인** 
 ![](./imgs/github_setting_copliot_00.png)
+
+<br/>
+
+* **Github 의 Copliot 구독확인** 
 ![](./imgs/github_setting_copliot_01.png)
 
 <br/>
 
-### 4.1 VSCode-Copliot-Codex   
+### 4.1 Github-Copliot-Codex   
 
 <br/>
 
-* Codex/Claude
+!!! tip "Github 의 Copliot이 구독 중이여 가능"
+    - 아래와 같이 Codex CLI 연결 이용 
+    - 아래와 같이 Claude CLI 연결 이용  
+
+* **Codex/Claude**
 ![](./imgs/github_setting_copliot_02.png)
+
+
+<br/>
+
+### 4.2 VSCode-AI 
+
+<br/>
+
+* **Codex/Claude**     
+![](./imgs/vscode_ai_00.png)   
 
 
 <br/>
