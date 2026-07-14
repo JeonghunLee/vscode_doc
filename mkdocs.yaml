@@ -10,10 +10,10 @@ repo_name: JeonghunLee/vscode_doc
 
 
 nav:
-  - 1.VSCode: index.md
-  - 2.GIT SETUP:
-    - 2.1 Default: git_setup_default.md
-    - 2.2 Project: git_setup_project.md
+  - VSCode: index.md
+  - GIT SETUP:
+    - Default: git_setup_default.md
+    - Project: git_setup_project.md
 
                     
 plugins:
