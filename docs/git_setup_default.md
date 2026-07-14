@@ -2,16 +2,7 @@
 
 <br/>
 
-* HTTPS
-```
-Git → Git Credential Manager → OAuth 토큰 → GitHub
-```
 
-
-* SSH
-```
-Git → SSH 클라이언트 → 개인키 → GitHub
-```
 <br/>
 
 ## 1. GIT의 기본설정 

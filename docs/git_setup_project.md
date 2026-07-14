@@ -10,6 +10,10 @@ git config --global user.name "xxxx"
 git config --global user.email "xxxxx"  
 ```
 
+!!! tip "Git Config SSH만 유효"
+    - SSH 설정에만 유효 
+    - HTTPS 설정에는 사용되지 않음     
+
 <br/>
 
 
@@ -22,7 +26,12 @@ git config --global user.email "xxxxx"
 git config --local user.name "xxxx" 
 git config --local user.email "xxxxx"  
 ```
+
 <br/>
+
+!!! tip "Git Config SSH만 유효"
+    - SSH 설정에만 유효 
+    - HTTPS 설정에는 사용되지 않음     
 
 * **GIT Project 확인** 
 ```
@@ -87,7 +96,7 @@ origin  git@github.com:Jeonghun-DYNE/Info_jetson.git (push)
 
 <br/>
 
-* HTTPS 기본구조 
+* **HTTPS 기본구조** 
 ```
 Git → Git Credential Manager → OAuth 토큰 → GitHub
 ```
