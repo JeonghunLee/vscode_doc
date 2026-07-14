@@ -104,7 +104,7 @@ VS Code 에서 Sign Out 할때 확인 가능
 
 <br/>
 
-### 4.1 Github-Copliot-Codex   
+### 4.1 Copliot-Codex/Claude   
 
 <br/>
 
