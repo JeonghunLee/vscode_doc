@@ -135,12 +135,31 @@ models:
 
 ---
 
+###  Python  
+
+<br/>
+
+* Python 관리    
+![](./imgs/vscode_ex_python_00.png)  
+
+
+<br/>
+
+---
+
 ## Check Extensions
 
 <br/>
 
 VS Code에 설치되어진 Extensions 들을 확인하고 각 부분의 버전을 확인   
 
+<br/>
+
+---
+
+### Extensions A
+
+<br/>
 
 * **CMD** in Window          
 VS Code에 설치되어진 Extensions   
@@ -237,6 +256,78 @@ ziyasal.vscode-open-in-github@1.3.6
 
 ---
 
+### Extensions B
+
+<br/>
+
+* **CMD** in Window          
+VS Code에 설치되어진 Extensions 과 Version  
+```
+>code --list-extensions --show-versions
+aaron-bond.better-comments@3.0.2
+anthropic.claude-code@2.1.218
+bierner.markdown-mermaid@1.32.1
+chekweitan.compare-view@0.14.1
+christian-kohler.npm-intellisense@1.4.5
+codezombiech.gitignore@0.10.0
+donjayamanne.githistory@0.6.20
+eamodio.gitlens@18.3.0
+espressif.esp-idf-extension@2.1.0
+espressif.esp-idf-web@0.0.4
+github.codespaces@1.18.15
+github.github-vscode-theme@6.3.5
+github.remotehub@0.64.0
+github.vscode-github-actions@0.32.3
+github.vscode-pull-request-github@0.160.0
+google.colab@0.8.1
+lextudio.restructuredtext@190.4.12
+mhutchie.git-graph@1.30.0
+moshfeu.compare-folders@0.30.0
+ms-azuretools.vscode-azure-github-copilot@1.0.209
+ms-azuretools.vscode-azure-mcp-server@2.0.46
+ms-azuretools.vscode-azureresourcegroups@0.12.7
+ms-azuretools.vscode-containers@2.4.5
+ms-edgedevtools.vscode-edge-devtools@2.1.10
+ms-python.debugpy@2026.6.0
+ms-python.python@2026.4.0
+ms-python.vscode-pylance@2026.3.1
+ms-python.vscode-python-envs@1.36.0
+ms-toolsai.jupyter@2025.9.1
+ms-toolsai.jupyter-keymap@1.1.2
+ms-toolsai.jupyter-renderers@1.3.0
+ms-toolsai.vscode-jupyter-cell-tags@0.1.9
+ms-toolsai.vscode-jupyter-slideshow@0.1.6
+ms-vscode-remote.remote-containers@0.466.0
+ms-vscode.azure-repos@0.40.0
+ms-vscode.cmake-tools@1.23.52
+ms-vscode.cpp-devtools@0.5.13
+ms-vscode.cpptools@1.32.2
+ms-vscode.cpptools-extension-pack@1.5.1
+ms-vscode.cpptools-themes@2.0.0
+ms-vscode.remote-repositories@0.42.0
+ms-vscode.vscode-github-issue-notebooks@0.0.134
+ms-windows-ai-studio.windows-ai-studio@1.6.5
+openai.chatgpt@26.5721.30844
+vscjava.migrate-java-to-azure@1.22.0
+```
+<br/>
+
+---
+
+### Extensions Functions 
+
+<br/>
+
+* **Ctrl + Shift +p**    
+각 전체기능을 쉽게 검색 및 찾기 
+![](./imgs/vscode_05.png)  
+
+<br/>
+
+---
+
+
+
 ## VSCode Remote Explore 
 
 <br/>
@@ -249,7 +340,7 @@ ziyasal.vscode-open-in-github@1.3.6
 !!! warning "Git 설정확인 필요"
     - Remote 설정 확인 (여기 설정과 실제 Git 설정이 다를 수 있음)
     - [Git Local 확인](git_setup_project.md#check-git-local)
-    - [SSH 설정 Config](git_setup_default.md#setup-config-b)   
+    - [2개의 계정 SSH Config B](git_setup_default.md#ssh-config-b)   
 
 <br/>
 

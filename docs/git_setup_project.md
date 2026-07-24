@@ -93,7 +93,7 @@ origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 ---
 
 
-## Setup GIT SSH User
+## Setup GIT User
 
 <br/>
 
@@ -102,6 +102,7 @@ origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 ```
 git config --local user.name "xxxx" 
 git config --local user.email "xxxxx"  
+git config --local --list
 ```
 
 <br/>
@@ -111,6 +112,8 @@ git config --local user.email "xxxxx"
 ```
 git config --global user.name "이름"
 git config --global user.email "이메일"
+git config --global --list
+cat ~\.gitconfig  
 ```
 
 <br/>

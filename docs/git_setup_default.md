@@ -21,17 +21,68 @@
 
 <br/>
 
+* **Git User 설정**   
+모든 곳에 기본설정  local -> global -> system      
+```
+git config --global user.name "이름"
+git config --global user.email "이메일"
+```
+
+* 확인  
+```
+git config --global --list
+```
+
+<br/>
+
+---
+
+### Git Config
+
+<br/>
+
+* **Git 기존설정확인**   
+```
+cat ~\.gitconfig   
+```
+
+<br/>
+
+* **GIT LFS 파일 저장방식 추가**         
+대용량 즉 mp4 나 대용량 방식의 파일 및 Binary 저장을 위해서 설정 
+```
+[user]
+        email = xxxxx
+        name = xxxxx
+
+[core]
+    autocrlf = true
+    editor = code --wait
+
+[filter "lfs"]
+        process = git-lfs filter-process
+        required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+```
+
+```
+> git lfs version
+git-lfs/3.7.1 (GitHub; windows amd64; go 1.25.1; git b84b3384)
+```
+
+<br/>
+
+---
+
+### Git HTTPS  
+
+<br/>
 
 * HTTPS
 ```
 Git → Git Credential Manager → OAuth 토큰 → GitHub
 ```
-
-!!! tips "HTTPS PAT 생략 "
-    - PAT 부분은 생략하며, VS Code에서 진행을 하면 브라우저가 필요 할 것임  
-        - 원래는 브라우저가 필요 없음   
-
-
 <br/>
 
 !!! tips "HTTPS - (PAT, Personal Access Token):"
@@ -44,15 +95,14 @@ Git → Git Credential Manager → OAuth 토큰 → GitHub
 
 <br/>
 
+### Git SSH 
 
+<br/>
 
 * SSH
 ```
 Git → SSH 클라이언트 → 개인키 → GitHub
 ```
-
-
-
 
 <br/>
 
@@ -62,12 +112,51 @@ Git → SSH 클라이언트 → 개인키 → GitHub
 
 <br/>
 
-* Gihub 사이트 SSH Key 등록         
-pub Key 등록     
-https://github.com/settings/keys
+* STEP.1 **SSH Key 생성 및 확인**  
+```
+cd ~/.ssh 
+ssh-keygen -t ed25519 -C "xxxx@gmail.com"
+```
 
+    * 1개의 계정으로 사용하기 권장 
+```
+ls 
+
+-a----      2025-11-24   오후 3:41            411 id_ed25519                                                                                                    
+-a----      2025-11-24   오후 3:41            100 id_ed25519.pub                                                                                                
+-a----      2025-11-24   오후 4:14            831 known_hosts                                                                                                   
+-a----      2025-11-24   오후 4:14             93 known_hosts.old 
+
+```
 
 <br/>
+
+* STEP.2 **Github 사이트 SSH Key 등록**         
+Settings → SSH and GPG keys → New SSH key       
+id_ed25519.pub  Key 등록    
+![](./imgs/github_setting_ssh_00.png)   
+https://github.com/settings/keys
+
+<br/>
+
+* STEP.3  **Git User Global Setup 재확인**   
+모든 곳에 기본설정  local -> global -> system      
+```
+git config --global user.name "이름"
+git config --global user.email "이메일"
+git config --global --list
+cat ~\.gitconfig   
+```
+
+* STEP.4 **SSH TEST** 
+
+```
+ssh -T git@github.com
+```
+
+<br/>
+
+---
 
 ### Multi Accounts  
 
@@ -77,19 +166,27 @@ https://github.com/settings/keys
     - RSA 보다는 기본적은 ed25519
 
 !!! warning "미권장"
-    - [Github Action 미동작](#setup-config-a)
+    - [Github Action 미동작](./git_setup_default.md#ssh-config-a)
     - 1개의 SSH로 그냥 사용하길 권장   
 
 <br/>      
 
+[Setup SSH - STEP.2 동작과 동일](git_setup_default.md#setup-ssh) 
+
+* Key A 생성 
 ```
+cd ~/.ssh 
+ssh-keygen -t ed25519 -C "your_personal@email.com" -f ~/.ssh/id_ed25519_company
 ~/.ssh/id_ed25519_company
 ~/.ssh/id_ed25519_company.pub
 ```
 
 <br/>
 
+* Key B 생성   
 ```
+cd ~/.ssh 
+ssh-keygen -t ed25519 -C "your_personal@email.com" -f ~/.ssh/id_ed25519_personal
 ~/.ssh/id_ed25519_personal
 ~/.ssh/id_ed25519_personal.pub
 ```
@@ -97,7 +194,10 @@ https://github.com/settings/keys
 
 ---
 
-### Setup Config A    
+
+
+
+### SSH Config A    
 
 <br/>
 
@@ -133,7 +233,7 @@ Host github-company
 
 ---
 
-### Setup Config B    
+### SSH Config B    
 
 <br/>
 
@@ -179,6 +279,21 @@ SSH 설정 과 Remote 쉽게 확인가능
 <br/>
 
 ---
+
+### TEST SSH GIT
+
+<br/>
+
+* SSH GIT TEST 
+```
+ssh -T git@github.com
+Hi JeonghunLee! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+<br/>
+
+---
+
 
 ## Setup HTTPS 
 
