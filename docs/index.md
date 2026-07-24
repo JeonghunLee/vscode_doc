@@ -399,6 +399,9 @@ vscjava.migrate-java-to-azure@1.22.0
 
 <br/>
 
+https://code.visualstudio.com/docs/remote/remote-overview  
+
+
 ![](./imgs/vscode_remote_00.png)
 
 
@@ -412,6 +415,10 @@ vscjava.migrate-java-to-azure@1.22.0
 
 <br/>
 
+
+https://code.visualstudio.com/docs/debugtest/testing 
+
+<br/>
 
 * **Python TEST**   
     * **pytest**  : 대부분 임베디드에서 많이 사용 

@@ -12,13 +12,14 @@ repo_name: JeonghunLee/vscode_doc
 nav:
   - VSCode: 
     - VSCode: index.md
+    - Config: vscode_config.md
     - Github: vscode_github.md
   - GIT:
     - Setup Login: git_setup_default.md
     - All Repositories: git_setup_project.md
   - Tools:
     - Tabby: tool_tabby.md
-
+    - Electron: tool_electron.md
                     
 plugins:
   - search
