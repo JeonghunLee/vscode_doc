@@ -143,8 +143,17 @@ models:
 
 <br/>
 
+!!! tip "pytest" 
+    - pytest 를 이용하여 임베디드에서 TEST 프로그램 작성 
+    - pytest Network 결합 및 Timer 
+    - pytest H/W 및 C/C++ Libary 결합  
+    - pytest salese Logic Anlayer 결합 
+    - [VSCode TEST](./index.md#vscode-test)    
+
 * Python 관리    
 ![](./imgs/vscode_ex_python_00.png)  
+
+* VS Code Extesion   
 ![](./imgs/vscode_ex_python_01.png)  
 
 
@@ -159,6 +168,32 @@ models:
 
 * C/C++ 주석 가독성    
 ![](./imgs/vscode_ex_bettercoments_00.png)  
+
+
+<br/>
+
+---
+
+###  Jupyter and Mermaid 
+
+<br/>
+
+* Jupyter 관리 와 Mermaid View   
+![](./imgs/ex_jupyter_00.png)  
+
+
+
+<br/>
+
+---
+
+### RST 
+
+<br/>
+
+* Sphinx 사용할 경우 
+![](./imgs/ex_restructuredText_00.png)  
+
 
 
 <br/>
