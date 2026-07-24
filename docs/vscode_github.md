@@ -204,8 +204,12 @@ VS Code 에서 Sign Out 할때 확인 가능
 
 <br/>
 
-* 반드시 아래와 같이 Git 설정확인
-    * [Git Local 설정 ](./git_setup_project.md#check-git-local)
+!!! tip "Git 설정확인" 
+    - [Git Local 설정확인 ](git_setup_project.md#check-git-local)            
+    - [Git Remote 설정확인 ](git_setup_project.md#check-git-remote)  
+
+!!! tip "VS Code - Git Graph"    
+    - [VSCode Extension-Git Graph](index.md#git-graph)   
 
 
 <br/>

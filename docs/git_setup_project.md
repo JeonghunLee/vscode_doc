@@ -97,7 +97,7 @@ origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 
 <br/>
 
-* **Git SSH Local Setup**   
+* **Git Use Local Setup**    
 즉 이 Respository에만 설정 
 ```
 git config --local user.name "xxxx" 
@@ -106,11 +106,22 @@ git config --local user.email "xxxxx"
 
 <br/>
 
-!!! tip "Git Config SSH만 유효"
-    - SSH 설정에만 유효 
-    - **HTTPS 설정에는 사용되지 않음**       
+* **Git User Global Setup**   
+모든 곳에 기본설정  local -> global -> system      
+```
+git config --global user.name "이름"
+git config --global user.email "이메일"
+```
 
-* **GIT SSH Project 확인** 
+<br/>
+
+!!! tip "Git Config User"
+    - SSH/HTTPS 설정 필요 
+           
+
+* **Check SSH Project**        
+user정보가 없음 global 이기 때문인 것 같음     
+즉 local로 별도 지정하지 않으면,  local -> global -> system 
 ```
 > git config --local --list
 

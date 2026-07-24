@@ -241,10 +241,15 @@ ziyasal.vscode-open-in-github@1.3.6
 
 <br/>
 
-!!! tip "Git 의 기본 설정" 
-    - SSH 설정 
+!!! tip "SSH 설정" 
+    - SSH 설정기반으로 확인 가능 
+    - SSH 기반의 설정의 Repository 파악 
+    - WSL 도 파악  
+
+!!! warning "Git 설정확인 필요"
     - Remote 설정 확인 (여기 설정과 실제 Git 설정이 다를 수 있음)
-        - [SSH 설정](git_setup_default.md#setup-config-b)   
+    - [Git Local 확인](git_setup_project.md#check-git-local)
+    - [SSH 설정 Config](git_setup_default.md#setup-config-b)   
 
 <br/>
 
@@ -255,25 +260,6 @@ ziyasal.vscode-open-in-github@1.3.6
 
 ---
 
-## VSCode Source Control 
-
-<br/>
-
-!!! tip "Git 설정확인" 
-    - [Git Local 설정확인 ](git_setup_project.md#check-git-local)           
-
-<br/>
-
-![](./imgs/vscode_sc_00.png)
-
-
-
-
-
-
-<br/>
-
----
 
 
 ## VSCode TEST
