@@ -1,6 +1,98 @@
 # GIT 설정 
 
-## 1. GIT Setup
+* 아래는 VS Code의 연관성 보다는 Git 순수설정 
+    * Github 사용한다면 주로 Github 기본 인증만 해당  
+    * HTTPS/SSH 인증 만 해당  
+    * **모든 Project/Respostory는 반드시 각 설정을 확인** 
+
+---
+
+## Check GIT Local 
+
+<br/>
+
+!!! tip "Project/Respostory 반드시 확인"
+    - 기본적인 모든 정보를 볼 수 있어 편하며, Remote 연결도 확인 가능 
+    - [VS Code 의 Github 인증](vscode_github.md#check-github-account) 별도 
+    - Git 의 순수 설정만 확인하며, VS Code의 Github 의 여러 인증과 무관   
+        - Github Repostiory / Github 만 해당될 듯  
+
+
+* **Check SSH**      
+```
+> git config --local --list
+
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=git@github.com:JeonghunLee/vscode_doc.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.vscode-merge-base=origin/main
+branch.main.merge=refs/heads/main
+```
+
+<br/>
+
+* **Check HTTPS**   
+```
+> git config --local --list
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/JeonghunLee/vscode_doc
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.main.vscode-merge-base=origin/main
+user.name=JeonghunLee
+user.email=xxxx
+```
+
+
+<br/>
+
+---
+
+## Check GIT Remote 
+
+<br/>
+
+!!! tip "Project/Respostory 반드시 확인"
+    - Remote 간단히 확인
+    - [VS Code 의 Github 인증](vscode_github.md#check-github-account)       
+        - Github Repostiory / Github 만 해당    
+
+기본적으로 Remote를 항상 확인  
+
+
+* **Remote HTTPS 설정 확인**  
+```
+> git remote -v       
+origin  https://github.com/JeonghunLee/vscode_doc (fetch)
+origin  https://github.com/JeonghunLee/vscode_doc (push)
+```
+
+<br/>
+
+* **Remote SSH 설정 확인**  
+```
+> git remote -v                                               
+origin  git@github.com:JeonghunLee/vscode_doc.git (fetch)
+origin  git@github.com:JeonghunLee/vscode_doc.git (push)
+```
+
+<br/>
+
+---
+
+## Setup GIT SSH 
 
 <br/>
 
@@ -17,7 +109,7 @@ git config --global user.email "xxxxx"
 <br/>
 
 
-## 2. GIT Project Setup
+## GIT Project Setup
 
 <br/>
 
@@ -53,7 +145,7 @@ branch.main.merge=refs/heads/main
 
 <br/>
 
-### 2.1 GIT Remote-SSH  
+### GIT Remote-SSH  
 
 <br/>
 
@@ -92,7 +184,7 @@ origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 
 <br/>
 
-### 2.2 GIT Remote-HTTPS  
+### GIT Remote-HTTPS  
 
 <br/>
 
@@ -115,7 +207,7 @@ origin  https://github.com/JeonghunLee/vscode_doc (push)
 
 <br/>
 
-## 3. 
+ 
 
 <br/>
 

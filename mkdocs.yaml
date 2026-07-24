@@ -10,10 +10,12 @@ repo_name: JeonghunLee/vscode_doc
 
 
 nav:
-  - VSCode: index.md
-  - GIT SETUP:
-    - DEFAULT: git_setup_default.md
-    - PROJECTs: git_setup_project.md
+  - VSCode: 
+    - VSCode: index.md
+    - Github: vscode_github.md
+  - GIT:
+    - Setup Login: git_setup_default.md
+    - All Repositories: git_setup_project.md
 
                     
 plugins:
@@ -95,7 +97,13 @@ extra_javascript:
   - javascripts/mermaid-init.js  
 
 extra_css:
-  - stylesheets/extra.css
+#
+# My custom css files to override default styles of mkdocs-material theme
+#
+  - stylesheets/1_basic.css
+  - stylesheets/2_toc.css  
+  - stylesheets/3_admonition.css  
+  - stylesheets/4_numbering.css   
 
 
 copyright: >
