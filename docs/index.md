@@ -38,6 +38,10 @@
 ![](./imgs/vscode_ex_gitgraph_00.png) 
 ![](./imgs/vscode_ex_gitgraph_01.png) 
 
+
+* Git Graph Remote   
+![](./imgs/vscode_ex_gitgraph_02.png) 
+
 <br/>
 
 ---
@@ -141,11 +145,27 @@ models:
 
 * Python 관리    
 ![](./imgs/vscode_ex_python_00.png)  
+![](./imgs/vscode_ex_python_01.png)  
 
 
 <br/>
 
 ---
+
+
+###  Better Comments
+
+<br/>
+
+* C/C++ 주석 가독성    
+![](./imgs/vscode_ex_bettercoments_00.png)  
+
+
+<br/>
+
+---
+
+
 
 ## Check Extensions
 
