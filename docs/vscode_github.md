@@ -32,8 +32,9 @@ Github의 계정이 복잡해져서 별도로 정리
 
 <br/>
 
-* **VSCode 의 Account** 
+* **VSCode 의 Account**     
 VS Code 의 Github 연결사항 확인   
+VS Code 의 
 ![](./imgs/vscode_00.png)
 ![](./imgs/vscode_03.png) 
 

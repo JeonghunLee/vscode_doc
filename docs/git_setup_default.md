@@ -34,13 +34,29 @@ Git → Git Credential Manager → OAuth 토큰 → GitHub
 
 <br/>
 
+!!! tips "HTTPS - (PAT, Personal Access Token):"
+    브라우저 로그인 없이, GitHub 계정 설정에서 발급받은 토큰(Token) 비밀번호 대신 입력하여 인증
+
+!!! tips "HTTPS - 자격 증명 관리자 (Credential Manager)"
+    Windows Git Credential Manager(credential.helper = manager)를 사용하는 경우,    
+    최초 한 번만 브라우저 연동 창이 뜨며, 이후에는 시스템이 자격 증명을 안전하게 캐싱하므로 
+    평소에는 브라우저를 사용안함  
+
+<br/>
+
+
+
 * SSH
 ```
 Git → SSH 클라이언트 → 개인키 → GitHub
 ```
+
+
+
+
 <br/>
 
-
+---
 
 ## Setup SSH 
 

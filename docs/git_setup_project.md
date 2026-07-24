@@ -92,28 +92,13 @@ origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 
 ---
 
-## Setup GIT SSH 
+
+## Setup GIT SSH User
 
 <br/>
 
-* Git SSH Setup   
-```
-git config --global user.name "xxxx" 
-git config --global user.email "xxxxx"  
-```
-
-!!! tip "Git Config SSH만 유효"
-    - SSH 설정에만 유효 
-    - HTTPS 설정에는 사용되지 않음     
-
-<br/>
-
-
-## GIT Project Setup
-
-<br/>
-
-* **Git SSH Setup**   
+* **Git SSH Local Setup**   
+즉 이 Respository에만 설정 
 ```
 git config --local user.name "xxxx" 
 git config --local user.email "xxxxx"  
@@ -123,9 +108,9 @@ git config --local user.email "xxxxx"
 
 !!! tip "Git Config SSH만 유효"
     - SSH 설정에만 유효 
-    - HTTPS 설정에는 사용되지 않음     
+    - **HTTPS 설정에는 사용되지 않음**       
 
-* **GIT Project 확인** 
+* **GIT SSH Project 확인** 
 ```
 > git config --local --list
 
@@ -143,9 +128,28 @@ branch.main.merge=refs/heads/main
 ```
 
 
+* **Check HTTPS**   
+```
+> git config --local --list
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/JeonghunLee/vscode_doc
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.main.vscode-merge-base=origin/main
+user.name=JeonghunLee
+user.email=xxxx
+```
+
+
 <br/>
 
-### GIT Remote-SSH  
+### Setup Remote-SSH  
 
 <br/>
 
@@ -184,7 +188,7 @@ origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 
 <br/>
 
-### GIT Remote-HTTPS  
+### Setup Remote-HTTPS  
 
 <br/>
 

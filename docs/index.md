@@ -25,15 +25,42 @@
 
 ---
 
+###  Git Graph
+
+<br/>
+
+!!! tip "Git History 분석" 
+    - Remote Respository 분석  
+
+<br/>
+
+* Git Graph Extension  
+![](./imgs/vscode_ex_gitgraph_00.png) 
+![](./imgs/vscode_ex_gitgraph_01.png) 
+
+<br/>
+
+---
+
+
+
 ###  Github  
 
 <br/>
+
+!!! tip "GitHub Pull Request/Issue" 
+    - Pull Request  연동  
+    - Issue 연동
+
+!!! warning "Github 인증확인" 
+    - [Github 인증 확인 필요](vscode_github.md#vscode-github-account) 
+
 
 * **Github Extension**        
 VS Code에서 쉽게 사용가능한 Github 의 기능   
 ![](./imgs/vscode_ex_github_00.png)
 
-!!! warning "Github 인증 다중으로 변경" 
+
 
 <br/>
 
@@ -214,11 +241,14 @@ ziyasal.vscode-open-in-github@1.3.6
 
 <br/>
 
+!!! tip "Git 의 기본 설정" 
+    - SSH 설정 
+    - Remote 설정 확인 (여기 설정과 실제 Git 설정이 다를 수 있음)
+        - [SSH 설정](git_setup_default.md#setup-config-b)   
+
+<br/>
+
 ![](./imgs/vscode_remote_00.png)
-
-
-
-
 
 
 <br/>
@@ -226,6 +256,11 @@ ziyasal.vscode-open-in-github@1.3.6
 ---
 
 ## VSCode Source Control 
+
+<br/>
+
+!!! tip "Git 설정확인" 
+    - [Git Local 설정확인 ](git_setup_project.md#check-git-local)           
 
 <br/>
 
