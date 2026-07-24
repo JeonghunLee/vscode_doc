@@ -16,6 +16,8 @@ nav:
   - GIT:
     - Setup Login: git_setup_default.md
     - All Repositories: git_setup_project.md
+  - Tools:
+    - Tabby: tool_tabby.md
 
                     
 plugins:
