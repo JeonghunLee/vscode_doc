@@ -1,10 +1,11 @@
 # VSCode
 
-<br/>
-
-
-
-<br/>
+![](./imgs/vscode_ex_install_00.png)
+![](./imgs/vscode_ex_install_01.png)
+![](./imgs/vscode_ex_install_02.png)
+![](./imgs/vscode_ex_install_03.png)
+![](./imgs/vscode_ex_install_04.png)
+![](./imgs/vscode_ex_install_05.png)
 
 ---
 
@@ -13,12 +14,6 @@
 <br/>
 
 
-![](./imgs/vscode_ex_install_00.png)
-![](./imgs/vscode_ex_install_01.png)
-![](./imgs/vscode_ex_install_02.png)
-![](./imgs/vscode_ex_install_03.png)
-![](./imgs/vscode_ex_install_04.png)
-![](./imgs/vscode_ex_install_05.png)
 
 
 <br/>
@@ -30,7 +25,9 @@
 <br/>
 
 !!! tip "Git History 분석" 
-    - Remote Respository 분석  
+    - Local / Remote Respository History 분석  
+        - **main** : local  
+        - **origin/main** : remote  
 
 <br/>
 

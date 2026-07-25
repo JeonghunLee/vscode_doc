@@ -11,7 +11,7 @@ repo_name: JeonghunLee/vscode_doc
 
 nav:
   - VSCode: 
-    - VSCode: index.md
+    - Extensions: index.md
     - Config: vscode_config.md
     - Github: vscode_github.md
   - GIT:

@@ -1,44 +1,85 @@
 # VS Code CONFIG
 
-## VSCODE CONFIG 
-
-
-
-### Global CONFIG
+## Config 
 
 <br/>
 
-* VSCode 기본구조
+* **CMD Extension 이름 파악**     
+설치되어진 extension 이름 확인가능하면 쉽게 들어가서 package.json 파일을 찾을 수 있음  
 ```
-Mode                 LastWriteTime         Length Name                                                                                                       
-----                 -------------         ------ ----                                                                                                       
-d-----      2026-07-24   오후 9:15                agent-plugins                                                                                              
-d-----      2025-11-17   오후 4:51                cli                                                                                                        
-d-----      2026-07-24   오후 8:25                extensions                                                                                                 
--a----      2025-11-17   오후 4:51            798 argv.json      
+code --list-extensions
+code --list-extensions --show-versions
 ```
+<br/>
 
+!!! tip  "global / local config"
+    - 기본적으로 local 우선순위가 높으며, 각 config는 json 기반 
+    - global extensions 들의 global config 정확히 알아야 세부설정도 가능 
+    - global extensions 들의 구조 와 package.json 파악  
+
+---
+
+### Config Global
 
 <br/>
 
-* VSCode 설정확인 
+!!! tip  "global config"
+    - 본인 계정의 .vscode 에서 출발하며 이 기반으로 찾기  
+    - ~/.vscode/extesions  
+    - global extensions 들의 구조 와 package.json 파악  
+
+
+* VSCode Config 기본구조 
 ```
-tree ~\.vscode
+~/.vscode
+├── agent-plugins   
+├── cli       
+├── extensions   // 주로 분석할 곳 package.json         
+└── argv.json  
+
+~/.vscode-shared
+└── sharedStorage  
+```
+<br/>
+
+* ESPIDF Config 연결 
+```
+~/.espressif
+├── dist          // 배포 
+├── python_env       
+├── tools         // 각 실행파일 및 cmake/build 등 
+├── espidf.constraints.v5.2.txt /  
+├── espidf.constraints.v5.4.txt         
+└── esp_idf.json  // 중요 각 설정 
 ```
 
+* 이외 다른 연결도 확인  
+```
+ls ~/
+```
 
 <br/>
 
 * Json 파일 찾기 
+    ```
+    Get-ChildItem ~\.vscode -Recurse -File -Filter *.json
+    ``` 
+    ```
+    Get-ChildItem ~\.vscode -Recurse -File -Filter package.json
+    ```
+<br/>
+
+* package.json 기반의 특정 설정 찾기      
+Linux의 파이프 기반의 Grep 과 유사  
 ```
-Get-ChildItem ~\.vscode -Recurse -File -Filter *.json
+Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "package.json" | Select-String -Pattern "terminal.activateEnvironment"
 ```
 
 <br/>
 
 ---
 
-### Local CONFIG 
+### Config Local 
 
 
 <br/>
@@ -71,14 +112,41 @@ Get-ChildItem ~\.vscode -Recurse -File -Filter *.json
 
 ---
 
-## setting 
+## settings 
 
 <br/>
 
+!!! tip " 우선순위" 
+    - AI 가 이미 많이 알고 있음   
+    - AI 에서 힌트를 얻어 세부적인 제어를 할 경우 , 각 Package.json 에서 다른 설정 문의  
+    - 각 Package.json 설정 과 외부 config 연결성 
 
-### setting 1
 
-Python 자동설정 
+* 다음순위 
+    1. [Config Global 분석](#config-global)   
+    2. local settings.json 변경 
+
+<br/>
+
+---
+
+### settings 1
+
+<br/>
+
+* Global package.json 찾기      
+이미 **terminal.activateEnvironment** 설정값을 알고 있으므로, 역으로 찾기 
+```
+Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "package.json" | Select-String -Pattern "terminal.activateEnvironment"
+```
+
+!!! tip "python config" 
+    - 1줄로 되어있어 솔직히 보기가 힘들면, AI 한테 분석요청 
+    - 이 기반으로 다른 설정 및 연결진행   
+
+<br/>
+
+* Python 자동설정 
 ```
 {  
   //.venv
@@ -91,28 +159,17 @@ Python 자동설정
 
 ---
 
-### setting 2
+### settings 2
 
 <br/>
 
-세부적으로 분석을 하고 싶다면, 아래 방식으로 찾자  
 
-<br/>
-
-* **CMD Extension 위치 파악**     
-설치되어진 extension 이름 확인가능하면 쉽게 들어가서 package.json 파일을 찾을 수 있음  
-```
-code --list-extensions
-code --list-extensions --show-versions
-```
-<br/>
-
-
-* Global 모드 Package.json    
+* Global package.json 찾기    
 만약, 모른다면, 아래 처럼 모든 Package 의 이름 찾으며 유사이름으로 보기   
 ```
 Get-ChildItem ~\.vscode -Recurse -File -Filter package.json
 ```
+
 
 <br/>
 
@@ -122,10 +179,13 @@ Get-ChildItem ~\.vscode -Recurse -File -Filter package.json
     3. espressif
 ```
 Get-ChildItem ~\.vscode -Recurse -File -Filter package.json |  Select-String '"idf\.' -List
-
-C:\Users\ahyuo\.vscode\extensions\espressif.esp-idf-extension-2.1.0\package.json:625:                                   "idf.extensionActivationMode": {
 ```
-상위 파일 구조(C:\Users\ahyuo\.vscode\extensions\espressif.esp-idf-extension-2.1.0\package.json:625) 
+```
+Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "package.json" | Select-String -Pattern "idf"
+```
+
+* 상위 파일 분석  
+~\.vscode\extensions\espressif.esp-idf-extension-2.1.0\package.json
 ```
 		"configuration": [
 			{
@@ -153,15 +213,118 @@ C:\Users\ahyuo\.vscode\extensions\espressif.esp-idf-extension-2.1.0\package.json
 						"description": "%param.eimIdfJsonPath%",
 						"scope": "application"
 					},
-					"idf.eimExecutableArgs": {
+...
+			{
+				"command": "espIdf.partition.table.refresh",
+				"title": "%espIdf.partition.table.refresh.title%",
+				"category": "ESP-IDF",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "espIdf.flashBinaryToPartition",
+				"category": "ESP-IDF",    // Ctrl+Shift P  : ESP-IDF: Flash Partition 찾음 
+				"title": "%espIdf.flashBinaryToPartition.title%"
+			},
+			{
+				"command": "espIdf.apptrace.archive.refresh",
+				"title": "%espIdf.apptrace.archive.refresh.title%",
+				"icon": "$(refresh)",
+				"category": "ESP-IDF"
+			},
 ```
+* 상위 idf 중복 검색  
+여러개의 extensions 을 사용   
+```
+ls ~/.vscode\extensions\espressif.esp-idf-extension-2.1.0   // Main 
+ls ~/.vscode\extensions\espressif.esp-idf-web-0.0.4         // Web 
+ls ~/.vscode\extensions\ms-vscode.cmake-tools-1.23.52       // Cmake 연결 
+```
+
 <br/>
 
+* 상위 특정 Command    
+    1. Ctrl+Shift P  : ESP-IDF: Flash Partition 찾음   
+    2. 이걸 package.json 
+    3. *.json 확장찾기 
+    4. 다시 구조 파악 (export.ps1) 발견 및 python 연결사항 확인 
+    5. ~/.espressif 다시 확인 
+```
+ Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "*.json" | Select-String -Pattern "flashBinaryToPartition"
+```
+```
+cat ~\.vscode\extensions\espressif.esp-idf-extension-2.1.0\export.ps1
+# Define the Invoke-idfpy function
+function global:Invoke-idfpy {
+    & python.exe `
+    "$($env:IDF_PATH)\tools\idf.py" @args
+}
+
+function global:esptool.py {
+  & python.exe `
+  "$($env:IDF_PATH)\components\esptool_py\esptool\esptool.py" @args
+}
+
+function global:espefuse.py {
+  & python.exe `
+  "$($env:IDF_PATH)\components\esptool_py\esptool\espefuse.py" @args
+}
+
+function global:espsecure.py {
+  & python.exe `
+  "$($env:IDF_PATH)\components\esptool_py\esptool\espsecure.py" @args
+}
+
+function global:otatool.py {
+  & python.exe `
+  "$($env:IDF_PATH)\components\app_update\otatool.py" @args
+}
+
+function global:parttool.py {
+  & python.exe `
+  "$($env:IDF_PATH)\components\partition_table\parttool.py" @args
+}
+```
 
 
-* **Local setting.json 수정**      
-즉 찾은 idf 와 이름을 맞추어서 설정  
-우선순위 local -> global   
+*  ~/.espressif/esp_idf.json     
+idfToolsPath 기반으로 어디 연결되었는지 다시 확인  
+연결안됨 
+요즘 ESP IDF가 VS Code 용으로 나와 전부 변경되어짐    
+```
+{                                        
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "http://dl.espressif.com/dl/schemas/esp_idf",
+  "_comment": "Configuration file for ESP-IDF IDEs.",
+  "_warning": "Use / or \\ when specifying path. Single backslash is not allowed by JSON format.",
+  "gitPath": "C:\\Users\\ahyuo\\.espressif\\tools\\idf-git\\2.39.2\\cmd\\git.exe",
+  "idfToolsPath": "C:\\Users\\ahyuo\\.espressif",
+  "idfSelectedId": "esp-idf-5faf46425cae84f5cb184f383d0c258b",
+  "idfInstalled": {
+    "esp-idf-a10fe9e3b31485d978ed51c67889688c": {
+      "version": "5.2.6",
+      "python": "C:\\Users\\ahyuo\\.espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe",
+      "path": "C:\\Users\\ahyuo\\esp\\v5.2\\esp-idf"
+    },
+    "esp-idf-5faf46425cae84f5cb184f383d0c258b": {
+      "version": "5.4.3",
+      "python": "C:\\Users\\ahyuo\\.espressif\\python_env\\idf5.4_py3.11_env\\Scripts\\python.exe",
+      "path": "C:\\Users\\ahyuo\\esp\\v5.4\\esp-idf"
+    }
+  }
+}
+```
+
+<br/>
+
+!!! warning "setting.json 참고" 
+    - **아래의 경우는 참고** 만 하며 **최신 VSCDOE** 에는 의미가 없음  
+    - 상위처럼 각 분석방법을 통해 찾아서 본인만의 설정을 만들어야 함  
+    - ex RS485의 경우, 내가 내부 설정을 변경해서 별도로 확장구성해서 구성을 하였음 
+        - **문제사항: 확장할 경우 , 이전과 호환성이 떨어짐** 
+        - 가급적 Local 기반으로 별도로 구성하며, **각 Global Config와 최대한 연결** 을 하도록 해야함    
+    - VSCODE가 이전에는 이보다 더 단순하여, 세부사항을 내마음대로 설정을 하였음    
+
+* **Local setting.json 참고**           
 ```
 {
     "files.associations": {
@@ -228,6 +391,58 @@ C:\Users\ahyuo\.vscode\extensions\espressif.esp-idf-extension-2.1.0\package.json
 <br/>
 
 ---
+
+#### ESP-IDF 
+
+<br/>
+
+* 예전의 ESP-IDF 구조 
+
+ESP-IDF Termianl 실행하면 실행됨 
+아래 소스 확인 
+```
+c:\Users\jhlee\.vscode\extensions\espressif.esp-idf-extension-1.10.1\export.ps1
+```
+
+최근에 설치한 ESP-IDF PATH 동일함 확인  
+```
+function global:esptool.py {
+  & python.exe `
+  "$($env:IDF_PATH)\components\esptool_py\esptool\esptool.py" @args
+}
+```
+
+* 재확인 방법         
+  C:\Users\jhlee\.vscode\extensions -> 모든 Extension 확인        
+  C:\Users\jhlee\.vscode\extensions\espressif.esp-idf-extension-1.10.1            
+
+<br/>
+
+* TypeScript 관리   
+상위는 소스는 TypeScript로 아래에서 관리 하는 듯함         
+https://github.com/espressif/vscode-esp-idf-extension/blob/master/src/flash/flashTask.ts    
+```
+flashCommand 함수 
+Failed to flash because of some unusual error. Check Terminal for more details`;
+```
+배포되는 듯함 
+https://github.com/espressif/vscode-esp-idf-extension/blob/master/src/flash/uartFlash.ts
+```
+flashCommand 함수 검색됨 
+Failed to flash because of some unusual error. Check Terminal for more details` -> 수정하면 죽지만 다음에 실행하면 됨 
+```
+
+<br/>
+
+* 재확인 
+C:\Users\jhlee\.vscode\extensions\espressif.esp-idf-extension-1.10.1\dist\extension.js  --> TypeScript / JavaScript 로 변환됨
+C:\Users\jhlee\.vscode\extensions\espressif.esp-idf-extension-1.10.1\dist\views
+
+<br/>
+
+---
+
+<br/>
 
 ## tasks
 
@@ -308,6 +523,14 @@ https://code.visualstudio.com/docs/debugtest/tasks
 ### tasks 2
 
 <br/>
+
+!!! tip "TEST 자동화"
+    - TEST 의 거의 자동화를 위해 Task를 적극적 이용 
+    - 이를 수동실행 과 자동실행 변경 
+    - 수동 VS Code에서 실행 
+        - 각 연결해서 실행하도록 하고, 최대한 단순하게 구성하려고 함 
+        - 각 config 설정을 세부적으로 알아야 더 세부적인 Task도 구성 가능   
+    - 자동은 다른 Tool를 별도로 사용 
 
 ```
 {
