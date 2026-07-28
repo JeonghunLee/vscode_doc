@@ -5,6 +5,10 @@
     * HTTPS/SSH 인증 만 해당  
     * **모든 Project/Respostory는 반드시 각 설정을 확인** 
 
+!!! success "VSCode Source Control"
+    - Git 설정은 오직 [VSCode Source Control](./vscode_github.md#vscode-souce-control) 만 연관  
+    - **[VS Code Extesion Github](vscode_github.md#vscode-github-account) 다른 부분과는 연관이 없음**  
+
 ---
 
 ## Check GIT Local 
@@ -22,7 +26,7 @@
 ```
 git config --local --list
 ```
-e.g.
+e.g. check **remote.origin** SSH  
 ```
 core.repositoryformatversion=0
 core.filemode=false
@@ -43,7 +47,7 @@ branch.main.merge=refs/heads/main
 ```
 git config --local --list
 ```
-e.g.
+e.g. check **remote.origin**  HTTPS 
 ```
 core.repositoryformatversion=0
 core.filemode=false
@@ -81,7 +85,7 @@ user.email=xxxx
 ```
 git remote -v       
 ```
-e.g.
+e.g. https://github.com/username/repo
 ```
 origin  https://github.com/JeonghunLee/vscode_doc (fetch)
 origin  https://github.com/JeonghunLee/vscode_doc (push)
@@ -93,7 +97,7 @@ origin  https://github.com/JeonghunLee/vscode_doc (push)
 ```
 git remote -v                                               
 ```
-e.g.
+e.g. git@github.com:/username/repo.git      **(host:github.com)**     
 ```
 origin  git@github.com:JeonghunLee/vscode_doc.git (fetch)
 origin  git@github.com:JeonghunLee/vscode_doc.git (push)
@@ -165,7 +169,7 @@ branch.main.merge=refs/heads/main
 ```
 
 !!! tip "user.name/user.email"
-    - check global setup 
+    - 상위처럼 user.name 없다면 기본설정 ~/.gitconfig 사용 
 
 <br/>
 
@@ -193,57 +197,56 @@ user.email=xxxx
 
 <br/>
 
-### Setup Remote-SSH  
+### Setup Remote SSH  
 
 <br/>
 
-* **Remote 설정확인**   
-    1. SSH 설정 
-    2. HTTPS 설정 
-```
-git remote -v
-```
-e.g. 
-```
-origin  git@github.com:Jeonghun-DYNE/Info_jetson.git (fetch)
-origin  git@github.com:Jeonghun-DYNE/Info_jetson.git (push)
-```
-<br/>
 
-* **Remote SSH 설정변경**   
-    * SSH의 config에서 host 가 git@github-company 일 경우  
-    * 상위처럼 변경할 경우, VS Code의 Github Action 문제 발생 
-```
-git remote set-url origin git@github-company:Jeonghun-DYNE/Info_jetson.git
-```
-```
-git remote -v                                               
-```
-```
-origin  git@github-company:Jeonghun-DYNE/Info_jetson.git (fetch)
-origin  git@github-company:Jeonghun-DYNE/Info_jetson.git (push)
-```
-
-<br/>
-
-* **Remote SSH 설정변경**     
-기본 SSH설정으로 가급적 아래 처럼 사용      
+* **Remote SSH 설정 A 변경**   
+.e.g. setup ssh host   
 ```
 git remote set-url origin git@github.com:JeonghunLee/vscode_doc.git
 ```
-e.g. check remote repo
+e.g. check SSH host **default host(github.com)**
 ```
 git remote -v                                               
 ```
-e.g. result 
 ```
 origin  git@github.com:JeonghunLee/vscode_doc.git (fetch)
 origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 ```
+e.g. SSH TEST(host)
+```
+ssh -T git@github.com
+```
 
 <br/>
 
-### Setup Remote-HTTPS  
+* **Remote SSH 설정 B 변경**  
+.e.g. setup ssh host (~/.ssh/config)  
+```
+git remote set-url origin git@github-company:JeonghunLee/vscode_doc.git
+```
+e.g. check SSH host **github-comapny(~/.ssh/config)** 
+```
+git remote -v                                               
+```
+```
+origin  git@github-company:JeonghunLee/vscode_doc.git (fetch)
+origin  git@github-company:JeonghunLee/vscode_doc.git (push)
+```
+
+
+!!! warning "SSH Config 사용시 주의"
+    - ~/ssh/config 사용시 SSH Host를 변경시 **VS Code Extesion Github Action 미동작**   
+        - Remote는 동작하나, VS Code의 Extension만 미동작 (인증문제)    
+    - [Setup Multi Accoutn Config A](git_setup_default.md#ssh-config-a)  
+
+<br/>
+
+---
+
+### Setup Remote HTTPS  
 
 <br/>
 

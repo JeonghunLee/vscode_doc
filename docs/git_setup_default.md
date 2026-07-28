@@ -10,6 +10,12 @@
     2. SSH 1개 설정 : 공용 설정   
         - SSH 2개 설정 : 미권장  
 
+!!! success "VSCode Source Control"
+    - Git 설정은 오직 [VSCode Source Control](./vscode_github.md#vscode-souce-control) 만 연관  
+    - **[VS Code Extesion Github](vscode_github.md#vscode-github-account) 다른 부분과는 연관이 없음**  
+
+<br/>
+
 ---
 
 ## Setup GIT
@@ -177,7 +183,7 @@ ssh -T git@github.com
 
 ---
 
-### Multi Accounts  
+### SSH Multi Accounts  
 
 <br/>
 
@@ -301,7 +307,7 @@ SSH 설정 과 Remote 쉽게 확인가능
 
 ---
 
-### TEST SSH GIT
+### SSH TEST GIT
 
 <br/>
 
