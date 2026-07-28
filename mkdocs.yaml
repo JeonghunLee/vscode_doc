@@ -16,7 +16,7 @@ nav:
     - Github: vscode_github.md
   - GIT:
     - Setup Defaults: git_setup_default.md
-    - Check/Setup Repositories: git_setup_project.md
+    - Check/Setup Repo: git_setup_project.md
   - Node.js:    
     - Electron: tool_electron.md    
   - Tools:

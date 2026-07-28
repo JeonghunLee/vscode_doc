@@ -41,18 +41,21 @@ git config --global --list
 
 <br/>
 
-* **Git 기존설정확인**   
+* **Git 설정 확인**   
 ```
 cat ~\.gitconfig   
 ```
 
 <br/>
 
-* **GIT LFS 파일 저장방식 추가**         
-대용량 즉 mp4 나 대용량 방식의 파일 및 Binary 저장을 위해서 설정 
+* **GIT 설정 추가**         
+    * lfs : 대용량 즉 mp4 나 대용량 방식의 파일 및 Binary 저장을 위해서 설정 **(default)** 
+    * core: 옵션 주로 Window 기반 (option)
+    * init : 기본 branch  **(default)**   
+e.g. A
 ```
 [user]
-        email = xxxxx
+        email = xxx@xxxx
         name = xxxxx
 
 [core]
@@ -65,9 +68,25 @@ cat ~\.gitconfig
         clean = git-lfs clean -- %f
         smudge = git-lfs smudge -- %f
 ```
-
+e.g. B
 ```
-> git lfs version
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+[user]
+        name = xxxx
+        email = xxx@xxxx
+[init]
+        defaultBranch = main
+```
+* **Check Git lfs version**
+```
+git lfs version
+```
+e.g. 
+```
 git-lfs/3.7.1 (GitHub; windows amd64; go 1.25.1; git b84b3384)
 ```
 
@@ -260,6 +279,7 @@ Host github.com
 
 !!! warning "Host github.com default 설정"
     - 1개의 Git만 허용하는 듯 하며 default 사용해야함  
+    - VS Code Extesion 상위 Host github.com으로만 인식하는 듯    
 
 
 <br/>

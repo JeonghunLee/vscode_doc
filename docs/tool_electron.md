@@ -28,6 +28,9 @@
 ![](./imgs/tool_nodejs_electron_fiddle_00.png)
 ![](./imgs/tool_nodejs_electron_fiddle_01.png)
 
+!!! tip "가급적 업데이트"
+
+![](./imgs/tool_nodejs_electron_fiddle_02.png)
 
 <br/>
 

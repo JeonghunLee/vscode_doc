@@ -20,8 +20,10 @@
 
 * **Check SSH**      
 ```
-> git config --local --list
-
+git config --local --list
+```
+e.g.
+```
 core.repositoryformatversion=0
 core.filemode=false
 core.bare=false
@@ -39,7 +41,10 @@ branch.main.merge=refs/heads/main
 
 * **Check HTTPS**   
 ```
-> git config --local --list
+git config --local --list
+```
+e.g.
+```
 core.repositoryformatversion=0
 core.filemode=false
 core.bare=false
@@ -74,7 +79,10 @@ user.email=xxxx
 
 * **Remote HTTPS 설정 확인**  
 ```
-> git remote -v       
+git remote -v       
+```
+e.g.
+```
 origin  https://github.com/JeonghunLee/vscode_doc (fetch)
 origin  https://github.com/JeonghunLee/vscode_doc (push)
 ```
@@ -83,7 +91,10 @@ origin  https://github.com/JeonghunLee/vscode_doc (push)
 
 * **Remote SSH 설정 확인**  
 ```
-> git remote -v                                               
+git remote -v                                               
+```
+e.g.
+```
 origin  git@github.com:JeonghunLee/vscode_doc.git (fetch)
 origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 ```
@@ -102,6 +113,9 @@ origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 ```
 git config --local user.name "xxxx" 
 git config --local user.email "xxxxx"  
+```
+e.g. check local setup (only repo)
+```
 git config --local --list
 ```
 
@@ -112,7 +126,13 @@ git config --local --list
 ```
 git config --global user.name "이름"
 git config --global user.email "이메일"
+```
+e.g. check golbal seupt
+```
 git config --global --list
+```
+e.g. check global setup 
+```
 cat ~\.gitconfig  
 ```
 
@@ -120,14 +140,17 @@ cat ~\.gitconfig
 
 !!! tip "Git Config User"
     - SSH/HTTPS 설정 필요 
-           
+
+<br/>           
 
 * **Check SSH Project**        
 user정보가 없음 global 이기 때문인 것 같음     
 즉 local로 별도 지정하지 않으면,  local -> global -> system 
 ```
-> git config --local --list
-
+git config --local --list
+```
+e.g. check local  
+```
 core.repositoryformatversion=0
 core.filemode=false
 core.bare=false
@@ -141,10 +164,17 @@ branch.main.vscode-merge-base=origin/main
 branch.main.merge=refs/heads/main
 ```
 
+!!! tip "user.name/user.email"
+    - check global setup 
+
+<br/>
 
 * **Check HTTPS**   
 ```
-> git config --local --list
+git config --local --list
+```
+e.g. check local  
+```
 core.repositoryformatversion=0
 core.filemode=false
 core.bare=false
@@ -171,7 +201,10 @@ user.email=xxxx
     1. SSH 설정 
     2. HTTPS 설정 
 ```
-> git remote -v
+git remote -v
+```
+e.g. 
+```
 origin  git@github.com:Jeonghun-DYNE/Info_jetson.git (fetch)
 origin  git@github.com:Jeonghun-DYNE/Info_jetson.git (push)
 ```
@@ -181,9 +214,12 @@ origin  git@github.com:Jeonghun-DYNE/Info_jetson.git (push)
     * SSH의 config에서 host 가 git@github-company 일 경우  
     * 상위처럼 변경할 경우, VS Code의 Github Action 문제 발생 
 ```
-> git remote set-url origin git@github-company:Jeonghun-DYNE/Info_jetson.git
-
-> git remote -v                                               
+git remote set-url origin git@github-company:Jeonghun-DYNE/Info_jetson.git
+```
+```
+git remote -v                                               
+```
+```
 origin  git@github-company:Jeonghun-DYNE/Info_jetson.git (fetch)
 origin  git@github-company:Jeonghun-DYNE/Info_jetson.git (push)
 ```
@@ -193,9 +229,14 @@ origin  git@github-company:Jeonghun-DYNE/Info_jetson.git (push)
 * **Remote SSH 설정변경**     
 기본 SSH설정으로 가급적 아래 처럼 사용      
 ```
-> git remote set-url origin git@github.com:JeonghunLee/vscode_doc.git
-
-> git remote -v                                               
+git remote set-url origin git@github.com:JeonghunLee/vscode_doc.git
+```
+e.g. check remote repo
+```
+git remote -v                                               
+```
+e.g. result 
+```
 origin  git@github.com:JeonghunLee/vscode_doc.git (fetch)
 origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 ```
@@ -214,11 +255,13 @@ Git → Git Credential Manager → OAuth 토큰 → GitHub
 <br/>
 
 * **Remote HTTPS 설정변경**     
-
 ```
-> git remote set-url origin https://github.com/JeonghunLee/vscode_doc
-
-> git remote -v       
+git remote set-url origin https://github.com/JeonghunLee/vscode_doc
+```
+```
+git remote -v       
+```
+```
 origin  https://github.com/JeonghunLee/vscode_doc (fetch)
 origin  https://github.com/JeonghunLee/vscode_doc (push)
 ```
