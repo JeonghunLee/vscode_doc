@@ -13,23 +13,21 @@ Github의 계정이 복잡해져서 별도로 정리
  
 <br/>
 
-* **VS Code 내의 Github Account**    
+!!! warning "Github 인증"
+    - **Git의 설정과 상관** 이 없으며, 주로 VSCode의 Extension **확장기능 인증** 사용 
+    - VSCode의 [Source Control](vscode_github.md#vscode-souce-control) 과 전혀 무관함 
 
-| VS Code Extesion 기능 | 역할 |  계정  |    OAuth 필요 | 
-|------|------|----------------| ------|
-| **GitHub** | 기본 GitHub 인증 (Authentication) | ✅ 예  |  ✅ 예  |
-| **GitHub Repository** | Remote Repository 열기 탐색 | ✅ 예   | ✅ 예  |
-| **GitHub Pull Requests** | PR, Issue 관리 | ✅ 예  | ✅ 예  |
-| **GitHub Actions** | Actions 실행 및 로그 조회 | ✅ 예 | ✅ 예  |
-| **GitHub Copilot** | Copilot  AI 코드 생성 | ❌ 별도 외부 계정 설정 가능 | ✅ 예  |
+<br/>
 
-| VS Code Extesion 기능                    | OAuth 계정 변경 | 독립 사용 가능 | 비고                                    |
-| ----------------------------- | :---------: | :------: | ------------------------------------- |
-| GitHub                        |      ✅      |    ⚠️    | 다른 GitHub 확장과 인증을 공유하는 경우가 많음         |
-| GitHub Copilot                |      ✅      |    ⚠️    | 개인 계정으로 로그인 가능하지만 GitHub 인증과 연동될 수 있음 |
-| GitHub Pull Requests & Issues |      ✅      |     ❌    | GitHub 인증을 사용하는 것이 일반적                |
-| GitHub Repositories           |      ✅      |     ❌    | GitHub 인증을 사용하는 것이 일반적                |
-| GitHub Actions                |      ✅      |     ❌    | GitHub 인증을 사용하는 것이 일반적                |
+* **VS Code Extension Github Account**    
+
+| VS Code Extesion 기능 | 역할 |  계정  |    OAuth 필요 | 독립 사용 가능 | 비고                                    | 
+|------|------|----------------| ------|  :--------- | :------ | 
+| **GitHub** | 기본 GitHub 인증 (Authentication) | ✅ 예  |  ✅ 예  |  ⚠️    | 다른 GitHub 확장과 인증을 공유하는 경우가 많음         |
+| **GitHub Repository** | Remote Repository 열기 탐색 | ✅ 예   | ✅ 예  |  ❌     | 주로 거의 사용 안함 |
+| **GitHub Pull Requests** | PR, Issue 관리 | ✅ 예  | ✅ 예  |  ❌    | GitHub 인증을 사용하는 것이 일반적                |
+| **GitHub Actions** | Actions 실행 및 로그 조회 | ✅ 예 | ✅ 예  |  ❌    | GitHub 인증을 사용하는 것이 일반적                |
+| **GitHub Copilot** | Copilot  AI 코드 생성 | ❌ 별도 외부 계정 설정 가능 | ✅ 예  |  ⚠️    | GitHub 인증을 사용하는 것이 일반적                |
 
 
 
@@ -216,20 +214,25 @@ VS Code 에서 Sign Out 할때 확인 가능
 <br/>
 
 !!! warning "VSCode Github 와 Source Control"     
-    *  **Git의 기능 과 VS Code Github 인증는 별개로 동작**          
-    *  [VS Code Github 인증](./vscode_github.md#vscode-github-account) 
+    *  **Git의 기본기능 과 VS Code Extesion Github 인증는 별개로 동작**          
+    *  [VS Code Extension - Github 인증](./vscode_github.md#vscode-github-account) 
 
 
-!!! tip "Git 설정확인" 
-    - [Git Local 설정확인 ](git_setup_project.md#check-git-local)            
-    - [Git Remote 설정확인 ](git_setup_project.md#check-git-remote)  
+!!! tip "Git 설정 및 확인" 
+    - [Git Setup](git_setup_default.md#setup-git)  
+        - [Git Local 설정확인 ](git_setup_project.md#check-git-local)            
+        - [Git Remote 설정확인 ](git_setup_project.md#check-git-remote)  
 
 !!! tip "VS Code - Git Graph"    
     - [VSCode Extension-Git Graph](index.md#git-graph)   
 
 
-https://code.visualstudio.com/docs/sourcecontrol/quickstart 
+<br/>
 
+* VSCode Source Control Manaul      
+    https://code.visualstudio.com/docs/sourcecontrol/quickstart 
+
+<br/>
 
 * **TEST SSH-GIT** 
 ```
@@ -238,6 +241,17 @@ Hi JeonghunLee! You've successfully authenticated, but GitHub does not provide s
 ```
 
 <br/>
+
+----
+
+### GUI Souce Control 
+
+<br/>
+
+!!! tip "Git Graph / history"
+    - [Git Graph](index.md#git-graph)    
+    - 같이 사용하기 Git History 역시 
+
 
 * **VS Code - Source Control** 
     ![VSCode Source Control](./imgs/vscode_sc_00.png)

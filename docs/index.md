@@ -28,6 +28,7 @@
     - Local / Remote Respository History 분석  
         - **main** : local  
         - **origin/main** : remote  
+    - VS Code 의 [Source Control](vscode_github.md#vscode-souce-control) 같이 사용   
 
 <br/>
 
