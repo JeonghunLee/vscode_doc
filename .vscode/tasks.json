@@ -44,6 +44,41 @@
                 "-Command",
                 "& { .\\.venv\\Scripts\\Activate.ps1; mkdocs build --strict }"
             ],
-        }            
+        },
+        {
+            "label": "STEP.1 Setup Electron",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}/electron_setup.ps1"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "STEP.2 Package Electron",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}/electron_package.ps1"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },        
+                    
     ]
 }

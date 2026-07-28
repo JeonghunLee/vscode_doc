@@ -15,11 +15,13 @@ nav:
     - Config: vscode_config.md
     - Github: vscode_github.md
   - GIT:
-    - Setup Login: git_setup_default.md
-    - All Repositories: git_setup_project.md
+    - Setup Defaults: git_setup_default.md
+    - Check/Setup Repositories: git_setup_project.md
+  - Node.js:    
+    - Electron: tool_electron.md    
   - Tools:
     - Tabby: tool_tabby.md
-    - Electron: tool_electron.md
+
                     
 plugins:
   - search
@@ -110,5 +112,5 @@ extra_css:
 
 
 copyright: >
-  © 2026 Jeonghun Lee.
+  © 2026 Jeonghun Lee. <br>
   All rights reserved.
