@@ -14,6 +14,13 @@
 <br/>
 
 
+* VSCode Main 구성  
+    - Javascript (Node.js)   
+    - Typescript  
+
+TypeScript 
+    https://devblogs.microsoft.com/typescript/typescript-native-port/
+
 
 
 <br/>

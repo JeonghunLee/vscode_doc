@@ -83,19 +83,17 @@ mkdocs build
 
 
 * Setting   
-electron_setup.ps1
 electron_package.ps1
 ```
-cd site 
-npm init -y
-npm install --save-dev electron electron-builder
-cd ..
 cp main.js site/
 cp package.json site/
+cd site 
+
+npm install 
+npm run dist  or npm start 
 ```
 
 * node.js 
-
 ```
 main.js
 package.json
