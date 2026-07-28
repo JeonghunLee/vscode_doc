@@ -228,6 +228,7 @@ Host github-company
 
 !!! warning "Github Action 동작안됨"
     - 상위처럼 2개로 완벽히 나누면 안됨 
+    - **Remote는 동작이 되어지나, VS Extesion 이 동작이 안되는 것임**   
 
 <br/>
 

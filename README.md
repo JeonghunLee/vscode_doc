@@ -77,3 +77,26 @@ mermaid is not working
 mkdocs build 
 ```
 ...
+
+
+## Electron 
+
+
+* Setting   
+electron_setup.ps1
+electron_package.ps1
+```
+cd site 
+npm init -y
+npm install --save-dev electron electron-builder
+cd ..
+cp main.js site/
+cp package.json site/
+```
+
+* node.js 
+
+```
+main.js
+package.json
+```
