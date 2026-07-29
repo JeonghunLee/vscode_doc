@@ -16,9 +16,14 @@
 
 * VSCode Main 구성  
     - Javascript (Node.js)   
+        - electron 과 json 과 각 연결부분 bin 
     - Typescript  
+        - Jsvascript 보다 빠르게 하기 위해서 사용  
 
-TypeScript 
+<br/>
+
+* **TypeScript 의 중요성**    
+내부적으로 봐도, 거의 주요 부분을 Typescript으로 사용하는 듯하며, 세부적 분석할 대 중요     
     https://devblogs.microsoft.com/typescript/typescript-native-port/
 
 

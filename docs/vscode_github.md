@@ -13,29 +13,29 @@ Github의 계정이 복잡해져서 별도로 정리
  
 <br/>
 
-!!! warning "Github 인증"
-    - **Git의 설정과 상관** 이 없으며, 주로 VSCode의 Extension **확장기능 인증** 사용 
+!!! warning "VSCode Extesion Github/Github Series 인증"
+    - **Git 기본 설정과 상관** 이 없으며, 주로 VSCode의 Extension Github Series **확장기능 인증** 사용 
     - VSCode의 [Source Control](vscode_github.md#vscode-souce-control) 과 전혀 무관함 
 
 <br/>
 
 * **VS Code Extension Github Account**    
 
-| VS Code Extesion 기능 | 역할 |  계정  |    OAuth 필요 | 독립 사용 가능 | 비고                                    | 
+| VS Code Extesion  | 역할 |  계정  |    OAuth 필요 | 독립가능 | 비고                                    | 
 |------|------|----------------| ------|  :--------- | :------ | 
-| **GitHub** | 기본 GitHub 인증 (Authentication) | ✅ 예  |  ✅ 예  |  ⚠️    | 다른 GitHub 확장과 인증을 공유하는 경우가 많음         |
-| **GitHub Repository** | Remote Repository 열기 탐색 | ✅ 예   | ✅ 예  |  ❌     | 주로 거의 사용 안함 |
-| **GitHub Pull Requests** | PR, Issue 관리 | ✅ 예  | ✅ 예  |  ❌    | GitHub 인증을 사용하는 것이 일반적                |
-| **GitHub Actions** | Actions 실행 및 로그 조회 | ✅ 예 | ✅ 예  |  ❌    | GitHub 인증을 사용하는 것이 일반적                |
-| **GitHub Copilot** | Copilot  AI 코드 생성 | ❌ 별도 외부 계정 설정 가능 | ✅ 예  |  ⚠️    | GitHub 인증을 사용하는 것이 일반적                |
+| **GitHub** | 기본 GitHub 인증 (Authentication) | ✅ 예  |  ✅ 예  |  ⚠️    | GitHub 확장과 인증을 공유 많음         |
+| GitHub Repository | Remote Repository 탐색/수정/열기 | ✅ 예   | ✅ 예  |  ❌     | 주로 거의 사용 안함 |
+| **GitHub Pull Requests** | Github PR, Issue 관리 | ✅ 예  | ✅ 예  |  ❌    | GitHub 인증을 사용하는 것이 일반적                |
+| **GitHub Actions** | Actions 실행/로그 조회 | ✅ 예 | ✅ 예  |  ❌    | GitHub 인증을 사용하는 것이 일반적                |
+| **GitHub Copilot** | Copilot AI 코드 생성 | ⚠️ 별도 외부계정? | ✅ 예  |  ⚠️    | GitHub 인증을 사용하는 것이 일반적                |
 
 
-
-!!! tip "OAuth 가 기본 Browser로  Login 인증"
+!!! tip "OAuth 가 기본(default) Browser로  Login 인증"
     - Github 2개 계정을 각 지원이 안될 경우, 브라우저 기본설정을 변경해서 진행 
         - 2개의 Browser로 각 별도 인증 진행 
     - VS Code가 브라우저를 통해 인증을 진행   
     - 1개의 계정의 경우, 필요 없음 
+    - 상위 이외 더 확장적 Github Extensions 존재 (Azure)  
 
 <br/>
 
