@@ -38,10 +38,15 @@ pandoc -o reference.docx --print-default-data-file reference.docx
 ```
 pandoc -o reference.pptx --print-default-data-file reference.pptx
 ```
+
 <br/>
 
 !!! tip "Reference File"
     - 상위 파일을 만든 후, 각 폰트를 변경하고 본인 스타일로 수정   
+
+![](./imgs/tool_pandoc_docx_00.png)
+![](./imgs/tool_pandoc_ppt_00.png)
+
 
 <br/>
 
