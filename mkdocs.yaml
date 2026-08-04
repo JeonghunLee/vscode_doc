@@ -18,6 +18,7 @@ nav:
     - Setup GIT: git_setup_default.md
     - Check GIT: git_setup_project.md
   - Node.js:    
+    - Mermaid: node_mermaid.md 
     - Electron: tool_electron.md    
   - Tools:
     - Tabby: tool_tabby.md
