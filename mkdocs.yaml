@@ -15,12 +15,13 @@ nav:
     - Config: vscode_config.md
     - Github: vscode_github.md
   - GIT:
-    - Setup Defaults: git_setup_default.md
-    - Check/Setup Repo: git_setup_project.md
+    - Setup GIT: git_setup_default.md
+    - Check GIT: git_setup_project.md
   - Node.js:    
     - Electron: tool_electron.md    
   - Tools:
     - Tabby: tool_tabby.md
+    - pandoc: tool_pandoc.md
 
                     
 plugins:

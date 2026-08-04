@@ -1,4 +1,4 @@
-# GIT 설정 
+# Check GIT 
 
 * 아래는 VS Code의 연관성 보다는 Git 순수설정 
     * Github 사용한다면 주로 Github 기본 인증만 해당  
@@ -8,6 +8,15 @@
 !!! success "VSCode Source Control"
     - Git 설정은 오직 [VSCode Source Control](./vscode_github.md#vscode-souce-control) 만 연관  
     - **[VS Code Extesion Github](vscode_github.md#vscode-github-account) 다른 부분과는 연관이 없음**  
+
+<br/>
+
+* Check Git 우선순위
+    * [Check GIT Remote](./git_setup_project.md#check-git-remote) : Git Remote Repository 확인 
+    * [Check GIT Local](./git_setup_project.md#check-git-local) : Git Local 설정 확인 (User 확인)
+
+
+<br/>
 
 ---
 
@@ -108,7 +117,75 @@ origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 ---
 
 
-## Setup GIT User
+## ReSetup GIT 
+
+<br/>  
+
+
+* **Check User/Remote**        
+    * user정보가 없음 global 사용      
+    * 즉 local로 별도 지정하지 않으면,  local -> global -> system 
+```
+git config --local --list
+```
+e.g. check local(local) user 정보가 없으므로, **global로 사용** 하며, **remote ssh** 로 사용      
+```
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=git@github.com:JeonghunLee/vscode_doc.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.vscode-merge-base=origin/main
+branch.main.merge=refs/heads/main
+``` 
+
+!!! tip "User Local"
+    - **user.name** : 사용자 이름     
+    - **user.email** : 사용자 이메일 
+    - 우선순위 local -> global -> system(보통 외부, 기업 시스템) 
+
+!!! tip "User Global"
+    - 상위처럼 user.name 없다면 기본설정 **~/.gitconfig 사용(global)** 
+    - cat ~/.gitconfig (user 확인)  
+
+<br/>
+
+* **Check User/Remote**   
+```
+git config --local --list
+```
+e.g. check **local user** 정보, **remote https** 로 사용  
+```
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/JeonghunLee/vscode_doc
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.main.vscode-merge-base=origin/main
+user.name=JeonghunLee
+user.email=xxxx
+```
+
+!!! tip "User Local"
+    - **user.name** : 사용자 이름     
+    - **user.email** : 사용자 이메일 
+    - **이 프로젝트만 한정적으로 사용**   
+
+
+<br/>
+
+---
+
+### Setup User Local 
 
 <br/>
 
@@ -123,7 +200,18 @@ e.g. check local setup (only repo)
 git config --local --list
 ```
 
+!!! tip "User Local" 
+    - **이 프로젝트만 한정적으로 사용가능하며, Global(default)가 별도**   
+
 <br/>
+
+---
+
+### Setup User Global
+
+<br/>
+
+
 
 * **Git User Global Setup**   
 모든 곳에 기본설정  local -> global -> system      
@@ -142,60 +230,14 @@ cat ~\.gitconfig
 
 <br/>
 
-!!! tip "Git Config User"
-    - SSH/HTTPS 설정 필요 
-
-<br/>           
-
-* **Check SSH Project**        
-user정보가 없음 global 이기 때문인 것 같음     
-즉 local로 별도 지정하지 않으면,  local -> global -> system 
-```
-git config --local --list
-```
-e.g. check local  
-```
-core.repositoryformatversion=0
-core.filemode=false
-core.bare=false
-core.logallrefupdates=true
-core.symlinks=false
-core.ignorecase=true
-remote.origin.url=git@github.com:Jeonghun-DYNE/Info_jetson.git
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.main.remote=origin
-branch.main.vscode-merge-base=origin/main
-branch.main.merge=refs/heads/main
-```
-
-!!! tip "user.name/user.email"
-    - 상위처럼 user.name 없다면 기본설정 ~/.gitconfig 사용 
-
-<br/>
-
-* **Check HTTPS**   
-```
-git config --local --list
-```
-e.g. check local  
-```
-core.repositoryformatversion=0
-core.filemode=false
-core.bare=false
-core.logallrefupdates=true
-core.symlinks=false
-core.ignorecase=true
-remote.origin.url=https://github.com/JeonghunLee/vscode_doc
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.main.remote=origin
-branch.main.merge=refs/heads/main
-branch.main.vscode-merge-base=origin/main
-user.name=JeonghunLee
-user.email=xxxx
-```
+!!! tip "User Global" 
+    - **주로 기본설정 Global(default)**   
+    - Remote Repository 의 SSH/HTTPS 설정은 별도필요  
 
 
 <br/>
+
+---
 
 ### Setup Remote SSH  
 

@@ -1,9 +1,11 @@
-# Setup GIT 
+# Setup GIT Default
 
 <br/>
 
 
-복수 계정을 위해서 설명
+**복수 계정을 위해서 설명**
+
+<br/>
 
 * **테스트 결론**     
     1. HTTPS 1개 설정 : 개인 설정   
@@ -352,7 +354,7 @@ GCM: Git Credential Manager
 * **GCM Log Out**      
 계정이 다를 경우, 다시 Brwser 기반으로 다시 인증 
 ```
-git credential-manager github logout "Jeonghun-DYNE"
+git credential-manager github logout "JeonghunLee"
 ```
 
 <br/>

@@ -15,7 +15,7 @@ Github의 계정이 복잡해져서 별도로 정리
 
 !!! warning "VSCode Extesion Github/Github Series 인증"
     - **Git 기본 설정과 상관** 이 없으며, 주로 VSCode의 Extension Github Series **확장기능 인증** 사용 
-    - VSCode의 [Source Control](vscode_github.md#vscode-souce-control) 과 전혀 무관함 
+    - VSCode의 [Source Control](vscode_github.md#vscode-souce-control) 과 **전혀 무관함** 
 
 <br/>
 
