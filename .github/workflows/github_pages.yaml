@@ -57,7 +57,7 @@ jobs:
           files: |
             mkdocs-site.zip
           body: |
-            🚀 Info Jetson Release
+            🚀 VS Code Documentation Release
             ------------------------------------------
             * **Version**: ${{ github.ref_name }}            
             * **Release Date**: ${{ github.event.head_commit.timestamp }}      
