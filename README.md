@@ -1,5 +1,4 @@
-# vscode_doc
-VS Code Setup 
+# How To use VS Code 
 
 
 
