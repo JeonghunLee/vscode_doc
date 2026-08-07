@@ -9,7 +9,7 @@ Github의 계정이 복잡해져서 별도로 정리
 
 ---
 
-## VSCode Github Account 
+## VSCode Github Accounts 
  
 <br/>
 
@@ -41,7 +41,6 @@ Github의 계정이 복잡해져서 별도로 정리
 
 * **VSCode 의 Account**     
 VS Code 의 Github 연결사항 확인   
-VS Code 의 
 ![](./imgs/vscode_00.png)
 ![](./imgs/vscode_03.png) 
 
@@ -124,19 +123,8 @@ ms-settings:defaultapps
 
 ---
 
-### Check Github Account 
 
-<br/>
-
-!!! tip "GitHub Account Check"
-    - 아래와 같이 Sign Out 통해 쉽게 각 인증되어진 Github Extension 확인 가능 
-
-
-* **Github Account-> Sing Out**     
-    * **Manage Extension Account Preference** 확인 가능 
-    * VS Code 에서 Sign Out 확인 가능 
-![](./imgs/vscode_01.png)
-![](./imgs/vscode_02.png)
+## Github Mutiple Accounts 
 
 <br/>
 
@@ -148,6 +136,28 @@ ms-settings:defaultapps
 
 <br/>
 
+---
+
+### Check Github Accounts 
+
+
+
+<br/>
+
+!!! tip "GitHub Account Check"
+    - 아래와 같이 Sign Out 통해 쉽게 각 인증되어진 Github Extension 확인 가능 
+
+
+* **Check Github Account-> Sing Out**     
+    * **Manage Extension Account Preference** 확인 가능 
+    * Github Account-> Sing Out 확인 가능 
+![](./imgs/vscode_01.png)
+![](./imgs/vscode_02.png)
+
+
+<br/>
+<br/>
+
 * **Github Account-> Multiple Account 확인**          
     *  각 Github로 Manage Truested Extension 확인 가능 
 ![](./imgs/vscode_ex_github_04.png)
@@ -157,7 +167,7 @@ ms-settings:defaultapps
 
 ---
 
-### Github Copliot   
+## Github Copliot   
 
 <br/>
 
