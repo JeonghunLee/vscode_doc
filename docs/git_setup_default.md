@@ -318,6 +318,42 @@ SSH 설정 과 Remote 쉽게 확인가능
 ssh -T git@github.com
 Hi JeonghunLee! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+<br/>
+
+---
+
+### SSH DEBUG GIT
+
+<br/>
+
+
+* GIT의 SSH 사용 DEBUG 
+아래의 실행 Command를 일일히 다 Debug로 표시    
+```
+$env:GIT_TRACE = "1"
+$env:GIT_SSH_COMMAND = "ssh -vvv"
+git ls-remote git@github.com:Jeonghun-DYNE/Mono-Distortion-Vector-Depth.git
+```
+
+<br/>
+
+* SSH 설정 
+```
+git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+```
+
+<br/>
+
+!!! tip "git clone"
+    - GIT SSH TEST 는 잘되지만, Git clone이 안되는 경우가 간혹 발생 
+    - 이유: C:/SPB 에 별도의 SSH가 생겨서 발생 
+        - Window 의 기본 C:\Windows\System32\OpenSSH\ssh.exe
+        - 상위 별도 생성되어 문제 발생  
+
+<br/>
+
+* Cadence 의 Orcad 설치할 경우  
+![](./imgs/github_setting_ssh_01.png)
 
 <br/>
 
