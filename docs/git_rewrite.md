@@ -41,13 +41,13 @@ python -m pip install git-filter-repo
 !!! success "git filter repo"     
     * 설치 후 Python으로 실행 진행  
     * exe 도 존재하지만, 이 부분 [PATH로 Error에서 확인](git_rewrite.md#error-git-filter-repo-in-window) 
-    
+
 
 <br/>
 
 ---
 
-### Rewrite Commit Local
+### Recheck Commit Local
 
 <br/>
 
@@ -78,7 +78,15 @@ git remote -v
 
 <br/>
 
+---
 
+### Rewrite Commit Local Email
+
+
+<br/>
+
+!!! warning "check branch/remote"
+    - 반드시 [check branch, remote 확인](git_rewrite.md#recheck-commit-local) 
 
 * Git Filter Repo Email 변경        
     * --email-callback  
@@ -90,6 +98,16 @@ python -m git_filter_repo --force --email-callback "return email.replace(b'ahyuo
     * user.email 변경됨
 
 <br/>
+
+---
+
+### Rewrite Commit Local Name/Email
+
+
+<br/>
+
+!!! warning "check branch/remote"
+    - 반드시 [check branch, remote 확인](git_rewrite.md#recheck-commit-local) 
 
 * Git Filter Repo user/email 변경  
     * --name-callback
