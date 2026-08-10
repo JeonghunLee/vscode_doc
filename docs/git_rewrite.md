@@ -44,23 +44,45 @@ python -m pip install git-filter-repo
 ```
 git log --all --format="%h | %an | %ae"
 ```
+<br/>
+
+
+* Git Current Branch 확인 
+```
+git branch --show-current
+```
+
+!!! tip "Git Current Branch "
+    * Remote 에 Push 할때 동일한지 확인 
+
+<br/>
 
 * Git Remote 확인 
 ```
 git remote -v  
 ```
+!!! warning "git_filter_repo"
+    - 사용할 경우 remote 정보가 자동으로 삭제되어짐 
+
 
 <br/>
 
-* Git Filter Repo 이용       
-Window에서 매번 PATH 문제가 발생하여, Python기반으로 실행   
+
+
+* Git Filter Repo Email 변경        
+    * --email-callback  
 ```
 python -m git_filter_repo --force --email-callback "return email.replace(b'ahyuo79@mail.com', b'ahyuo79@gmail.com')"
 ```
 
 !!! tip "Git Local Commit 변경"
     * user.email 변경됨
- 
+
+<br/>
+
+* Git Filter Repo user/email 변경  
+    * --name-callback
+    * --email-callback  
 ```
 python -m git_filter_repo --force `
   --name-callback "return b'JeonghunLee' if name == b'Jeonghun-DYNE' else name" `
@@ -70,6 +92,11 @@ python -m git_filter_repo --force `
 !!! tip "user.name/user.email 변경"
     * user.name 과 user.email 변경됨 
     * **user.email 만 맞추면 거의 다 되어짐** 
+
+!!! warning " Window 의 경우"
+    * 아래 PATH 문제로 상위와 같이 Python 기반으로 실행 
+    * git filter repo 로 실행되어야 함 
+  
 
 <br/>
 
