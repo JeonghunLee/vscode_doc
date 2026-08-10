@@ -17,6 +17,7 @@ nav:
   - GIT:
     - Setup GIT: git_setup_default.md
     - Check GIT: git_setup_project.md
+    - Rewrite GIT: git_rewrite.md
   - Node.js:    
     - Mermaid: node_mermaid.md 
     - Electron: tool_electron.md    
