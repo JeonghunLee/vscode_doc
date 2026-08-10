@@ -80,7 +80,7 @@ git remote -v
 
 ---
 
-### Rewrite Commit Local Email
+### Rewrite Commit Local 
 
 
 <br/>
@@ -96,20 +96,12 @@ python -m git_filter_repo --force --email-callback "return email.replace(b'ahyuo
 
 !!! tip "Git Local Commit 변경"
     * user.email 변경됨
+    * user.name 보다 user.email 이 맞으면 거의 다 해결되어짐   
+    * 아래는 옵션  
 
 <br/>
 
----
-
-### Rewrite Commit Local Name/Email
-
-
-<br/>
-
-!!! warning "check branch/remote"
-    - 반드시 [check branch, remote 확인](git_rewrite.md#recheck-commit-local) 
-
-* Git Filter Repo user/email 변경  
+* Git Filter Repo user/email 2개 동시 변경  
     * --name-callback
     * --email-callback  
 ```
