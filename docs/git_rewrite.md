@@ -45,6 +45,11 @@ python -m pip install git-filter-repo
 git log --all --format="%h | %an | %ae"
 ```
 
+* Git Remote 확인 
+```
+git remote -v  
+```
+
 <br/>
 
 * Git Filter Repo 이용       
@@ -54,8 +59,17 @@ python -m git_filter_repo --force --email-callback "return email.replace(b'ahyuo
 ```
 
 !!! tip "Git Local Commit 변경"
-    * ahyuo79@gmail.com으로 변경됨
+    * user.email 변경됨
  
+```
+python -m git_filter_repo --force `
+  --name-callback "return b'JeonghunLee' if name == b'Jeonghun-DYNE' else name" `
+  --email-callback "return b'ahyuo79@gmail.com' if email == b'jeonghun.lee@dynemedical.com' else email"
+```
+
+!!! tip "user.name/user.email 변경"
+    * user.name 과 user.email 변경됨 
+    * **user.email 만 맞추면 거의 다 되어짐** 
 
 <br/>
 
@@ -65,6 +79,9 @@ python -m git_filter_repo --force --email-callback "return email.replace(b'ahyuo
 ### Rewrite Commit Remote
 
 <br/>
+
+!!! warning "remote 정보"
+    * 상위를 제대로 하면, remote 정보가 삭제되어짐 
 
 
 * Git Remote 확인 
@@ -82,12 +99,17 @@ git remote add origin https://github.com/JeonghunLee/vscode_doc.git
 
 
 * Git Push Remote Force 
+현재 바꾸고 싶은 Branch를 정확히 알고해야함 
 ```
 git push --force origin main 
 ```
 ```
 git push --force --tags origin
 ```
+
+!!! warning "main/master"
+    * force 하기전에 반드시 branch main/master 인지 확인 
+    * tags의 경우도 가급적 해주자. 
 
 <br/>
 
