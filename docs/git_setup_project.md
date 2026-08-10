@@ -384,6 +384,9 @@ origin  https://github.com/JeonghunLee/vscode_doc (push)
 <br/>
 
 !!! tip "Git History Rewriting"
+    * 과거에 Git Commit Username 과 User.Email 잘못 올리 경우, 각 부분을 수정할 경우 
+    * 과거의 Git Commit 정보를 수정하고 싶을 경우 
+
 
 <br/>
 
@@ -402,7 +405,7 @@ python -m pip install git-filter-repo
 
 ---
 
-### Rewrite Commit Infomation
+### Rewrite Commit Local
 
 <br/>
 
@@ -411,21 +414,48 @@ python -m pip install git-filter-repo
 git log --all --format="%h | %an | %ae"
 ```
 
-* Git Filter Repo 이용 
+* Git Filter Repo 이용       
 Window에서 매번 PATH 문제가 발생하여, Python기반으로 실행   
 ```
 python -m git_filter_repo --force --email-callback "return email.replace(b'ahyuo79@mail.com', b'ahyuo79@gmail.com')"
 ```
-
-
-
 
 <br/>
 
 ---
 
 
-### Check Git Filter Repo 
+### Rewrite Commit Remote
+
+<br/>
+
+
+* Git Remote 확인 
+```
+git remote -v  
+```
+```
+git remote add origin https://github.com/JeonghunLee/vscode_doc.git
+```
+
+!!! tip "Remote Resetup"
+    * 기존의 Remote가 없어짐 
+
+<br/>
+
+
+* Git Push Remote Force 
+```
+git push --force origin main 
+```
+
+<br/>
+
+---
+
+
+
+## Check Git Filter Repo 
 
 <br/>
 
