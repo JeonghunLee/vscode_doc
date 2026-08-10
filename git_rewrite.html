@@ -581,9 +581,16 @@
 <h3 id="rewrite-commit-local">Rewrite Commit Local</h3>
 <p><br/></p>
 <ul>
-<li>Git History 전체확인 
+<li>
+<p>Git History 전체확인 
 <div class="highlight"><pre><span></span><code>git log --all --format="%h | %an | %ae"
-</code></pre></div></li>
+</code></pre></div></p>
+</li>
+<li>
+<p>Git Remote 확인 
+<div class="highlight"><pre><span></span><code>git remote -v  
+</code></pre></div></p>
+</li>
 </ul>
 <p><br/></p>
 <ul>
@@ -595,13 +602,30 @@ Window에서 매번 PATH 문제가 발생하여, Python기반으로 실행 <br/>
 <div class="admonition tip">
 <p class="admonition-title">Git Local Commit 변경</p>
 <ul>
-<li>ahyuo79@gmail.com으로 변경됨</li>
+<li>user.email 변경됨</li>
+</ul>
+</div>
+<div class="highlight"><pre><span></span><code>python -m git_filter_repo --force `
+  --name-callback "return b'JeonghunLee' if name == b'Jeonghun-DYNE' else name" `
+  --email-callback "return b'ahyuo79@gmail.com' if email == b'jeonghun.lee@dynemedical.com' else email"
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">user.name/user.email 변경</p>
+<ul>
+<li>user.name 과 user.email 변경됨 </li>
+<li><strong>user.email 만 맞추면 거의 다 되어짐</strong> </li>
 </ul>
 </div>
 <p><br/></p>
 <hr/>
 <h3 id="rewrite-commit-remote">Rewrite Commit Remote</h3>
 <p><br/></p>
+<div class="admonition warning">
+<p class="admonition-title">remote 정보</p>
+<ul>
+<li>상위를 제대로 하면, remote 정보가 삭제되어짐 </li>
+</ul>
+</div>
 <ul>
 <li>Git Remote 확인 
 <div class="highlight"><pre><span></span><code>git remote -v  
@@ -618,11 +642,19 @@ Window에서 매번 PATH 문제가 발생하여, Python기반으로 실행 <br/>
 <p><br/></p>
 <ul>
 <li>Git Push Remote Force 
-<div class="highlight"><pre><span></span><code>git push --force origin main 
+현재 바꾸고 싶은 Branch를 정확히 알고해야함 
+<div class="highlight"><pre><span></span><code>git push --force origin main // main , master , develop 등
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>git push --force --tags origin
 </code></pre></div></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">main/master</p>
+<ul>
+<li>force 하기전에 반드시 branch main/master 인지 확인 </li>
+<li>tags의 경우도 가급적 해주자. </li>
+</ul>
+</div>
 <p><br/></p>
 <hr/>
 <h2 id="error-git-filter-repo-in-window">Error Git Filter Repo in Window</h2>
