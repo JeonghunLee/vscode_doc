@@ -78,6 +78,59 @@ user.email=xxxx
 
 ---
 
+
+### Check Git User
+
+<br/>
+
+* Local User 정보 확인  
+
+```
+git config --show-origin --get user.name
+```
+!!! tip "user.name"     
+    - file : .git/config  의 경우 local 
+    - user.name : 상위 File 위치에 따라 Local 
+
+```
+git config --show-origin --get user.email
+```
+!!! tip "user.email"     
+    - file : .git/config  의 경우 local 
+    - user.email : 상위 File 위치에 따라 Local 
+
+
+<br/>
+
+---
+
+
+### Check Git History 
+
+<br/>
+
+
+
+* Local Git History 확인  
+    * Hash / user.name / user.email 
+```
+git log --format="%h | %an | %ae" -20
+```
+
+!!! tip "Hash/Username/Email"
+    - Hash : Commit ID 
+    - user.name : Author Name
+    - user.email  : Author Email
+
+!!! warning "user.name/user.email"
+    - 2개다 반드시 정확히 설정해야 함 
+
+<br/>
+
+---
+
+
+
 ## Check GIT Remote 
 
 <br/>
@@ -112,9 +165,17 @@ origin  git@github.com:JeonghunLee/vscode_doc.git (fetch)
 origin  git@github.com:JeonghunLee/vscode_doc.git (push)
 ```
 
+!!! note "Check Remote"
+    * orgin : remote repo 
+        * https://github.com/username/repo  : **HTTPS** 
+        * git@github.com:username/repo.git  : **SSH HOST** 
+
+
+
 <br/>
 
 ---
+
 
 
 ## ReSetup GIT 
