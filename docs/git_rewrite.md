@@ -16,8 +16,14 @@
 !!! warning "Git History Rewriting"
     * 과거에 Git Commit Username 과 User.Email 잘못 올리 경우, 각 부분을 수정할 경우 
     * 과거의 Git Commit 정보를 수정하고 싶을 경우 
-    * **Python Git Filter Repo 이용** 
+
+<br/>
     
+!!! success "git filter repo"
+    * Git History 수정을 위한 Python Package 
+    * git filter repo 명령어는 Window PATH 문제가 자주 발생 
+    * 가급적 Python으로 실행 
+
 
 <br/>
 
@@ -31,6 +37,11 @@
 ```
 python -m pip install git-filter-repo
 ```
+
+!!! success "git filter repo"     
+    * 설치 후 Python으로 실행 진행  
+    * exe 도 존재하지만, 이 부분 [PATH로 Error에서 확인](git_rewrite.md#error-git-filter-repo-in-window) 
+    
 
 <br/>
 
