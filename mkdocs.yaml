@@ -24,6 +24,7 @@ nav:
   - Tools:
     - Tabby: tool_tabby.md
     - pandoc: tool_pandoc.md
+    - VNC: tool_vnc.md
 
                     
 plugins:
