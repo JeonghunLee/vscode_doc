@@ -13,10 +13,11 @@
 
 <br/>
 
-!!! success "Git History Rewriting"
+!!! warning "Git History Rewriting"
     * 과거에 Git Commit Username 과 User.Email 잘못 올리 경우, 각 부분을 수정할 경우 
     * 과거의 Git Commit 정보를 수정하고 싶을 경우 
     * **Python Git Filter Repo 이용** 
+    
 
 <br/>
 
@@ -83,6 +84,9 @@ git remote add origin https://github.com/JeonghunLee/vscode_doc.git
 * Git Push Remote Force 
 ```
 git push --force origin main 
+```
+```
+git push --force --tags origin
 ```
 
 <br/>
