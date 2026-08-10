@@ -584,20 +584,41 @@
 <li>
 <p>Git History 전체확인 
 <div class="highlight"><pre><span></span><code>git log --all --format="%h | %an | %ae"
-</code></pre></div></p>
+</code></pre></div>
+<br/></p>
 </li>
 <li>
-<p>Git Remote 확인 
-<div class="highlight"><pre><span></span><code>git remote -v  
+<p>Git Current Branch 확인 
+<div class="highlight"><pre><span></span><code>git branch --show-current
 </code></pre></div></p>
 </li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Git Current Branch </p>
+<ul>
+<li>Remote 에 Push 할때 동일한지 확인 </li>
+</ul>
+</div>
 <p><br/></p>
 <ul>
-<li>Git Filter Repo 이용     <br/>
-Window에서 매번 PATH 문제가 발생하여, Python기반으로 실행 <br/>
+<li>Git Remote 확인 
+<div class="highlight"><pre><span></span><code>git remote -v  
+</code></pre></div></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">git_filter_repo</p>
+<ul>
+<li>사용할 경우 remote 정보가 자동으로 삭제되어짐 </li>
+</ul>
+</div>
+<p><br/></p>
+<ul>
+<li>Git Filter Repo Email 변경        <ul>
+<li>--email-callback<br/>
 <div class="highlight"><pre><span></span><code>python -m git_filter_repo --force --email-callback "return email.replace(b'ahyuo79@mail.com', b'ahyuo79@gmail.com')"
 </code></pre></div></li>
+</ul>
+</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Git Local Commit 변경</p>
@@ -605,15 +626,30 @@ Window에서 매번 PATH 문제가 발생하여, Python기반으로 실행 <br/>
 <li>user.email 변경됨</li>
 </ul>
 </div>
+<p><br/></p>
+<ul>
+<li>Git Filter Repo user/email 변경  <ul>
+<li>--name-callback</li>
+<li>--email-callback<br/>
 <div class="highlight"><pre><span></span><code>python -m git_filter_repo --force `
   --name-callback "return b'JeonghunLee' if name == b'Jeonghun-DYNE' else name" `
   --email-callback "return b'ahyuo79@gmail.com' if email == b'jeonghun.lee@dynemedical.com' else email"
-</code></pre></div>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">user.name/user.email 변경</p>
 <ul>
 <li>user.name 과 user.email 변경됨 </li>
 <li><strong>user.email 만 맞추면 거의 다 되어짐</strong> </li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title"> Window 의 경우</p>
+<ul>
+<li>아래 PATH 문제로 상위와 같이 Python 기반으로 실행 </li>
+<li>git filter repo 로 실행되어야 함 </li>
 </ul>
 </div>
 <p><br/></p>
