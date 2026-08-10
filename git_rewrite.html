@@ -7,11 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="VS Code Manual" name="description"/>
 <meta content="Jeonghun Lee" name="author"/>
-<link href="vscode_github.html" rel="prev"/>
-<link href="git_setup_project.html" rel="next"/>
+<link href="git_setup_project.html" rel="prev"/>
+<link href="node_mermaid.html" rel="next"/>
 <link href="imgs/logo.jpg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>Setup GIT - VS Code Manaul</title>
+<title>Rewrite GIT - VS Code Manaul</title>
 <link href="assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link href="assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/iframe-worker/shim"></script>
@@ -29,7 +29,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#setup-git-default">
+<a class="md-skip" href="#rewrite-git">
           콘텐츠로 이동
         </a>
 </div>
@@ -53,7 +53,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Setup GIT
+              Rewrite GIT
             
           </span>
 </div>
@@ -226,20 +226,8 @@
 
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    
-  
-    Setup GIT
-  
-
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="git_setup_default.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="git_setup_default.html">
 <span class="md-ellipsis">
     
   
@@ -249,134 +237,6 @@
     
   </span>
 </a>
-<nav aria-label="목차" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      목차
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-git">
-<span class="md-ellipsis">
-      
-        Setup GIT
-      
-    </span>
-</a>
-<nav aria-label="Setup GIT" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#git-config">
-<span class="md-ellipsis">
-      
-        Git Config
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#git-https">
-<span class="md-ellipsis">
-      
-        Git HTTPS
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#git-ssh">
-<span class="md-ellipsis">
-      
-        Git SSH
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-ssh">
-<span class="md-ellipsis">
-      
-        Setup SSH
-      
-    </span>
-</a>
-<nav aria-label="Setup SSH" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-multi-accounts">
-<span class="md-ellipsis">
-      
-        SSH Multi Accounts
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-config-a">
-<span class="md-ellipsis">
-      
-        SSH Config A
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-config-b">
-<span class="md-ellipsis">
-      
-        SSH Config B
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-test-git">
-<span class="md-ellipsis">
-      
-        SSH TEST GIT
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-debug-git">
-<span class="md-ellipsis">
-      
-        SSH DEBUG GIT
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-https">
-<span class="md-ellipsis">
-      
-        Setup HTTPS
-      
-    </span>
-</a>
-<nav aria-label="Setup HTTPS" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gcm">
-<span class="md-ellipsis">
-      
-        GCM
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="git_setup_project.html">
@@ -390,8 +250,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="git_rewrite.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Rewrite GIT
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="git_rewrite.html">
 <span class="md-ellipsis">
     
   
@@ -401,6 +273,85 @@
     
   </span>
 </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-history-rewriting">
+<span class="md-ellipsis">
+      
+        Git History Rewriting
+      
+    </span>
+</a>
+<nav aria-label="Git History Rewriting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-git-filter-repo">
+<span class="md-ellipsis">
+      
+        Install Git Filter Repo
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rewrite-commit-local">
+<span class="md-ellipsis">
+      
+        Rewrite Commit Local
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rewrite-commit-remote">
+<span class="md-ellipsis">
+      
+        Rewrite Commit Remote
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-git-filter-repo-in-window">
+<span class="md-ellipsis">
+      
+        Error Git Filter Repo in Window
+      
+    </span>
+</a>
+<nav aria-label="Error Git Filter Repo in Window" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-window-path">
+<span class="md-ellipsis">
+      
+        Check Window PATH
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup-window-path">
+<span class="md-ellipsis">
+      
+        Setup Window PATH
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -520,38 +471,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup-git">
+<a class="md-nav__link" href="#git-history-rewriting">
 <span class="md-ellipsis">
       
-        Setup GIT
+        Git History Rewriting
       
     </span>
 </a>
-<nav aria-label="Setup GIT" class="md-nav">
+<nav aria-label="Git History Rewriting" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#git-config">
+<a class="md-nav__link" href="#install-git-filter-repo">
 <span class="md-ellipsis">
       
-        Git Config
+        Install Git Filter Repo
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#git-https">
+<a class="md-nav__link" href="#rewrite-commit-local">
 <span class="md-ellipsis">
       
-        Git HTTPS
+        Rewrite Commit Local
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#git-ssh">
+<a class="md-nav__link" href="#rewrite-commit-remote">
 <span class="md-ellipsis">
       
-        Git SSH
+        Rewrite Commit Remote
       
     </span>
 </a>
@@ -560,78 +511,29 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup-ssh">
+<a class="md-nav__link" href="#error-git-filter-repo-in-window">
 <span class="md-ellipsis">
       
-        Setup SSH
+        Error Git Filter Repo in Window
       
     </span>
 </a>
-<nav aria-label="Setup SSH" class="md-nav">
+<nav aria-label="Error Git Filter Repo in Window" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-multi-accounts">
+<a class="md-nav__link" href="#check-window-path">
 <span class="md-ellipsis">
       
-        SSH Multi Accounts
+        Check Window PATH
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-config-a">
+<a class="md-nav__link" href="#setup-window-path">
 <span class="md-ellipsis">
       
-        SSH Config A
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-config-b">
-<span class="md-ellipsis">
-      
-        SSH Config B
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-test-git">
-<span class="md-ellipsis">
-      
-        SSH TEST GIT
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ssh-debug-git">
-<span class="md-ellipsis">
-      
-        SSH DEBUG GIT
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-https">
-<span class="md-ellipsis">
-      
-        Setup HTTPS
-      
-    </span>
-</a>
-<nav aria-label="Setup HTTPS" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gcm">
-<span class="md-ellipsis">
-      
-        GCM
+        Setup Window PATH
       
     </span>
 </a>
@@ -646,362 +548,212 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="setup-git-default">Setup GIT Default</h1>
-<p><br/></p>
-<p><strong>복수 계정을 위해서 설명</strong></p>
-<p><br/></p>
-<ul>
-<li><strong>테스트 결론</strong> <ol>
-<li>HTTPS 1개 설정 : 개인 설정   </li>
-<li>SSH 1개 설정 : 공용 설정   <ul>
-<li>SSH 2개 설정 : 미권장  </li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
+<h1 id="rewrite-git">Rewrite GIT</h1>
 <div class="admonition success">
-<p class="admonition-title">VSCode Source Control</p>
+<p class="admonition-title">Git History Rewrite</p>
 <ul>
-<li>Git 설정은 오직 <a href="vscode_github.html#vscode-souce-control">VSCode Source Control</a> 만 연관  </li>
-<li><strong><a href="vscode_github.html#vscode-github-account">VS Code Extesion Github</a> 다른 부분과는 연관이 없음</strong> </li>
+<li>과거에 잘못 오릴 경우, 이 부분 수정 Git History User Name / Email 변경</li>
 </ul>
 </div>
 <p><br/></p>
 <hr/>
-<h2 id="setup-git">Setup GIT</h2>
+<h2 id="git-history-rewriting">Git History Rewriting</h2>
 <p><br/></p>
-<p>아래와 같이 HTTPS or SSH로 Git을 설정을하는데, 주로 SSH로 진행을 많이 한다. </p>
-<p><br/></p>
-<ul>
-<li>
-<p><strong>Git User 설정</strong> <br/>
-모든 곳에 기본설정  local -&gt; global -&gt; system    <br/>
-<div class="highlight"><pre><span></span><code>git config --global user.name "이름"
-git config --global user.email "이메일"
-</code></pre></div></p>
-</li>
-<li>
-<p>확인<br/>
-<div class="highlight"><pre><span></span><code>git config --global --list
-</code></pre></div></p>
-</li>
-</ul>
-<p><br/></p>
-<hr/>
-<h3 id="git-config">Git Config</h3>
-<p><br/></p>
-<ul>
-<li><strong>Git 설정 확인</strong> <br/>
-<div class="highlight"><pre><span></span><code>cat ~\.gitconfig   
-</code></pre></div></li>
-</ul>
-<p><br/></p>
-<ul>
-<li><strong>GIT 설정 추가</strong> <ul>
-<li>lfs : 대용량 즉 mp4 나 대용량 방식의 파일 및 Binary 저장을 위해서 설정 <strong>(default)</strong> </li>
-<li>core: 옵션 주로 Window 기반 (option)</li>
-<li>init : 기본 branch  <strong>(default)</strong> <br/>
-e.g. A
-<div class="highlight"><pre><span></span><code>[user]
-        email = xxx@xxxx
-        name = xxxxx
-
-[core]
-    autocrlf = true
-    editor = code --wait
-
-[filter "lfs"]
-        process = git-lfs filter-process
-        required = true
-        clean = git-lfs clean -- %f
-        smudge = git-lfs smudge -- %f
-</code></pre></div>
-e.g. B
-<div class="highlight"><pre><span></span><code>[filter "lfs"]
-        clean = git-lfs clean -- %f
-        smudge = git-lfs smudge -- %f
-        process = git-lfs filter-process
-        required = true
-[user]
-        name = xxxx
-        email = xxx@xxxx
-[init]
-        defaultBranch = main
-</code></pre></div></li>
-</ul>
-</li>
-<li><strong>Check Git lfs version</strong>
-<div class="highlight"><pre><span></span><code>git lfs version
-</code></pre></div>
-e.g. 
-<div class="highlight"><pre><span></span><code>git-lfs/3.7.1 (GitHub; windows amd64; go 1.25.1; git b84b3384)
-</code></pre></div></li>
-</ul>
-<p><br/></p>
-<hr/>
-<h3 id="git-https">Git HTTPS</h3>
-<p><br/></p>
-<ul>
-<li>HTTPS
-<div class="highlight"><pre><span></span><code>Git → Git Credential Manager → OAuth 토큰 → GitHub
-</code></pre></div>
-<br/></li>
-</ul>
-<div class="admonition tips">
-<p class="admonition-title">HTTPS - (PAT, Personal Access Token):</p>
-<p>브라우저 로그인 없이, GitHub 계정 설정에서 발급받은 토큰(Token) 비밀번호 대신 입력하여 인증</p>
-</div>
-<div class="admonition tips">
-<p class="admonition-title">HTTPS - 자격 증명 관리자 (Credential Manager)</p>
-<p>Windows Git Credential Manager(credential.helper = manager)를 사용하는 경우,  <br/>
-최초 한 번만 브라우저 연동 창이 뜨며, 이후에는 시스템이 자격 증명을 안전하게 캐싱하므로 
-평소에는 브라우저를 사용안함  </p>
-</div>
-<p><br/></p>
-<h3 id="git-ssh">Git SSH</h3>
-<p><br/></p>
-<ul>
-<li>SSH
-<div class="highlight"><pre><span></span><code>Git → SSH 클라이언트 → 개인키 → GitHub
-</code></pre></div></li>
-</ul>
-<p><br/></p>
-<hr/>
-<h2 id="setup-ssh">Setup SSH</h2>
-<p><br/></p>
-<ul>
-<li>
-<p>STEP.1 <strong>SSH Key 생성 및 확인</strong><br/>
-<div class="highlight"><pre><span></span><code>cd ~/.ssh 
-ssh-keygen -t ed25519 -C "xxxx@gmail.com"
-</code></pre></div></p>
-<ul>
-<li>1개의 계정으로 사용하기 권장 
-<div class="highlight"><pre><span></span><code>ls 
-
--a----      2025-11-24   오후 3:41            411 id_ed25519                                                                                                    
--a----      2025-11-24   오후 3:41            100 id_ed25519.pub                                                                                                
--a----      2025-11-24   오후 4:14            831 known_hosts                                                                                                   
--a----      2025-11-24   오후 4:14             93 known_hosts.old 
-</code></pre></div></li>
-</ul>
-</li>
-</ul>
-<p><br/></p>
-<ul>
-<li>STEP.2 <strong>Github 사이트 SSH Key 등록</strong> <br/>
-Settings → SSH and GPG keys → New SSH key     <br/>
-id_ed25519.pub  Key 등록  <br/>
-<img alt="" src="imgs/github_setting_ssh_00.png"/> <br/>
-<a href="https://github.com/settings/keys">https://github.com/settings/keys</a></li>
-</ul>
-<p><br/></p>
-<ul>
-<li>
-<p>STEP.3  <strong>Git User Global Setup 재확인</strong> <br/>
-모든 곳에 기본설정  local -&gt; global -&gt; system    <br/>
-<div class="highlight"><pre><span></span><code>git config --global user.name "이름"
-git config --global user.email "이메일"
-git config --global --list
-cat ~\.gitconfig   
-</code></pre></div></p>
-</li>
-<li>
-<p>STEP.4 <strong>SSH TEST</strong> </p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>ssh -T git@github.com
-</code></pre></div>
-<p><br/></p>
-<hr/>
-<h3 id="ssh-multi-accounts">SSH Multi Accounts</h3>
-<p><br/></p>
-<div class="admonition tip">
-<p class="admonition-title">SSH Key 2개 생성 </p>
-<ul>
-<li>RSA 보다는 기본적은 ed25519</li>
-</ul>
-</div>
 <div class="admonition warning">
-<p class="admonition-title">미권장</p>
+<p class="admonition-title">Git History Rewriting</p>
 <ul>
-<li><a href="git_setup_default.html#ssh-config-a">Github Action 미동작</a></li>
-<li>1개의 SSH로 그냥 사용하길 권장   </li>
+<li>과거에 Git Commit Username 과 User.Email 잘못 올리 경우, 각 부분을 수정할 경우 </li>
+<li>과거의 Git Commit 정보를 수정하고 싶을 경우 </li>
+<li><strong>Python Git Filter Repo 이용</strong> </li>
 </ul>
 </div>
-<p><br/> </p>
-<p><a href="git_setup_default.html#setup-ssh">Setup SSH - STEP.2 동작과 동일</a> </p>
+<p><br/></p>
+<hr/>
+<h3 id="install-git-filter-repo">Install Git Filter Repo</h3>
+<p><br/></p>
 <ul>
-<li>Key A 생성 
-<div class="highlight"><pre><span></span><code>cd ~/.ssh 
-ssh-keygen -t ed25519 -C "your_personal@email.com" -f ~/.ssh/id_ed25519_company
-~/.ssh/id_ed25519_company
-~/.ssh/id_ed25519_company.pub
+<li>Git Filter Repo 설치 
+<div class="highlight"><pre><span></span><code>python -m pip install git-filter-repo
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<hr/>
+<h3 id="rewrite-commit-local">Rewrite Commit Local</h3>
+<p><br/></p>
+<ul>
+<li>Git History 전체확인 
+<div class="highlight"><pre><span></span><code>git log --all --format="%h | %an | %ae"
 </code></pre></div></li>
 </ul>
 <p><br/></p>
 <ul>
-<li>Key B 생성 <br/>
-<div class="highlight"><pre><span></span><code>cd ~/.ssh 
-ssh-keygen -t ed25519 -C "your_personal@email.com" -f ~/.ssh/id_ed25519_personal
-~/.ssh/id_ed25519_personal
-~/.ssh/id_ed25519_personal.pub
-</code></pre></div>
-<br/></li>
+<li>Git Filter Repo 이용     <br/>
+Window에서 매번 PATH 문제가 발생하여, Python기반으로 실행 <br/>
+<div class="highlight"><pre><span></span><code>python -m git_filter_repo --force --email-callback "return email.replace(b'ahyuo79@mail.com', b'ahyuo79@gmail.com')"
+</code></pre></div></li>
 </ul>
-<hr/>
-<h3 id="ssh-config-a">SSH Config A</h3>
-<p><br/></p>
-<p>기본적으로 SSH Config 존재하지 않으며, 2개의 설정할 경우 별도로 생성 <br/>
-<strong>Github Action 동작이 안됨</strong> </p>
-<p><br/></p>
 <div class="admonition tip">
-<p class="admonition-title">.ssh/config</p>
+<p class="admonition-title">Git Local Commit 변경</p>
 <ul>
-<li>2개 이상 설정할 경우에만 필요  </li>
-<li>그전에는 기본적으로 없음   </li>
+<li>ahyuo79@gmail.com으로 변경됨</li>
+</ul>
+</div>
+<p><br/></p>
+<hr/>
+<h3 id="rewrite-commit-remote">Rewrite Commit Remote</h3>
+<p><br/></p>
+<ul>
+<li>Git Remote 확인 
+<div class="highlight"><pre><span></span><code>git remote -v  
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git remote add origin https://github.com/JeonghunLee/vscode_doc.git
+</code></pre></div></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Remote Resetup</p>
+<ul>
+<li>기존의 Remote가 없어짐 </li>
 </ul>
 </div>
 <p><br/></p>
 <ul>
-<li><strong>~/.ssh/config</strong> <br/>
-문제: Github Action 동작이 안됨 
-<div class="highlight"><pre><span></span><code>Host github-personal
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_personal
-
-Host github-company
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_company
+<li>Git Push Remote Force 
+<div class="highlight"><pre><span></span><code>git push --force origin main 
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git push --force --tags origin
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<hr/>
+<h2 id="error-git-filter-repo-in-window">Error Git Filter Repo in Window</h2>
+<p><br/></p>
+<div class="admonition tip">
+<p class="admonition-title">Window 의 PATH</p>
+<ul>
+<li>Window 의 경우, 주로 PATH 문제가 자주 발생함 </li>
+<li>상위와 같이 그냥 Python 기반으로 실행하는 것을 권장함 </li>
+<li>Window 의 git filter repo .exe 를 사용하고 싶다면 아래와 같이 실행  </li>
+</ul>
+</div>
+<p><br/></p>
+<hr/>
+<h3 id="check-window-path">Check Window PATH</h3>
+<p><br/></p>
+<ul>
+<li>git filter repo 설치 확인 
+<div class="highlight"><pre><span></span><code>python -m pip show git-filter-repo
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Name: git-filter-repo
+Version: 2.47.0
+Summary: Quickly rewrite git repository history
+Home-page: https://github.com/newren/git-filter-repo
+Author: 
+Author-email: Elijah Newren &lt;newren@gmail.com&gt;
+License: MIT
+Location: C:\Users\LeeJeongHun\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages
+Requires: 
+Required-by: 
+</code></pre></div></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">git-filter-repo.py/exe</p>
+<ul>
+<li>Location : git-filter-repo.py 확인  </li>
+<li><strong>Scripts : git_filter-repo.exe 확인</strong> <ul>
+<li>C:\Users\LeeJeongHun\AppData\Local\Python\pythoncore-3.14-64\Scripts\git-filter-repo.exe</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><br/></p>
+<ul>
+<li>git-filter-repo 설치 확인 
+<div class="highlight"><pre><span></span><code>python -m site --user-base
+C:\Users\LeeJeongHun\AppData\Roaming\Python
 </code></pre></div></li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">Github Action 동작안됨</p>
+<p class="admonition-title">Window Python PATH</p>
 <ul>
-<li>상위처럼 2개로 완벽히 나누면 안됨 </li>
-<li><strong>Remote는 동작이 되어지나, VS Extesion 이 동작이 안되는 것임</strong> </li>
-</ul>
-</div>
-<p><br/></p>
-<hr/>
-<h3 id="ssh-config-b">SSH Config B</h3>
-<p><br/></p>
-<p>기본적으로 SSH Config 존재하지 않으며, 2개의 설정할 경우 별도로 생성<br/>
-<strong>1개의 SSH 로 사용하는 것은 권장</strong> </p>
-<p><br/></p>
-<ul>
-<li><strong>~/.ssh/config 변경</strong> <br/>
-문제는 없으나, 개인을 HTTPS로 사용하는게 낫을 듯 싶음<br/>
-<div class="highlight"><pre><span></span><code>Host github-personal
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_personal
-
-Host github.com
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_company
-    IdentitiesOnly yes
-</code></pre></div></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Host github.com default 설정</p>
-<ul>
-<li>1개의 Git만 허용하는 듯 하며 default 사용해야함  </li>
-<li>VS Code Extesion 상위 Host github.com으로만 인식하는 듯    </li>
-</ul>
-</div>
-<p><br/></p>
-<ul>
-<li><strong>ssh/config 설정</strong> <br/>
-기본적으로 .ssh/config 가 설정이 안되므로 아래와 같이 강제설정  <br/>
-<strong>git config --local core.sshCommand 설정필요</strong> <br/>
-<div class="highlight"><pre><span></span><code>git config --local core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe -F C:/Users/LeeJeongHun/.ssh/config"
-</code></pre></div></li>
-</ul>
-<p><br/></p>
-<ul>
-<li><strong>VSCode - Remote Exploer</strong> <br/>
-SSH 설정 과 Remote 쉽게 확인가능<br/>
-<img alt="" src="imgs/vscode_remote_00.png"/> </li>
-</ul>
-<p><br/></p>
-<hr/>
-<h3 id="ssh-test-git">SSH TEST GIT</h3>
-<p><br/></p>
-<ul>
-<li>SSH GIT TEST 
-<div class="highlight"><pre><span></span><code>ssh -T git@github.com
-Hi JeonghunLee! You've successfully authenticated, but GitHub does not provide shell access.
-</code></pre></div>
-<br/></li>
-</ul>
-<hr/>
-<h3 id="ssh-debug-git">SSH DEBUG GIT</h3>
-<p><br/></p>
-<ul>
-<li>GIT의 SSH 사용 DEBUG 
-아래의 실행 Command를 일일히 다 Debug로 표시  <br/>
-<div class="highlight"><pre><span></span><code>$env:GIT_TRACE = "1"
-$env:GIT_SSH_COMMAND = "ssh -vvv"
-git ls-remote git@github.com:Jeonghun-DYNE/Mono-Distortion-Vector-Depth.git
-</code></pre></div></li>
-</ul>
-<p><br/></p>
-<ul>
-<li>SSH 설정 
-<div class="highlight"><pre><span></span><code>git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
-</code></pre></div></li>
-</ul>
-<p><br/></p>
-<div class="admonition tip">
-<p class="admonition-title">git clone</p>
-<ul>
-<li>GIT SSH TEST 는 잘되지만, Git clone이 안되는 경우가 간혹 발생 </li>
-<li>이유: C:/SPB 에 별도의 SSH가 생겨서 발생 <ul>
-<li>Window 의 기본 C:\Windows\System32\OpenSSH\ssh.exe</li>
-<li>상위 별도 생성되어 문제 발생  </li>
+<li>Location 의 PATH 문제발생 <ul>
+<li>Appdata\Local\Python\pythoncore-3.14-64\Scripts\git-filter-repo.exe</li>
+<li>Appdata\Roaming\Python : PATH가 미존재 </li>
 </ul>
 </li>
 </ul>
 </div>
 <p><br/></p>
-<ul>
-<li>Cadence 의 Orcad 설치할 경우<br/>
-<img alt="" src="imgs/github_setting_ssh_01.png"/></li>
-</ul>
-<p><br/></p>
 <hr/>
-<h2 id="setup-https">Setup HTTPS</h2>
+<h3 id="setup-window-path">Setup Window PATH</h3>
 <p><br/></p>
 <ul>
-<li>HTTPS 기본구조 
-<div class="highlight"><pre><span></span><code>Git → Git Credential Manager → OAuth 토큰 → GitHub
+<li>PowerShell PATH 확인 
+<div class="highlight"><pre><span></span><code>$env:Path -split ';'
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>c:\Users\LeeJeongHun\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand
+c:\Users\LeeJeongHun\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli
+C:\Windows\system32
+C:\Windows
+C:\Windows\System32\Wbem
+C:\Windows\System32\WindowsPowerShell\v1.0\
+C:\Windows\System32\OpenSSH\
+C:\Program Files\dotnet\
+C:\Program Files\Git\cmd
+C:\Program Files\nodejs\
+C:\Program Files\NVIDIA Corporation\SDK Manager
+C:\Program Files\Bandizip\
+C:\Program Files\usbipd-win\
+C:\Users\LeeJeongHun\AppData\Local\Microsoft\WindowsApps
+C:\Users\LeeJeongHun\AppData\Local\Programs\Microsoft VS Code\bin
+C:\Users\LeeJeongHun\AppData\Local\GitHubDesktop\bin
+C:\Users\LeeJeongHun\AppData\Local\Python\bin
+C:\Users\LeeJeongHun\AppData\Roaming\npm
+
+C:\Users\LeeJeongHun\AppData\Local\Programs\Ollama
+C:\Users\LeeJeongHun\AppData\Local\Microsoft\WinGet\Links
+C:\Users\LeeJeongHun\AppData\Local\Microsoft\WinGet\Packages\JohnMacFarlane.Pandoc_Microsoft.Winget.Source_8wekyb3d8bbwe\pandoc-3.10
+
+c:\Users\LeeJeongHun\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\scripts\noConfigScripts
 </code></pre></div></li>
 </ul>
-<p><br/></p>
 <div class="admonition tip">
-<p class="admonition-title">Browser 인증</p>
+<p class="admonition-title">Window PS PATH</p>
 <ul>
-<li>Git Credential Manager 의 경우, Browser로 인증     </li>
+<li>Check PS PATH 확인 </li>
 </ul>
 </div>
-<p><a href="vscode_github.html#default-browser">Browser 기본앱 변경</a> </p>
 <p><br/></p>
-<hr/>
-<h3 id="gcm">GCM</h3>
-<p><br/></p>
-<p>GCM: Git Credential Manager </p>
 <ul>
-<li><strong>GCM Log Out</strong> <br/>
-계정이 다를 경우, 다시 Brwser 기반으로 다시 인증 
-<div class="highlight"><pre><span></span><code>git credential-manager github logout "JeonghunLee"
+<li>Window PS PATH 추가 
+아래와 같이 강제로 추가 
+<div class="highlight"><pre><span></span><code>$Scripts = python -c "import sysconfig; print(sysconfig.get_path('scripts'))"
+$env:Path += ";$Scripts"
+</code></pre></div></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Window PS PATH 해당 Terminal에서 일시적 설정</p>
+<ul>
+<li>Window 경우, Python PATH가 자주 문제가 되어짐 </li>
+<li>Linux 처럼 단순하게 설치가 안되어지며, 상위 명령어는 <strong>Terminal에서 일시적 설정</strong> </li>
+</ul>
+</div>
+<p><br/></p>
+<ul>
+<li>PowerShell PATH 재확인 
+<div class="highlight"><pre><span></span><code>$env:Path -split ';'
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>....
+C:\Users\LeeJeongHun\AppData\Local\Python\pythoncore-3.14-64\Scripts
 </code></pre></div></li>
 </ul>
 <p><br/></p>
+<ul>
+<li>Powershell Command 
+<div class="highlight"><pre><span></span><code>where.exe git-filter-repo
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<hr/>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
@@ -1014,7 +766,7 @@ git ls-remote git@github.com:Jeonghun-DYNE/Mono-Distortion-Vector-Depth.git
 </main>
 <footer class="md-footer">
 <nav aria-label="하단/푸터" class="md-footer__inner md-grid">
-<a aria-label="이전: Github" class="md-footer__link md-footer__link--prev" href="vscode_github.html">
+<a aria-label="이전: Check GIT" class="md-footer__link md-footer__link--prev" href="git_setup_project.html">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -1023,17 +775,17 @@ git ls-remote git@github.com:Jeonghun-DYNE/Mono-Distortion-Vector-Depth.git
                 이전
               </span>
 <div class="md-ellipsis">
-                Github
+                Check GIT
               </div>
 </div>
 </a>
-<a aria-label="다음: Check GIT" class="md-footer__link md-footer__link--next" href="git_setup_project.html">
+<a aria-label="다음: Mermaid" class="md-footer__link md-footer__link--next" href="node_mermaid.html">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 다음
               </span>
 <div class="md-ellipsis">
-                Check GIT
+                Mermaid
               </div>
 </div>
 <div class="md-footer__button md-icon">
