@@ -101,7 +101,7 @@ git remote add origin https://github.com/JeonghunLee/vscode_doc.git
 * Git Push Remote Force 
 현재 바꾸고 싶은 Branch를 정확히 알고해야함 
 ```
-git push --force origin main 
+git push --force origin main // main , master , develop 등
 ```
 ```
 git push --force --tags origin
