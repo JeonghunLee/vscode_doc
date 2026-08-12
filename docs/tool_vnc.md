@@ -140,7 +140,12 @@ sudo ls -l /root/.vnc/passwd
 <br/>
 
 
+
+
 * X11 Systemd 등록 
+```
+sudo cat /etc/systemd/system/x11vnc.service
+```
 ```
 sudo nano /etc/systemd/system/x11vnc.service
 ```
