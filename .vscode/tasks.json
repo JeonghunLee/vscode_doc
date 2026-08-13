@@ -9,7 +9,7 @@
                 "-ExecutionPolicy",
                 "RemoteSigned",
                 "-Command",
-                "& { .\\.venv\\Scripts\\Activate.ps1; mkdocs serve }"
+                "& { .\\.venv\\Scripts\\Activate.ps1; mkdocs serve -a 127.0.0.1:8080 }"
             ],
         },
         {
