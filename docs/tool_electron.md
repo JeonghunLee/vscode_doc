@@ -1,6 +1,23 @@
 # Node.js
 
 
+## Electron Mkdocs 
+
+<br/>
+
+* 순서 
+    * STEP.1 Mkdocs Build 
+    * STEP.2 Mkdocs 의 site 내부 HTML 생성확인  
+    * STEP.3 HTML을 Node.js 의 Electron 이용하여 실행파일 변환 
+
+<br/>
+
+* 필요파일  
+    * electron_package.ps1
+    * package.json
+
+<br/>
+
 ## Electron Fiddle
 
 <br/>
