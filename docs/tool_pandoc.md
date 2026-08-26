@@ -167,6 +167,22 @@ Reference 파일을 한번에 완성하기는 힘들면, 아래와 같이 반복
 
 <br/>
 
+### Modify TOC 
+
+<br/>
+
+* **목차-> 사용자지정목차**   
+    * 우측 목차1 ~ 8 의 크기 및 폰트 수정   
+    * 수준표시 와 표시방법 
+![](./imgs/pandoc_docx_08.png)  
+
+* **TOC 제목**   
+Table of Contents 수정 
+
+![](./imgs/pandoc_docx_09.png)  
+
+<br/>
+
 ## Check DOCX/PPTX
 
 <br/>
