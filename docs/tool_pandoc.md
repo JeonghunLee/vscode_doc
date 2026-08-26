@@ -7,9 +7,12 @@ Mkdocs 중 문서 중 Markdown으로 된 문서를 쉽게 DOCX / PPTX 혹은 다
 
 [https://pandoc.org/](https://pandoc.org/) 
 
-!!! warning "Mermain/PlatUML" 
-    - Markdown을 쉽게 변경을 가능하지만, Mermaid 나 UML 미지원  
-    - Pandoc를 이용하여 문서를 만들고자 하면 각 Mermaid 나 UML는 우선 SVG or PNG 그림파일로 변경  
+
+> NOTE
+> 
+> Markdown을 쉽게 변경을 가능하지만, Mermaid 나 UML 미지원  
+> Pandoc를 이용하여 문서를 만들고자 하면 각 Mermaid 나 UML는 우선 SVG or PNG 그림파일로 변경  
+>
 
 <br/>
 
@@ -47,7 +50,8 @@ pandoc --version
 
 <br/>
 
-아래와 같이 Reference docx 와 pptx 파일을 생성하여 이를 수정하는 방식으로 가능하다. 
+
+Reference docx 와 pptx 파일생성 방법이지만, **솔직히 Reference 파일은 필요 없을 듯하다.**   
 
 <br/>
 
@@ -61,9 +65,11 @@ pandoc -o reference.pptx --print-default-data-file reference.pptx
 
 <br/>
 
-!!! tip "Reference File"
-    - 상위 파일을 만든 후, 각 폰트를 변경하고 본인 스타일로 수정   
-    - docx 와 pptx 가능한 이유는 XML기반  
+* Reference File
+    * 상위 파일을 만든 후, 각 폰트를 변경하고 본인 스타일로 수정
+    * docx 와 pptx 가능한 이유는 XML기반
+
+<br/>
 
 ![](./imgs/tool_pandoc_docx_00.png)
 ![](./imgs/tool_pandoc_ppt_00.png)
@@ -77,10 +83,82 @@ pandoc -o reference.pptx --print-default-data-file reference.pptx
 
 <br/>
 
-Reference 파일을 한번에 완성하기는 힘들며, 
+Reference 파일을 한번에 완성하기는 힘들면, 아래와 같이 반복 진행하며, 상위처럼 Reference 파일 만들기 보다       
+**기존에 본인이 사용하는 것을 Reference 파일을 이용하는 게 더 빠름**   
 
 <br/>
 
+가능하다면, 기존파일을 아무거나 사용하고 싶은 것을 가져와서 Reference하는 게 더 좋음 
+
+<br/>
+
+
+* STEP.1 : Convert to DOCX 파일 생성 (reference 이용)
+* STEP.2 : 상위 Output의 tool_pandoc.docx 파일을 수정  
+    * Ctrl+Alt+Shift+S : 스타일 수정 나옴 (각 스타일 서식구조를 변경)   
+    * 각 원하는 서식에서 우측버튼 -> 스타일 -> 원하는 스타일 선택 -> 스타일 적용 
+
+<br/>
+
+### Modify Style 
+
+<br/>
+
+**Pandoc에서 사용하는 스타일 서식을 본인 스타일의 서식으로 변경**   
+
+<br/>
+
+* docx 파일 스타일 수정    
+    * 스타일에서 각 pandoc의 **스타일 이름** 찾기  
+        * e.g. 제목2, 제목3, Compact, Source Code, Table  
+
+![](./imgs/pandoc_docx_00.png)
+![](./imgs/pandoc_docx_03.png) 
+
+* TOC 제목 스타일 수정 
+![](./imgs/pandoc_docx_01.png)
+
+* **Source Code 스타일 수정** 
+    * 스타일 이름: Source Code   
+![](./imgs/pandoc_docx_02.png)
+
+
+<br/>
+
+### Modify Matrix 
+
+<br/>
+
+* **테이블디자인 -> 표스타일**  
+![](./imgs/pandoc_docx_04.png)  
+![](./imgs/pandoc_docx_05.png)  
+
+<br/>
+
+아래에서 최종 표스타일 수정 
+
+* **스타일 수정-Table-표전체**   
+    * **스타일이름: Table** : 이 이름을 찾아서 매번 스타일 서식을 변경하는 것이 목적     
+    * **스타일기준**: 외부에 이미 설정된 스타일을 가져오는 것으로 수정중이라면 변경하지 않는 것이 좋음  
+![](./imgs/pandoc_docx_06.png)  
+
+
+* **스타일 수정-Table-머리글행**    
+![](./imgs/pandoc_docx_07.png)  
+
+
+<br/>
+<br/>
+
+| TEST |  TEST |  TEST | 
+| ---  | ----- |  ----| 
+| TEST |  TEST |  TEST | 
+| TEST |  TEST |  TEST | 
+| TEST |  TEST |  TEST | 
+| TEST |  TEST |  TEST | 
+
+
+<br/>
 
 ## Check DOCX/PPTX
 
@@ -88,12 +166,15 @@ Reference 파일을 한번에 완성하기는 힘들며,
 
 * **DOCX/PPTX 의 구성**  
 zip으로 되어있으며, 이를 풀면 XML 기반으로 쉽게 확인가능   
+
 ```
 tar -tf .\reference.docx | Select-Object -First 10
 ```
+
 ```
 tar -tf .\reference.docx 
 ```
+
 ```
 [Content_Types].xml
 _rels/.rels
@@ -148,6 +229,8 @@ pandoc .\docs\index.md `
   -o .\output\index.pptx
 ```
 
+<br/>
+
 * Convert markdown to pptx   
 Reference 이용    
 ```
@@ -157,11 +240,18 @@ pandoc .\docs\index.md `
   --resource-path=".;.\docs" `
   -o .\output\index.pptx
 ```
+
+
 <br/>
 
----
+
+
+
+
 
 ### Convert to DOCX
+
+<br/>
 
 * Convert markdown to docx 
 ```
@@ -176,11 +266,27 @@ pandoc `
 
 <br/>
 
+* Convert markdown to docx 
+```
+pandoc `
+  .\docs\tool_pandoc.md `
+  --toc `
+  --number-sections `
+  --reference-doc=.\docx\tool_pandoc.docx `
+  --resource-path=".;.\docs" `
+  -o .\output\tool_pandoc.docx
+```
+
+<br/>
+
+
 ## Mermaid Build 
 
 <br/>
 
 Node.js가 설치되어있다면, npx가 존재  
+
+[Go to Node.js](./node_mermaid.md#mermaid-build)
 
 <br/>
 
@@ -204,18 +310,21 @@ npx --help
 
 
 * Convert Markdown(mmd) to svg
+
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
   -i .\docx\mmd\test.md `
   -o .\docx\imgs\test.svg `
   -b transparent
 ```
+
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
   -i .\docx\mmd\test_general.md `
   -o .\docx\imgs\test_general.svg `
   -b transparent
 ```
+
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
   -i .\docx\mmd\test_handdrawn.md `

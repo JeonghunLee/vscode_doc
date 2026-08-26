@@ -53,7 +53,7 @@
                 ".\\docs\\tool_pandoc.md",
                 "--toc",
                 "--number-sections",
-                "--reference-doc=.\\docx\\reference.docx",
+                "--reference-doc=.\\docx\\tool_pandoc.docx",
                 "--resource-path=.\\docs",
                 "-o",``
                 ".\\output\\tool_pandoc.docx"
