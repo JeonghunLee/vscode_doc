@@ -46,6 +46,86 @@
             ],
         },
         {
+            "label": "Pandoc: Tool Pandoc",
+            "type": "shell",
+            "command": "pandoc",
+            "args": [
+                ".\\docs\\tool_pandoc.md",
+                "--toc",
+                "--number-sections",
+                "--reference-doc=.\\docx\\reference.docx",
+                "--resource-path=.\\docs",
+                "-o",``
+                ".\\output\\tool_pandoc.docx"
+            ]
+        },     
+        {
+            "label": "Mermaid: Convert test.md to SVG",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "-p",
+                "@mermaid-js/mermaid-cli",
+                "mmdc",
+                "-i",
+                ".\\docx\\mmd\\test.md",
+                "-o",
+                ".\\docx\\imgs\\test.svg",
+                "-b",
+                "transparent"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },            
+        {
+            "label": "Mermaid: Convert test_handdrawn.md to SVG",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "-p",
+                "@mermaid-js/mermaid-cli",
+                "mmdc",
+                "-i",
+                ".\\docx\\mmd\\test_handdrawn.md",
+                "-o",
+                ".\\docx\\imgs\\test_handdrawn.svg",
+                "-b",
+                "transparent"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },   
+        {
+            "label": "Mermaid: Convert test_general.md to SVG",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "-p",
+                "@mermaid-js/mermaid-cli",
+                "mmdc",
+                "-i",
+                ".\\docx\\mmd\\test_general.md",
+                "-o",
+                ".\\docx\\imgs\\test_general.svg",
+                "-b",
+                "transparent"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },                   
+        {
             "label": "Package Electron",
             "type": "shell",
             "command": "powershell",

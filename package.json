@@ -12,7 +12,7 @@
     "electron-builder": ">=26.0.0"
   },
   "build": {
-    "appId": "com.jeonghun.infojetson",
+    "appId": "com.jeonghun.vscode_doc",
     "productName": "vscode docs viewer",
     "directories": {
       "output": "dist"

@@ -23,7 +23,7 @@ nav:
     - Electron: tool_electron.md    
   - Tools:
     - Tabby: tool_tabby.md
-    - pandoc: tool_pandoc.md
+    - Pandoc: tool_pandoc.md
     - VNC: tool_vnc.md
     - WSL: tool_wsl.md
     - MSTeams: tool_msteams.md
