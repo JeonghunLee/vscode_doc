@@ -5,7 +5,9 @@
 
 <br/>
 
+* Check Node.js   
 Node.js가 설치되어있다면, npx가 존재  
+Node.js가 없다면 설치진행 
 
 <br/>
 
@@ -66,7 +68,8 @@ npx -p @mermaid-js/mermaid-cli mmdc `
   -o .\docx\imgs\test.svg `
   -b transparent
 ```
-
+Sample Mermaid   
+docx/mmd/test.md
 ![](./imgs_mermaid/test.svg) 
 
 <br/>
@@ -91,6 +94,8 @@ npx -p @mermaid-js/mermaid-cli mmdc `
   -o .\docx\imgs\test_general.svg `
   -b transparent
 ```
+Sample Mermaid   
+docx/mmd/test_general.md
 ![](./imgs_mermaid/test_general.svg) 
 
 <br/>
@@ -103,6 +108,9 @@ npx -p @mermaid-js/mermaid-cli mmdc `
   -o .\docx\imgs\test_handdrawn.svg `
   -b transparent
 ```
+
+Sample Mermaid   
+docx/mmd/test_handdrawn.md
 ![](./imgs_mermaid/test_handdrawn.svg) 
 
 

@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "VENV mkdoc serve Local",
+            "label": "VENV Mkdoc: Serve Local",
             "type": "shell",
             "command": "powershell",
             "args": [
@@ -13,7 +13,7 @@
             ],
         },
         {
-            "label": "VENV mkdoc serve Remote",
+            "label": "VENV Mkdoc: Serve Remote",
             "type": "shell",
             "command": "powershell",
             "args": [
@@ -24,7 +24,7 @@
             ],
         },
         {
-            "label": "VENV mkdoc build",
+            "label": "VENV Mkdoc: Build",
             "type": "shell",
             "command": "powershell",
             "args": [
@@ -35,7 +35,7 @@
             ],
         },       
         {
-            "label": "VENV mkdoc build strict",
+            "label": "VENV Mkdoc: Build strict",
             "type": "shell",
             "command": "powershell",
             "args": [
