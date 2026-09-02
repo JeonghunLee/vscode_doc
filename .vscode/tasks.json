@@ -126,7 +126,7 @@
             }
         },                   
         {
-            "label": "Package Electron",
+            "label": "Package : Mkdocs to Electron",
             "type": "shell",
             "command": "powershell",
             "args": [
