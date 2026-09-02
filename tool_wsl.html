@@ -7,11 +7,11 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="VS Code Manual" name="description"/>
 <meta content="Jeonghun Lee" name="author"/>
-<link href="git_setup_default.html" rel="prev"/>
-<link href="git_rewrite.html" rel="next"/>
+<link href="tool_vnc.html" rel="prev"/>
+<link href="tool_msteams.html" rel="next"/>
 <link href="imgs/logo.jpg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>Check GIT - VS Code Manaul</title>
+<title>WSL - VS Code Manaul</title>
 <link href="assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link href="assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/iframe-worker/shim"></script>
@@ -29,7 +29,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#check-git">
+<a class="md-skip" href="#wsl">
           콘텐츠로 이동
         </a>
 </div>
@@ -53,7 +53,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Check GIT
+              WSL
             
           </span>
 </div>
@@ -203,8 +203,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -216,7 +216,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
             
@@ -238,20 +238,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    
-  
-    Check GIT
-  
-
-    
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="git_setup_project.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="git_setup_project.html">
 <span class="md-ellipsis">
     
   
@@ -261,103 +249,6 @@
     
   </span>
 </a>
-<nav aria-label="목차" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      목차
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#check-git-local">
-<span class="md-ellipsis">
-      
-        Check GIT Local
-      
-    </span>
-</a>
-<nav aria-label="Check GIT Local" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#check-git-user">
-<span class="md-ellipsis">
-      
-        Check Git User
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#check-git-history">
-<span class="md-ellipsis">
-      
-        Check Git History
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#check-git-remote">
-<span class="md-ellipsis">
-      
-        Check GIT Remote
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#resetup-git">
-<span class="md-ellipsis">
-      
-        ReSetup GIT
-      
-    </span>
-</a>
-<nav aria-label="ReSetup GIT" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-user-local">
-<span class="md-ellipsis">
-      
-        Setup User Local
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-user-global">
-<span class="md-ellipsis">
-      
-        Setup User Global
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-remote-ssh">
-<span class="md-ellipsis">
-      
-        Setup Remote SSH
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-remote-https">
-<span class="md-ellipsis">
-      
-        Setup Remote HTTPS
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="git_rewrite.html">
@@ -424,8 +315,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-ellipsis">
     
@@ -437,7 +328,7 @@
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             
@@ -483,8 +374,20 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="tool_wsl.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    WSL
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="tool_wsl.html">
 <span class="md-ellipsis">
     
   
@@ -494,6 +397,85 @@
     
   </span>
 </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wsl">
+<span class="md-ellipsis">
+      
+        WSL
+      
+    </span>
+</a>
+<nav aria-label="WSL" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-wsl">
+<span class="md-ellipsis">
+      
+        Check WSL
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wsl-ubuntu">
+<span class="md-ellipsis">
+      
+        WSL Ubuntu
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-ubuntu-in-wsl">
+<span class="md-ellipsis">
+      
+        Check Ubuntu in WSL
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wsl-and-usb">
+<span class="md-ellipsis">
+      
+        WSL and USB
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wsl-settings">
+<span class="md-ellipsis">
+      
+        WSL Settings
+      
+    </span>
+</a>
+<nav aria-label="WSL Settings" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wsl-and-network">
+<span class="md-ellipsis">
+      
+        WSL and Network
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="tool_msteams.html">
@@ -525,29 +507,38 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-git-local">
+<a class="md-nav__link" href="#wsl">
 <span class="md-ellipsis">
       
-        Check GIT Local
+        WSL
       
     </span>
 </a>
-<nav aria-label="Check GIT Local" class="md-nav">
+<nav aria-label="WSL" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-git-user">
+<a class="md-nav__link" href="#check-wsl">
 <span class="md-ellipsis">
       
-        Check Git User
+        Check WSL
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-git-history">
+<a class="md-nav__link" href="#wsl-ubuntu">
 <span class="md-ellipsis">
       
-        Check Git History
+        WSL Ubuntu
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-ubuntu-in-wsl">
+<span class="md-ellipsis">
+      
+        Check Ubuntu in WSL
       
     </span>
 </a>
@@ -556,56 +547,29 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-git-remote">
+<a class="md-nav__link" href="#wsl-and-usb">
 <span class="md-ellipsis">
       
-        Check GIT Remote
+        WSL and USB
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#resetup-git">
+<a class="md-nav__link" href="#wsl-settings">
 <span class="md-ellipsis">
       
-        ReSetup GIT
+        WSL Settings
       
     </span>
 </a>
-<nav aria-label="ReSetup GIT" class="md-nav">
+<nav aria-label="WSL Settings" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup-user-local">
+<a class="md-nav__link" href="#wsl-and-network">
 <span class="md-ellipsis">
       
-        Setup User Local
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-user-global">
-<span class="md-ellipsis">
-      
-        Setup User Global
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-remote-ssh">
-<span class="md-ellipsis">
-      
-        Setup Remote SSH
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setup-remote-https">
-<span class="md-ellipsis">
-      
-        Setup Remote HTTPS
+        WSL and Network
       
     </span>
 </a>
@@ -620,356 +584,152 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="check-git">Check GIT</h1>
-<ul>
-<li>아래는 VS Code의 연관성 보다는 Git 순수설정 <ul>
-<li>Github 사용한다면 주로 Github 기본 인증만 해당  </li>
-<li>HTTPS/SSH 인증 만 해당  </li>
-<li><strong>모든 Project/Respostory는 반드시 각 설정을 확인</strong> </li>
-</ul>
-</li>
-</ul>
-<div class="admonition success">
-<p class="admonition-title">VSCode Source Control</p>
-<ul>
-<li>Git 설정은 오직 <a href="vscode_github.html#vscode-souce-control">VSCode Source Control</a> 만 연관  </li>
-<li><strong><a href="vscode_github.html#vscode-github-account">VS Code Extesion Github</a> 다른 부분과는 연관이 없음</strong> </li>
-</ul>
-</div>
+<h1>WSL</h1>
+<h2 id="wsl">WSL</h2>
 <p><br/></p>
 <ul>
-<li>Check Git 우선순위<ul>
-<li><a href="git_setup_project.html#check-git-remote">Check GIT Remote</a> : Git Remote Repository 확인 </li>
-<li><a href="git_setup_project.html#check-git-local">Check GIT Local</a> : Git Local 설정 확인 (User 확인)</li>
-</ul>
-</li>
-</ul>
-<p><br/></p>
-<hr/>
-<h2 id="check-git-local">Check GIT Local</h2>
-<p><br/></p>
-<div class="admonition tip">
-<p class="admonition-title">Project/Respostory 반드시 확인</p>
-<ul>
-<li>기본적인 모든 정보를 볼 수 있어 편하며, Remote 연결도 확인 가능 </li>
-<li><a href="vscode_github.html#check-github-account">VS Code 의 Github 인증</a> 별도 </li>
-<li>Git 의 순수 설정만 확인하며, VS Code의 Github 의 여러 인증과 무관   <ul>
-<li>Github Repostiory / Github 만 해당될 듯  </li>
-</ul>
-</li>
-</ul>
-</div>
-<ul>
-<li><strong>Check SSH</strong> <br/>
-<div class="highlight"><pre><span></span><code>git config --local --list
-</code></pre></div>
-e.g. check <strong>remote.origin</strong> SSH<br/>
-<div class="highlight"><pre><span></span><code>core.repositoryformatversion=0
-core.filemode=false
-core.bare=false
-core.logallrefupdates=true
-core.symlinks=false
-core.ignorecase=true
-remote.origin.url=git@github.com:JeonghunLee/vscode_doc.git
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.main.remote=origin
-branch.main.vscode-merge-base=origin/main
-branch.main.merge=refs/heads/main
-</code></pre></div></li>
-</ul>
-<p><br/></p>
-<ul>
-<li><strong>Check HTTPS</strong> <br/>
-<div class="highlight"><pre><span></span><code>git config --local --list
-</code></pre></div>
-e.g. check <strong>remote.origin</strong>  HTTPS 
-<div class="highlight"><pre><span></span><code>core.repositoryformatversion=0
-core.filemode=false
-core.bare=false
-core.logallrefupdates=true
-core.symlinks=false
-core.ignorecase=true
-remote.origin.url=https://github.com/JeonghunLee/vscode_doc
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.main.remote=origin
-branch.main.merge=refs/heads/main
-branch.main.vscode-merge-base=origin/main
-user.name=JeonghunLee
-user.email=xxxx
+<li><strong>WSL 명령어 확인</strong> <br/>
+<div class="highlight"><pre><span></span><code>wsl --help
 </code></pre></div></li>
 </ul>
 <p><br/></p>
 <hr/>
-<h3 id="check-git-user">Check Git User</h3>
-<p><br/></p>
+<h3 id="check-wsl">Check WSL</h3>
 <ul>
-<li>Local User 정보 확인  </li>
-</ul>
-<div class="highlight"><pre><span></span><code>git config --show-origin --get user.name
+<li><strong>WSL 의 배포(distro) 와 버전 확인</strong> <br/>
+<div class="highlight"><pre><span></span><code>wsl -l -v
 </code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">user.name</p>
-<ul>
-<li>file : .git/config  의 경우 local </li>
-<li>user.name : 상위 File 위치에 따라 Local </li>
+<div class="highlight"><pre><span></span><code>C:\Users\LeeJeongHun&gt;wsl -l -v
+  NAME                                    STATE           VERSION
+* Ubuntu                                  Running         2
+  Ubuntu_22.04                            Stopped         2
+</code></pre></div></li>
 </ul>
-</div>
-<div class="highlight"><pre><span></span><code>git config --show-origin --get user.email
-</code></pre></div>
 <div class="admonition tip">
-<p class="admonition-title">user.email</p>
+<p class="admonition-title">WSL</p>
 <ul>
-<li>file : .git/config  의 경우 local </li>
-<li>user.email : 상위 File 위치에 따라 Local </li>
+<li>WSL은 여러개를 설치가 가능하며, default가 맨 위에 있음 </li>
+<li>default도 별도로 설정 가능  </li>
 </ul>
 </div>
 <p><br/></p>
 <hr/>
-<h3 id="check-git-history">Check Git History</h3>
+<h3 id="wsl-ubuntu">WSL Ubuntu</h3>
 <p><br/></p>
 <ul>
-<li>Local Git History 확인  <ul>
-<li>Hash / user.name / user.email 
-<div class="highlight"><pre><span></span><code>git log --format="%h | %an | %ae" -20
+<li>WSL 실행          <br/>
+WSL defualt 실행 과 특정 distro 로 선택 실행 <br/>
+<div class="highlight"><pre><span></span><code>wsl 
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>wsl -d Ubuntu_22.04
 </code></pre></div></li>
 </ul>
-</li>
-</ul>
 <div class="admonition tip">
-<p class="admonition-title">Hash/Username/Email</p>
+<p class="admonition-title">WSL Distro</p>
 <ul>
-<li>Hash : Commit ID </li>
-<li>user.name : Author Name</li>
-<li>user.email  : Author Email</li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">user.name/user.email</p>
-<ul>
-<li>2개다 반드시 정확히 설정해야 함 </li>
+<li>WSL을 실행한 후 exit 하면 종료가 되며, 선택적으로 상위 처럼 -d를 이용하여 실행가능 </li>
+<li>기본은 default 실행   </li>
 </ul>
 </div>
 <p><br/></p>
 <hr/>
-<h2 id="check-git-remote">Check GIT Remote</h2>
+<h3 id="check-ubuntu-in-wsl">Check Ubuntu in WSL</h3>
 <p><br/></p>
-<div class="admonition tip">
-<p class="admonition-title">Project/Respostory 반드시 확인</p>
+<p>WSL 실행 후 각 상태를 확인 </p>
+<p><br/></p>
 <ul>
-<li>Remote 간단히 확인</li>
-<li><a href="vscode_github.html#check-github-account">VS Code 의 Github 인증</a> <ul>
-<li>Github Repostiory / Github 만 해당    </li>
-</ul>
-</li>
-</ul>
-</div>
-<p>기본적으로 Remote를 항상 확인  </p>
-<ul>
-<li><strong>Remote HTTPS 설정 확인</strong><br/>
-<div class="highlight"><pre><span></span><code>git remote -v       
-</code></pre></div>
-e.g. <a href="https://github.com/username/repo">https://github.com/username/repo</a>
-<div class="highlight"><pre><span></span><code>origin  https://github.com/JeonghunLee/vscode_doc (fetch)
-origin  https://github.com/JeonghunLee/vscode_doc (push)
+<li>Host WSL 확인<br/>
+<div class="highlight"><pre><span></span><code>leejeonghun@Laptop-JHLee:~$ cat /etc/wsl-distribution.conf
+[oobe]
+command = /usr/lib/wsl/wsl-setup
+defaultUid = 1000
+defaultName = Ubuntu-26.04
+
+[shortcut]
+icon = /usr/share/wsl/ubuntu.ico
+
+[windowsterminal]
+ProfileTemplate = /usr/share/wsl/terminal-profile.json
 </code></pre></div></li>
 </ul>
 <p><br/></p>
-<ul>
-<li><strong>Remote SSH 설정 확인</strong><br/>
-<div class="highlight"><pre><span></span><code>git remote -v                                               
-</code></pre></div>
-e.g. <a href="mailto:git@github.com">git@github.com</a>:/username/repo.git      <strong>(host:github.com)</strong> <br/>
-<div class="highlight"><pre><span></span><code>origin  git@github.com:JeonghunLee/vscode_doc.git (fetch)
-origin  git@github.com:JeonghunLee/vscode_doc.git (push)
-</code></pre></div></li>
-</ul>
+<hr/>
+<h2 id="wsl-and-usb">WSL and USB</h2>
+<p><br/></p>
 <div class="admonition note">
-<p class="admonition-title">Check Remote</p>
+<p class="admonition-title">WSL and USB</p>
 <ul>
-<li>orgin : remote repo <ul>
-<li><a href="https://github.com/username/repo">https://github.com/username/repo</a>  : <strong>HTTPS</strong> </li>
-<li><a href="mailto:git@github.com">git@github.com</a>:username/repo.git  : <strong>SSH HOST</strong> </li>
-</ul>
-</li>
-</ul>
-</div>
-<p><br/></p>
-<hr/>
-<h2 id="resetup-git">ReSetup GIT</h2>
-<p><br/> </p>
-<ul>
-<li><strong>Check User/Remote</strong> <ul>
-<li>user정보가 없음 global 사용      </li>
-<li>즉 local로 별도 지정하지 않으면,  local -&gt; global -&gt; system 
-<div class="highlight"><pre><span></span><code>git config --local --list
-</code></pre></div>
-e.g. check local(local) user 정보가 없으므로, <strong>global로 사용</strong> 하며, <strong>remote ssh</strong> 로 사용    <br/>
-<div class="highlight"><pre><span></span><code>core.repositoryformatversion=0
-core.filemode=false
-core.bare=false
-core.logallrefupdates=true
-core.symlinks=false
-core.ignorecase=true
-remote.origin.url=git@github.com:JeonghunLee/vscode_doc.git
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.main.remote=origin
-branch.main.vscode-merge-base=origin/main
-branch.main.merge=refs/heads/main
-</code></pre></div></li>
-</ul>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">User Local</p>
-<ul>
-<li><strong>user.name</strong> : 사용자 이름     </li>
-<li><strong>user.email</strong> : 사용자 이메일 </li>
-<li>우선순위 local -&gt; global -&gt; system(보통 외부, 기업 시스템) </li>
-</ul>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">User Global</p>
-<ul>
-<li>상위처럼 user.name 없다면 기본설정 <strong>~/.gitconfig 사용(global)</strong> </li>
-<li>cat ~/.gitconfig (user 확인)  </li>
+<li>WSL은 항상 Window의 Host의 모든 것이 자동으로 많이 되지만, 항상 연결되지 않으므로,      </li>
+<li>각 USB 부터 Network 까지 전부 다 신경써서 연결을 해주고 진행을 해야 한다.  </li>
 </ul>
 </div>
 <p><br/></p>
 <ul>
-<li><strong>Check User/Remote</strong> <br/>
-<div class="highlight"><pre><span></span><code>git config --local --list
+<li>Host USB 확인<br/>
+<div class="highlight"><pre><span></span><code> usbipd.exe list
 </code></pre></div>
-e.g. check <strong>local user</strong> 정보, <strong>remote https</strong> 로 사용<br/>
-<div class="highlight"><pre><span></span><code>core.repositoryformatversion=0
-core.filemode=false
-core.bare=false
-core.logallrefupdates=true
-core.symlinks=false
-core.ignorecase=true
-remote.origin.url=https://github.com/JeonghunLee/vscode_doc
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.main.remote=origin
-branch.main.merge=refs/heads/main
-branch.main.vscode-merge-base=origin/main
-user.name=JeonghunLee
-user.email=xxxx
-</code></pre></div></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">User Local</p>
-<ul>
-<li><strong>user.name</strong> : 사용자 이름     </li>
-<li><strong>user.email</strong> : 사용자 이메일 </li>
-<li><strong>이 프로젝트만 한정적으로 사용</strong> </li>
-</ul>
-</div>
-<p><br/></p>
-<hr/>
-<h3 id="setup-user-local">Setup User Local</h3>
-<p><br/></p>
-<ul>
-<li><strong>Git Use Local Setup</strong> <br/>
-즉 이 Respository에만 설정 
-<div class="highlight"><pre><span></span><code>git config --local user.name "xxxx" 
-git config --local user.email "xxxxx"  
-</code></pre></div>
-e.g. check local setup (only repo)
-<div class="highlight"><pre><span></span><code>git config --local --list
-</code></pre></div></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">User Local</p>
-<ul>
-<li><strong>이 프로젝트만 한정적으로 사용가능하며, Global(default)가 별도</strong> </li>
-<li>가장 많이 사용하는 방법은 <strong>Local</strong> 설정으로 사용 </li>
-</ul>
-</div>
-<p><br/></p>
-<hr/>
-<h3 id="setup-user-global">Setup User Global</h3>
-<p><br/></p>
-<ul>
-<li><strong>Git User Global Setup</strong> <br/>
-모든 곳에 기본설정  local -&gt; global -&gt; system    <br/>
-<div class="highlight"><pre><span></span><code>git config --global user.name "이름"
-git config --global user.email "이메일"
-</code></pre></div>
-e.g. check golbal seupt
-<div class="highlight"><pre><span></span><code>git config --global --list
-</code></pre></div>
-e.g. check global setup 
-<div class="highlight"><pre><span></span><code>cat ~\.gitconfig  
-</code></pre></div></li>
-</ul>
-<p><br/></p>
-<div class="admonition tip">
-<p class="admonition-title">User Global</p>
-<ul>
-<li><strong>주로 기본설정 Global(default)</strong> </li>
-<li>Remote Repository 의 SSH/HTTPS 설정은 별도필요  </li>
-</ul>
-</div>
-<p><br/></p>
-<hr/>
-<h3 id="setup-remote-ssh">Setup Remote SSH</h3>
-<p><br/></p>
-<ul>
-<li><strong>Remote SSH 설정 A 변경</strong> <br/>
-.e.g. setup ssh host <br/>
-<div class="highlight"><pre><span></span><code>git remote set-url origin git@github.com:JeonghunLee/vscode_doc.git
-</code></pre></div>
-e.g. check SSH host <strong>default host(github.com)</strong>
-<div class="highlight"><pre><span></span><code>git remote -v                                               
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>origin  git@github.com:JeonghunLee/vscode_doc.git (fetch)
-origin  git@github.com:JeonghunLee/vscode_doc.git (push)
-</code></pre></div>
-e.g. SSH TEST(host)
-<div class="highlight"><pre><span></span><code>ssh -T git@github.com
+<div class="highlight"><pre><span></span><code>Connected:
+BUSID  VID:PID    DEVICE                                                        STATE
+5-6    046d:c52b  Logitech USB Input Device, USB 입력 장치                      Not shared
+5-7    27c6:6594  Goodix MOC Fingerprint                                        Not shared
+5-9    174f:11b4  Integrated Camera, Integrated IR Camera, APP Mode             Not shared
+5-10   8087:0037  인텔(R) 무선 Bluetooth(R)                                     Not shared
+6-1    17ef:30b4  USB 입력 장치                                                 Not shared
+6-2    17ef:30b5  Billboard Device, Vendor Interface                            Not shared
+8-4    17ef:30bb  ThinkPad Thunderbolt 4 Dock USB Audio, USB 입력 장치          Not shared
+
+Persisted:
+GUID                                  DEVICE
+81fb8b0c-713b-42cf-9479-356a18710f00  UsbNcm Host Device
+c63a666a-b751-4b75-b4f5-3d40550eb46b  APX
 </code></pre></div></li>
 </ul>
 <p><br/></p>
 <ul>
-<li><strong>Remote SSH 설정 B 변경</strong><br/>
-.e.g. setup ssh host (~/.ssh/config)<br/>
-<div class="highlight"><pre><span></span><code>git remote set-url origin git@github-company:JeonghunLee/vscode_doc.git
+<li>Host USB 와 WSL 연결     <br/>
+Host USB 확인 후, WSL에 연결 후 
+<div class="highlight"><pre><span></span><code>usbipd.exe attach --wsl --busid 5-10 --auto-attach  
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<ul>
+<li>WSL 의 Linux 확인 <br/>
+<div class="highlight"><pre><span></span><code>lsusb 
 </code></pre></div>
-e.g. check SSH host <strong>github-comapny(~/.ssh/config)</strong>
-<div class="highlight"><pre><span></span><code>git remote -v                                               
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>origin  git@github-company:JeonghunLee/vscode_doc.git (fetch)
-origin  git@github-company:JeonghunLee/vscode_doc.git (push)
+<div class="highlight"><pre><span></span><code>Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 </code></pre></div></li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">SSH Config 사용시 주의</p>
+<p class="admonition-title">Host usbipd.exe </p>
 <ul>
-<li>~/ssh/config 사용시 SSH Host를 변경시 <strong>VS Code Extesion Github Action 미동작</strong> <ul>
-<li>Remote는 동작하나, VS Code의 Extension만 미동작 (인증문제)    </li>
-</ul>
-</li>
-<li><a href="git_setup_default.html#ssh-config-a">Setup Multi Accoutn Config A</a> </li>
+<li>usbipd.exe Command WSL 실행 후 나 PowerSehll에서 양쪽다 실행가능함 </li>
+<li><strong>usbipd.exe 는 Host 의 상태이지 WSL 내부 상태가 아님</strong> </li>
 </ul>
 </div>
 <p><br/></p>
 <hr/>
-<h3 id="setup-remote-https">Setup Remote HTTPS</h3>
+<h2 id="wsl-settings">WSL Settings</h2>
 <p><br/></p>
 <ul>
-<li><strong>HTTPS 기본구조</strong>
-<div class="highlight"><pre><span></span><code>Git → Git Credential Manager → OAuth 토큰 → GitHub
+<li>WSL 의 설정 
+<div class="highlight"><pre><span></span><code>C:\Users\&lt;사용자명&gt;\.wslconfig
 </code></pre></div></li>
 </ul>
 <p><br/></p>
 <ul>
-<li><strong>Remote HTTPS 설정변경</strong> <br/>
-<div class="highlight"><pre><span></span><code>git remote set-url origin https://github.com/JeonghunLee/vscode_doc
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>git remote -v       
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>origin  https://github.com/JeonghunLee/vscode_doc (fetch)
-origin  https://github.com/JeonghunLee/vscode_doc (push)
-</code></pre></div></li>
+<li><strong>WSL Settings</strong> <br/>
+아래의 Window에서 제공하는 WSL Setting으로 쉽게 설정 가능<br/>
+<img alt="" src="imgs/tool_wsl_setting_00.png"/></li>
+</ul>
+<p><br/></p>
+<hr/>
+<h3 id="wsl-and-network">WSL and Network</h3>
+<p><br/></p>
+<ul>
+<li><strong>WSL Settings</strong> <br/>
+WSL의 Network는 가급적 여기서 해결 
+<img alt="" src="imgs/tool_wsl_setting_01.png"/></li>
 </ul>
 <p><br/></p>
 <hr/>
@@ -985,7 +745,7 @@ origin  https://github.com/JeonghunLee/vscode_doc (push)
 </main>
 <footer class="md-footer">
 <nav aria-label="하단/푸터" class="md-footer__inner md-grid">
-<a aria-label="이전: Setup GIT" class="md-footer__link md-footer__link--prev" href="git_setup_default.html">
+<a aria-label="이전: VNC" class="md-footer__link md-footer__link--prev" href="tool_vnc.html">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -994,17 +754,17 @@ origin  https://github.com/JeonghunLee/vscode_doc (push)
                 이전
               </span>
 <div class="md-ellipsis">
-                Setup GIT
+                VNC
               </div>
 </div>
 </a>
-<a aria-label="다음: Rewrite GIT" class="md-footer__link md-footer__link--next" href="git_rewrite.html">
+<a aria-label="다음: MSTeams" class="md-footer__link md-footer__link--next" href="tool_msteams.html">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 다음
               </span>
 <div class="md-ellipsis">
-                Rewrite GIT
+                MSTeams
               </div>
 </div>
 <div class="md-footer__button md-icon">

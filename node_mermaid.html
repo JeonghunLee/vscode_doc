@@ -318,13 +318,35 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-diagrams">
+<a class="md-nav__link" href="#mermaid-build">
 <span class="md-ellipsis">
       
-        Mermaid Diagrams
+        Mermaid Build
       
     </span>
 </a>
+<nav aria-label="Mermaid Build" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convert-mermaid-to-svg">
+<span class="md-ellipsis">
+      
+        Convert Mermaid to SVG
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handdrawn-mermaid">
+<span class="md-ellipsis">
+      
+        handDrawn Mermaid
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -384,7 +406,7 @@
 <span class="md-ellipsis">
     
   
-    pandoc
+    Pandoc
   
 
     
@@ -397,6 +419,30 @@
     
   
     VNC
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tool_wsl.html">
+<span class="md-ellipsis">
+    
+  
+    WSL
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tool_msteams.html">
+<span class="md-ellipsis">
+    
+  
+    MSTeams
   
 
     
@@ -421,13 +467,35 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#mermaid-diagrams">
+<a class="md-nav__link" href="#mermaid-build">
 <span class="md-ellipsis">
       
-        Mermaid Diagrams
+        Mermaid Build
       
     </span>
 </a>
+<nav aria-label="Mermaid Build" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convert-mermaid-to-svg">
+<span class="md-ellipsis">
+      
+        Convert Mermaid to SVG
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handdrawn-mermaid">
+<span class="md-ellipsis">
+      
+        handDrawn Mermaid
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -437,16 +505,105 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="nodejs">Node.js</h1>
-<h2 id="mermaid-diagrams">Mermaid Diagrams</h2>
+<h2 id="mermaid-build">Mermaid Build</h2>
 <p><br/></p>
 <ul>
-<li>Convert markdown to svg</li>
+<li>Check Node.js <br/>
+Node.js가 설치되어있다면, npx가 존재<br/>
+Node.js가 없다면 설치진행 </li>
 </ul>
+<p><br/></p>
+<ul>
+<li>Pandoc  <br/>
+<strong>Pandoc is not support mermaid</strong> <br/>
+Pandoc는 Mermaid가 미지원하므로, 이를 SVG를 변경 후 진행    </li>
+</ul>
+<p><br/></p>
+<ul>
+<li>All Pandoc need Converting 
+Node.js가 설치되어있으므로 준비 <br/>
+<div class="highlight"><pre><span></span><code>npx --help
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<ul>
+<li>Check package.json   <br/>
+아래와 같이 주석을 사용하면 안됨<br/>
+Mkdocs 를 HTML로 변환 후 이를 다시 Electron 으로 이용하여 exe로 Manual 완성 <br/>
+<div class="highlight"><pre><span></span><code>{
+  "name": "vscode_doc",
+  "version": "1.0.0",
+  "description": "MkDocs Electron Viewer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "&gt;=43.2.0",
+    "electron-builder": "&gt;=26.0.0"
+  },
+  "build": {
+    "appId": "com.jeonghun.vscode_doc",
+    "productName": "vscode docs viewer",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable"
+    }
+  }
+}
+</code></pre></div>
+<br/></li>
+</ul>
+<h3 id="convert-mermaid-to-svg">Convert Mermaid to SVG</h3>
+<p><br/></p>
+<ul>
+<li>Convert markdown to svg
 <div class="highlight"><pre><span></span><code>npx -p @mermaid-js/mermaid-cli mmdc `
   -i .\docx\mmd\test.md `
   -o .\docx\imgs\test.svg `
   -b transparent
 </code></pre></div>
+Sample Mermaid <br/>
+docx/mmd/test.md
+<img alt="" src="imgs_mermaid/test.svg"/> </li>
+</ul>
+<p><br/></p>
+<h3 id="handdrawn-mermaid">handDrawn Mermaid</h3>
+<p><br/></p>
+<ul>
+<li>Mermaid 옵션 
+<pre class="mermaid"><code>%%{init:{
+    "look":"handDrawn"
+}}%%</code></pre></li>
+</ul>
+<p><br/></p>
+<ul>
+<li>Mermaid 일반 
+<div class="highlight"><pre><span></span><code>npx -p @mermaid-js/mermaid-cli mmdc `
+  -i .\docx\mmd\test_general.md `
+  -o .\docx\imgs\test_general.svg `
+  -b transparent
+</code></pre></div>
+Sample Mermaid <br/>
+docx/mmd/test_general.md
+<img alt="" src="imgs_mermaid/test_general.svg"/> </li>
+</ul>
+<p><br/>
+<br/></p>
+<ul>
+<li>Mermaid handDrawn 
+<div class="highlight"><pre><span></span><code>npx -p @mermaid-js/mermaid-cli mmdc `
+  -i .\docx\mmd\test_handdrawn.md `
+  -o .\docx\imgs\test_handdrawn.svg `
+  -b transparent
+</code></pre></div></li>
+</ul>
+<p>Sample Mermaid <br/>
+docx/mmd/test_handdrawn.md
+<img alt="" src="imgs_mermaid/test_handdrawn.svg"/> </p>
 <p><br/></p>
 <hr/>
 </article>

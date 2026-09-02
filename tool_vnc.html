@@ -8,6 +8,7 @@
 <meta content="VS Code Manual" name="description"/>
 <meta content="Jeonghun Lee" name="author"/>
 <link href="tool_pandoc.html" rel="prev"/>
+<link href="tool_wsl.html" rel="next"/>
 <link href="imgs/logo.jpg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
 <title>VNC - VS Code Manaul</title>
@@ -354,7 +355,7 @@
 <span class="md-ellipsis">
     
   
-    pandoc
+    Pandoc
   
 
     
@@ -468,6 +469,30 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tool_wsl.html">
+<span class="md-ellipsis">
+    
+  
+    WSL
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tool_msteams.html">
+<span class="md-ellipsis">
+    
+  
+    MSTeams
+  
+
+    
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -608,16 +633,15 @@
 </div>
 <p><br/></p>
 <ul>
-<li>
-<p><strong>Window Remote Desktop</strong> <br/>
+<li><strong>Window Remote Desktop</strong> <br/>
 Android App도 제공  <br/>
-<a href="https://support.microsoft.com/ko-kr/windows/experience/connectivity-networking/how-to-use-remote-desktop">https://support.microsoft.com/ko-kr/windows/experience/connectivity-networking/how-to-use-remote-desktop</a></p>
-</li>
-<li>
-<p><strong>Chrome Remote Desktop Provider</strong> <br/>
+<a href="https://support.microsoft.com/ko-kr/windows/experience/connectivity-networking/how-to-use-remote-desktop">https://support.microsoft.com/ko-kr/windows/experience/connectivity-networking/how-to-use-remote-desktop</a></li>
+</ul>
+<p><br/></p>
+<ul>
+<li><strong>Chrome Remote Desktop Provider</strong> <br/>
 Android App도 제공   <br/>
-<a href="https://remotedesktop.google.com/?pli=1">https://remotedesktop.google.com/?pli=1</a></p>
-</li>
+<a href="https://remotedesktop.google.com/?pli=1">https://remotedesktop.google.com/?pli=1</a></li>
 </ul>
 <p><br/></p>
 <hr/>
@@ -696,6 +720,8 @@ sudo ls -l /root/.vnc/passwd
 <p><br/></p>
 <ul>
 <li>X11 Systemd 등록 
+<div class="highlight"><pre><span></span><code>sudo cat /etc/systemd/system/x11vnc.service
+</code></pre></div>
 <div class="highlight"><pre><span></span><code>sudo nano /etc/systemd/system/x11vnc.service
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>[Unit]
@@ -802,7 +828,7 @@ LISTEN 0      32              [::]:5900         [::]:*
 </main>
 <footer class="md-footer">
 <nav aria-label="하단/푸터" class="md-footer__inner md-grid">
-<a aria-label="이전: pandoc" class="md-footer__link md-footer__link--prev" href="tool_pandoc.html">
+<a aria-label="이전: Pandoc" class="md-footer__link md-footer__link--prev" href="tool_pandoc.html">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -811,8 +837,21 @@ LISTEN 0      32              [::]:5900         [::]:*
                 이전
               </span>
 <div class="md-ellipsis">
-                pandoc
+                Pandoc
               </div>
+</div>
+</a>
+<a aria-label="다음: WSL" class="md-footer__link md-footer__link--next" href="tool_wsl.html">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                다음
+              </span>
+<div class="md-ellipsis">
+                WSL
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
 </div>
 </a>
 </nav>

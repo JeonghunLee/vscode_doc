@@ -11,7 +11,7 @@
 <link href="tool_vnc.html" rel="next"/>
 <link href="imgs/logo.jpg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>pandoc - VS Code Manaul</title>
+<title>Pandoc - VS Code Manaul</title>
 <link href="assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link href="assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <script src="https://unpkg.com/iframe-worker/shim"></script>
@@ -53,7 +53,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              pandoc
+              Pandoc
             
           </span>
 </div>
@@ -356,7 +356,7 @@
 <span class="md-ellipsis">
     
   
-    pandoc
+    Pandoc
   
 
     
@@ -367,7 +367,7 @@
 <span class="md-ellipsis">
     
   
-    pandoc
+    Pandoc
   
 
     
@@ -380,13 +380,35 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup-pandoc">
+<a class="md-nav__link" href="#pandoc">
 <span class="md-ellipsis">
       
-        Setup pandoc
+        Pandoc
       
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-pandoc">
+<span class="md-ellipsis">
+      
+        Install pandoc
+      
+    </span>
+</a>
+<nav aria-label="Install pandoc" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#windows">
+<span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#make-reference">
@@ -396,6 +418,46 @@
       
     </span>
 </a>
+<nav aria-label="Make Reference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-reference">
+<span class="md-ellipsis">
+      
+        Modify Reference
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-style">
+<span class="md-ellipsis">
+      
+        Modify Style
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-matrix">
+<span class="md-ellipsis">
+      
+        Modify Matrix
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-toc">
+<span class="md-ellipsis">
+      
+        Modify TOC
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#check-docxpptx">
@@ -405,24 +467,72 @@
       
     </span>
 </a>
-</li>
+<nav aria-label="Check DOCX/PPTX" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#covert-to-docx">
+<a class="md-nav__link" href="#check-xml">
 <span class="md-ellipsis">
       
-        Covert to DOCX
+        Check XML
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pandoc-build">
+<span class="md-ellipsis">
+      
+        Pandoc Build
+      
+    </span>
+</a>
+<nav aria-label="Pandoc Build" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convert-to-pptx">
+<span class="md-ellipsis">
+      
+        Convert to PPTX
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#covert-to-pptx">
+<a class="md-nav__link" href="#convert-to-docx">
 <span class="md-ellipsis">
       
-        Covert to PPTX
+        Convert to DOCX
       
     </span>
 </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-build">
+<span class="md-ellipsis">
+      
+        Mermaid Build
+      
+    </span>
+</a>
+<nav aria-label="Mermaid Build" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convert-mermaid-to-svg">
+<span class="md-ellipsis">
+      
+        Convert Mermaid to SVG
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -433,6 +543,30 @@
     
   
     VNC
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tool_wsl.html">
+<span class="md-ellipsis">
+    
+  
+    WSL
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tool_msteams.html">
+<span class="md-ellipsis">
+    
+  
+    MSTeams
   
 
     
@@ -457,13 +591,35 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#setup-pandoc">
+<a class="md-nav__link" href="#pandoc">
 <span class="md-ellipsis">
       
-        Setup pandoc
+        Pandoc
       
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-pandoc">
+<span class="md-ellipsis">
+      
+        Install pandoc
+      
+    </span>
+</a>
+<nav aria-label="Install pandoc" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#windows">
+<span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#make-reference">
@@ -473,6 +629,46 @@
       
     </span>
 </a>
+<nav aria-label="Make Reference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-reference">
+<span class="md-ellipsis">
+      
+        Modify Reference
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-style">
+<span class="md-ellipsis">
+      
+        Modify Style
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-matrix">
+<span class="md-ellipsis">
+      
+        Modify Matrix
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modify-toc">
+<span class="md-ellipsis">
+      
+        Modify TOC
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#check-docxpptx">
@@ -482,24 +678,72 @@
       
     </span>
 </a>
-</li>
+<nav aria-label="Check DOCX/PPTX" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#covert-to-docx">
+<a class="md-nav__link" href="#check-xml">
 <span class="md-ellipsis">
       
-        Covert to DOCX
+        Check XML
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pandoc-build">
+<span class="md-ellipsis">
+      
+        Pandoc Build
+      
+    </span>
+</a>
+<nav aria-label="Pandoc Build" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convert-to-pptx">
+<span class="md-ellipsis">
+      
+        Convert to PPTX
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#covert-to-pptx">
+<a class="md-nav__link" href="#convert-to-docx">
 <span class="md-ellipsis">
       
-        Covert to PPTX
+        Convert to DOCX
       
     </span>
 </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mermaid-build">
+<span class="md-ellipsis">
+      
+        Mermaid Build
+      
+    </span>
+</a>
+<nav aria-label="Mermaid Build" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convert-mermaid-to-svg">
+<span class="md-ellipsis">
+      
+        Convert Mermaid to SVG
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -508,17 +752,32 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="pandoc">pandoc</h1>
-<h2 id="setup-pandoc">Setup pandoc</h2>
+<h1>Pandoc</h1>
+<h2 id="pandoc">Pandoc</h2>
 <p><br/></p>
+<p>Mkdocs 중 문서 중 Markdown으로 된 문서를 쉽게 DOCX / PPTX 혹은 다양한 포맷으로 변경가능한 Tool이며, <br/>
+아래의 설명과 같이 다양한 기능을 제공을 해준다.   </p>
+<p><a href="https://pandoc.org/">https://pandoc.org/</a> </p>
+<blockquote>
+<p>NOTE</p>
+<p>Markdown을 쉽게 변경을 가능하지만, Mermaid 나 UML 미지원<br/>
+Pandoc를 이용하여 문서를 만들고자 하면 각 Mermaid 나 UML는 우선 SVG or PNG 그림파일로 변경<br/>
+</p>
+</blockquote>
+<p><br/></p>
+<h2 id="install-pandoc">Install pandoc</h2>
+<p><br/></p>
+<p>현재 Window에서만 사용을 주로해서 아래와 같이 Window에서 쉽게 설치 </p>
+<p><br/></p>
+<h3 id="windows">Windows</h3>
 <ul>
 <li>
-<p>Install pandoc in Window
+<p>Install pandoc in Windows
 <div class="highlight"><pre><span></span><code>winget install --id JohnMacFarlane.Pandoc -e
 </code></pre></div></p>
 </li>
 <li>
-<p>check pandoc
+<p>Check pandoc
 <div class="highlight"><pre><span></span><code>pandoc --version
 </code></pre></div></p>
 </li>
@@ -534,6 +793,8 @@
 <hr/>
 <h2 id="make-reference">Make Reference</h2>
 <p><br/></p>
+<p>Reference docx 와 pptx 파일생성 방법이지만, <strong>솔직히 Reference 파일은 필요 없을 듯하다.</strong> </p>
+<p><br/></p>
 <ul>
 <li><strong>Reference docx/pptx file</strong><br/>
 <div class="highlight"><pre><span></span><code>pandoc -o reference.docx --print-default-data-file reference.docx
@@ -542,22 +803,157 @@
 </code></pre></div></li>
 </ul>
 <p><br/></p>
-<div class="admonition tip">
-<p class="admonition-title">Reference File</p>
 <ul>
-<li>상위 파일을 만든 후, 각 폰트를 변경하고 본인 스타일로 수정   </li>
+<li>Reference File<ul>
+<li>상위 파일을 만든 후, 각 폰트를 변경하고 본인 스타일로 수정</li>
+<li>docx 와 pptx 가능한 이유는 XML기반</li>
 </ul>
-</div>
+</li>
+</ul>
+<p><br/></p>
 <p><img alt="" src="imgs/tool_pandoc_docx_00.png"/>
 <img alt="" src="imgs/tool_pandoc_ppt_00.png"/></p>
 <p><br/></p>
-<hr/>
+<h3 id="modify-reference">Modify Reference</h3>
+<p><br/></p>
+<p>Reference 파일을 한번에 완성하기는 힘들면, 아래와 같이 반복 진행하며, 상위처럼 Reference 파일 만들기 보다     <br/>
+<strong>기존에 본인이 사용하는 것을 Reference 파일을 이용하는 게 더 빠름</strong> </p>
+<p><br/></p>
+<p>가능하다면, 기존파일을 아무거나 사용하고 싶은 것을 가져와서 Reference하는 게 더 좋음 </p>
+<p><br/></p>
+<ul>
+<li>STEP.1 : Convert to DOCX 파일 생성 (reference 이용)</li>
+<li>STEP.2 : 상위 Output의 tool_pandoc.docx 파일을 수정  <ul>
+<li>Ctrl+Alt+Shift+S : 스타일 수정 나옴 (각 스타일 서식구조를 변경)   </li>
+<li>각 원하는 서식에서 우측버튼 -&gt; 스타일 -&gt; 원하는 스타일 선택 -&gt; 스타일 적용 </li>
+</ul>
+</li>
+</ul>
+<p><br/></p>
+<h3 id="modify-style">Modify Style</h3>
+<p><br/></p>
+<p><strong>Pandoc에서 사용하는 스타일 서식을 본인 스타일의 서식으로 변경</strong> </p>
+<p><br/></p>
+<ul>
+<li>docx 파일 스타일 수정    <ul>
+<li>스타일에서 각 pandoc의 <strong>스타일 이름</strong> 찾기  <ul>
+<li>e.g. 제목2, 제목3, Compact, Source Code, Table  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="imgs/pandoc_docx_00.png"/>
+<img alt="" src="imgs/pandoc_docx_03.png"/> </p>
+<ul>
+<li>
+<p><strong>스타일 수정 -&gt; TOC 제목</strong> </p>
+<ul>
+<li>스타일 이름: TOC 제목   </li>
+<li>서식 : 한글 -&gt; 모든언어 
+<img alt="" src="imgs/pandoc_docx_01.png"/></li>
+</ul>
+</li>
+<li>
+<p><strong>스타일 수정-&gt;Source Code</strong> </p>
+<ul>
+<li>스타일 이름: Source Code   </li>
+<li>서식 : 한글 -&gt; 모든언어 
+<img alt="" src="imgs/pandoc_docx_02.png"/></li>
+</ul>
+</li>
+</ul>
+<p><br/></p>
+<h3 id="modify-matrix">Modify Matrix</h3>
+<p><br/></p>
+<ul>
+<li><strong>테이블디자인 -&gt; 표스타일</strong><br/>
+<img alt="" src="imgs/pandoc_docx_04.png"/><br/>
+<img alt="" src="imgs/pandoc_docx_05.png"/> </li>
+</ul>
+<p><br/></p>
+<p>아래에서 최종 표스타일 수정 </p>
+<ul>
+<li>
+<p><strong>스타일 수정-Table-표전체</strong> </p>
+<ul>
+<li><strong>스타일이름: Table</strong> : 이 이름을 찾아서 매번 스타일 서식을 변경하는 것이 목적     </li>
+<li><strong>스타일기준</strong>: 외부에 이미 설정된 스타일을 가져오는 것으로 수정중이라면 변경하지 않는 것이 좋음       </li>
+<li>서식 : 한글 -&gt; 모든언어     <br/>
+<img alt="" src="imgs/pandoc_docx_06.png"/> </li>
+</ul>
+</li>
+<li>
+<p><strong>스타일 수정-Table-머리글행</strong> </p>
+<ul>
+<li><strong>스타일이름: Table</strong> </li>
+<li>서식 적용대상: 표전체 -&gt; 머리글행  </li>
+<li>서식 : 한글 -&gt; 모든언어     <br/>
+<img alt="" src="imgs/pandoc_docx_07.png"/> </li>
+</ul>
+</li>
+</ul>
+<p><br/>
+<br/></p>
+<table>
+<thead>
+<tr>
+<th>TEST</th>
+<th>TEST</th>
+<th>TEST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEST</td>
+<td>TEST</td>
+<td>TEST</td>
+</tr>
+<tr>
+<td>TEST</td>
+<td>TEST</td>
+<td>TEST</td>
+</tr>
+<tr>
+<td>TEST</td>
+<td>TEST</td>
+<td>TEST</td>
+</tr>
+<tr>
+<td>TEST</td>
+<td>TEST</td>
+<td>TEST</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="modify-toc">Modify TOC</h3>
+<p><br/></p>
+<ul>
+<li>
+<p><strong>목차-&gt; 사용자지정목차</strong> </p>
+<ul>
+<li>우측 목차1 ~ 8 의 크기 및 폰트 수정   </li>
+<li>수준표시 와 표시방법 
+<img alt="" src="imgs/pandoc_docx_08.png"/> </li>
+</ul>
+</li>
+<li>
+<p><strong>TOC 제목</strong> <br/>
+Table of Contents 수정 </p>
+</li>
+</ul>
+<p><img alt="" src="imgs/pandoc_docx_09.png"/> </p>
+<p><br/></p>
 <h2 id="check-docxpptx">Check DOCX/PPTX</h2>
 <p><br/></p>
 <ul>
 <li><strong>DOCX/PPTX 의 구성</strong><br/>
-zip으로 되어있으며, 이를 풀면 XML 기반으로 쉽게 확인가능 <br/>
+zip으로 되어있으며, 이를 풀면 XML 기반으로 쉽게 확인가능   </li>
+</ul>
 <div class="highlight"><pre><span></span><code>tar -tf .\reference.docx | Select-Object -First 10
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>tar -tf .\reference.docx 
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>[Content_Types].xml
 _rels/.rels
@@ -569,23 +965,52 @@ word/fontTable.xml
 word/footnotes.xml
 word/comments.xml
 word/numbering.xml
+</code></pre></div>
+<p><br/>
+<br/></p>
+<h3 id="check-xml">Check XML</h3>
+<p><br/></p>
+<p><strong>XML기반으로 세부분석</strong> </p>
+<ul>
+<li>styles.xml 내용확인 
+<div class="highlight"><pre><span></span><code>tar -xf .\reference.docx -O word/styles.xml
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<ul>
+<li>압축풀기 <br/>
+압축을 풀면 다양한 XML과 Directory가 나옴 
+<div class="highlight"><pre><span></span><code>tar -xf .\reference.docx 
 </code></pre></div></li>
 </ul>
 <p><br/></p>
 <hr/>
-<h2 id="covert-to-docx">Covert to DOCX</h2>
+<h2 id="pandoc-build">Pandoc Build</h2>
+<h3 id="convert-to-pptx">Convert to PPTX</h3>
 <p><br/></p>
 <ul>
-<li>Convert markdown to pptx </li>
-</ul>
+<li>Convert markdown to pptx  <br/>
+간단히 변경가능하지만, 사용의미가 없음<br/>
 <div class="highlight"><pre><span></span><code>pandoc .\docs\index.md `
   --slide-level=2 `
   --resource-path=".;.\docs" `
   -o .\output\index.pptx
-</code></pre></div>
+</code></pre></div></li>
+</ul>
 <p><br/></p>
-<hr/>
-<h2 id="covert-to-pptx">Covert to PPTX</h2>
+<ul>
+<li>Convert markdown to pptx <br/>
+Reference 이용  <br/>
+<div class="highlight"><pre><span></span><code>pandoc .\docs\index.md `
+  --slide-level=2 `
+  --reference-doc=.\docx\reference.pptx `
+  --resource-path=".;.\docs" `
+  -o .\output\index.pptx
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<h3 id="convert-to-docx">Convert to DOCX</h3>
+<p><br/></p>
 <ul>
 <li>Convert markdown to docx 
 <div class="highlight"><pre><span></span><code>pandoc `
@@ -598,7 +1023,56 @@ word/numbering.xml
 </code></pre></div></li>
 </ul>
 <p><br/></p>
-<hr/>
+<ul>
+<li>Convert markdown to docx 
+<div class="highlight"><pre><span></span><code>pandoc `
+  .\docs\tool_pandoc.md `
+  --toc `
+  --number-sections `
+  --reference-doc=.\docx\tool_pandoc.docx `
+  --resource-path=".;.\docs" `
+  -o .\output\tool_pandoc.docx
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<h2 id="mermaid-build">Mermaid Build</h2>
+<p><br/></p>
+<p>Node.js가 설치되어있다면, npx가 존재  </p>
+<p><a href="node_mermaid.html#mermaid-build">Go to Node.js</a></p>
+<p><br/></p>
+<ul>
+<li>Pandoc  <br/>
+<strong>Pandoc is not support mermaid</strong> <br/>
+Pandoc는 Mermaid가 미지원하므로, 이를 SVG를 변경 후 진행    </li>
+</ul>
+<p>All Pandoc need Converting 
+<div class="highlight"><pre><span></span><code>npx --help
+</code></pre></div></p>
+<ul>
+<li>Check package.json   <br/>
+주석을 사용하면 안됨  </li>
+</ul>
+<p><br/></p>
+<h3 id="convert-mermaid-to-svg">Convert Mermaid to SVG</h3>
+<p><br/></p>
+<ul>
+<li>Convert Markdown(mmd) to svg</li>
+</ul>
+<div class="highlight"><pre><span></span><code>npx -p @mermaid-js/mermaid-cli mmdc `
+  -i .\docx\mmd\test.md `
+  -o .\docx\imgs\test.svg `
+  -b transparent
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>npx -p @mermaid-js/mermaid-cli mmdc `
+  -i .\docx\mmd\test_general.md `
+  -o .\docx\imgs\test_general.svg `
+  -b transparent
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>npx -p @mermaid-js/mermaid-cli mmdc `
+  -i .\docx\mmd\test_handdrawn.md `
+  -o .\docx\imgs\test_handdrawn.svg `
+  -b transparent
+</code></pre></div>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
