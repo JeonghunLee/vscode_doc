@@ -425,8 +425,9 @@ https://code.visualstudio.com/docs/remote/remote-overview
 
 <br/>
 
-* VSCode Testing   
+* **VSCode Testing**   
 https://code.visualstudio.com/docs/debugtest/testing 
+https://code.visualstudio.com/docs/python/testing  
 
 <br/>
 
@@ -479,11 +480,13 @@ AI-driven-CI-CT
 
 <br/>
 
-아래와 같이 설정을 하면, Testing이 기본동작이 가능하다 
+* **VSCode Testing for Python**   
+Python 기반으로 , VSCode Testing 설정 아래와 같이 가능하다.     
+https://code.visualstudio.com/docs/python/testing  
 
 <br/>
 
-* VSCode Unittest    
+* **VSCode Unittest**    
 .vscode/settings.json 
 ```
 {
@@ -507,7 +510,7 @@ AI-driven-CI-CT
 ```
 <br/>
 
-* VSCode Pytest and Unittest    
+* **VSCode Pytest and Unittest**    
 .vscode/settings.json 
 ```
 {
