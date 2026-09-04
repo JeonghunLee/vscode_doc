@@ -327,15 +327,24 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#vscode-test">
+<a class="md-nav__link" href="#vscode-testing">
 <span class="md-ellipsis">
       
-        VSCode TEST
+        VSCode Testing
       
     </span>
 </a>
-<nav aria-label="VSCode TEST" class="md-nav">
+<nav aria-label="VSCode Testing" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#settingjson">
+<span class="md-ellipsis">
+      
+        setting.json
+      
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pytest-and-unittest">
 <span class="md-ellipsis">
@@ -752,15 +761,24 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#vscode-test">
+<a class="md-nav__link" href="#vscode-testing">
 <span class="md-ellipsis">
       
-        VSCode TEST
+        VSCode Testing
       
     </span>
 </a>
-<nav aria-label="VSCode TEST" class="md-nav">
+<nav aria-label="VSCode Testing" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#settingjson">
+<span class="md-ellipsis">
+      
+        setting.json
+      
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pytest-and-unittest">
 <span class="md-ellipsis">
@@ -1183,9 +1201,31 @@ vscjava.migrate-java-to-azure@1.22.0
 <p><img alt="" src="imgs/vscode_remote_00.png"/></p>
 <p><br/></p>
 <hr/>
-<h2 id="vscode-test">VSCode TEST</h2>
+<h2 id="vscode-testing">VSCode Testing</h2>
 <p><br/></p>
-<p><a href="https://code.visualstudio.com/docs/debugtest/testing">https://code.visualstudio.com/docs/debugtest/testing</a> </p>
+<ul>
+<li>VSCode Testing <br/>
+<a href="https://code.visualstudio.com/docs/debugtest/testing">https://code.visualstudio.com/docs/debugtest/testing</a> </li>
+</ul>
+<p><br/></p>
+<ul>
+<li>AI-driven-CI-CT   </li>
+</ul>
+<figure>
+<p><img alt="" src="imgs/vscode_ex_testing_00.png"/> </p>
+<figcaption>
+<a href="https://jeonghunlee.github.io/AI-driven-CI-CT/">
+AI-driven-CI-CT 
+</a>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">AI-driven-CI-CT</p>
+<p>Project는 Pytest 와 Unittest 기반으로 CI/CT 즉 TEST 자동화 Project이다.  <br/>
+아래에 언급되어진 다양한 Pytest 를 Fixture기반으로 각 Testcase를 구성한 다음<br/>
+이 다양한 TEST Result를 LLM 분석하여 자동으로 이를 Report 해주는 시스템이다.<br/>
+<strong>Go to <a href="https://jeonghunlee.github.io/AI-driven-CI-CT/">AI-Driven CI/CT</a></strong></p>
+</div>
 <p><br/></p>
 <ul>
 <li><strong>Python TEST</strong> <ul>
@@ -1212,6 +1252,61 @@ vscjava.migrate-java-to-azure@1.22.0
 </li>
 </ul>
 <p><img alt="" src="imgs/vscode_test_00.png"/></p>
+<p><br/></p>
+<hr/>
+<h3 id="settingjson">setting.json</h3>
+<p><br/></p>
+<p>아래와 같이 설정을 하면, Testing이 기본동작이 가능하다 </p>
+<p><br/></p>
+<ul>
+<li>
+<p>VSCode Unittest  <br/>
+.vscode/settings.json 
+<div class="highlight"><pre><span></span><code>{
+  //.venv Python 
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  //Pytest 
+    "python.testing.pytestEnabled": false,
+  //Unitest     
+    "python.testing.unittestEnabled": true,
+  //Testing Command 
+    "python.testing.cwd": "${workspaceFolder}",
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "test_*.py"
+    ]
+}
+</code></pre></div>
+<br/></p>
+</li>
+<li>
+<p>VSCode Pytest and Unittest  <br/>
+.vscode/settings.json 
+<div class="highlight"><pre><span></span><code>{
+//.venv Python     
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.terminal.activateEnvironment": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [
+    "-p",
+    "no:cacheprovider",
+    "test_envs/tests/pytest",
+    "test_envs/tests/unittest"
+  ],
+  "python.testing.cwd": "${workspaceFolder}",
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}"
+  ]
+}
+</code></pre></div></p>
+</li>
+</ul>
 <p><br/></p>
 <hr/>
 <h3 id="pytest-and-unittest">pytest and unittest</h3>
