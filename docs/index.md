@@ -421,14 +421,40 @@ https://code.visualstudio.com/docs/remote/remote-overview
 
 
 
-## VSCode TEST
+## VSCode Testing
 
 <br/>
 
-
+* VSCode Testing   
 https://code.visualstudio.com/docs/debugtest/testing 
 
 <br/>
+
+* AI-driven-CI-CT   
+
+<figure markdown>
+
+![](./imgs/vscode_ex_testing_00.png) 
+
+<figcaption>
+<a href="https://jeonghunlee.github.io/AI-driven-CI-CT/">
+AI-driven-CI-CT 
+</a>
+</figcaption>
+
+</figure>
+
+ 
+!!! note "AI-driven-CI-CT"   
+    Project는 Pytest 와 Unittest 기반으로 CI/CT 즉 TEST 자동화 Project이다.    
+    아래에 언급되어진 다양한 Pytest 를 Fixture기반으로 각 Testcase를 구성한 다음  
+    이 다양한 TEST Result를 LLM 분석하여 자동으로 이를 Report 해주는 시스템이다.  
+    **Go to [AI-Driven CI/CT](https://jeonghunlee.github.io/AI-driven-CI-CT/)**
+
+<br/>
+
+
+
 
 * **Python TEST**   
     * **pytest**  : 대부분 임베디드에서 많이 사용 
@@ -444,6 +470,66 @@ https://code.visualstudio.com/docs/debugtest/testing
     * **python unittest** : 임베디드 에서 거의 사용안할 거라고 봄 
 
 ![](./imgs/vscode_test_00.png)
+
+<br/>
+
+---
+
+### setting.json
+
+<br/>
+
+아래와 같이 설정을 하면, Testing이 기본동작이 가능하다 
+
+<br/>
+
+* VSCode Unittest    
+.vscode/settings.json 
+```
+{
+  //.venv Python 
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  //Pytest 
+    "python.testing.pytestEnabled": false,
+  //Unitest     
+    "python.testing.unittestEnabled": true,
+  //Testing Command 
+    "python.testing.cwd": "${workspaceFolder}",
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "test_*.py"
+    ]
+}
+```
+<br/>
+
+* VSCode Pytest and Unittest    
+.vscode/settings.json 
+```
+{
+//.venv Python     
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.terminal.activateEnvironment": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [
+    "-p",
+    "no:cacheprovider",
+    "test_envs/tests/pytest",
+    "test_envs/tests/unittest"
+  ],
+  "python.testing.cwd": "${workspaceFolder}",
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}"
+  ]
+}
+```
+
 
 <br/>
 
