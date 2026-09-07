@@ -16,6 +16,27 @@ Mkdocs 중 문서 중 Markdown으로 된 문서를 쉽게 DOCX / PPTX 혹은 다
 
 <br/>
 
+### Mkdocs to Pandoc
+
+<br/>
+
+> NOTE
+>
+> 가능하면, ">" 기반으로 경고문을 작성 
+>
+
+<br/>
+
+> NOTE
+> 
+>   A. !!! tips/success/note "" 대신 전부 > 변경  
+>    
+>    "<br/>" 
+>    " --- "    : HTML 괜찮으나, --- 로 문서의 질이 떨어짐 
+>
+
+
+<br/>
 
 ## Install pandoc 
 
@@ -27,20 +48,29 @@ Mkdocs 중 문서 중 Markdown으로 된 문서를 쉽게 DOCX / PPTX 혹은 다
 
 ### Windows
 
+<br/>
+
 * Install pandoc in Windows
 ```
 winget install --id JohnMacFarlane.Pandoc -e
 ```
+
+<br/>
 
 * Check pandoc
 ```
 pandoc --version
 ```
 
-!!! tip "Markdown to Docx/PPTx 변경"
-    - 쉽게 Docx 와 PPTx 변경  
-    - DOCX/PPTX 은 XML 기반이므로 가능하지만, 뒤에 X가 빠지면 안됨 
-  
+> NOTE
+>
+> Markdown to Docx/PPTx 변경"
+>     쉽게 Docx 와 PPTx 변경  
+>     DOCX/PPTX 은 XML 기반이므로 가능하지만, 뒤에 X가 빠지면 안됨 
+
+<br/>
+
+**아래 TEST 를 위해서 --- 추가함**   
 
 <br/>
 
@@ -56,9 +86,15 @@ Reference docx 와 pptx 파일생성 방법이지만, **솔직히 Reference 파�
 <br/>
 
 * **Reference docx/pptx file**  
+
+<br/>
+
 ```
 pandoc -o reference.docx --print-default-data-file reference.docx
 ```
+
+<br/>
+
 ```
 pandoc -o reference.pptx --print-default-data-file reference.pptx
 ```
