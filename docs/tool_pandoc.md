@@ -77,7 +77,13 @@ pandoc -o reference.pptx --print-default-data-file reference.pptx
 
 <br/>
 
+### 머리글/바닥글 
 
+<br/>
+
+![](./imgs/tool_pandoc_docx_01.png)
+
+<br/>
 
 ### Modify Reference 
 
