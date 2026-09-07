@@ -1,9 +1,12 @@
 # How To use VS Code 
 
+<br/>
 
-
+<br/>
 
 ## Setup Python venv Envs
+
+<br/>
 
 ```
 python -m venv .venv
@@ -20,10 +23,14 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 .\.venv\Scripts\Activate.ps1
 ```
 
+<br/>
+
 
 ```
 (.venv) PS D:\Works\git\vscode_doc> pip install -r requirements.txt
 ```
+
+<br/>
 
 ## Check Python Packages for Mkdcos 
 
