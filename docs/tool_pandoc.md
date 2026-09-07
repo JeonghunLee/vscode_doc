@@ -83,6 +83,15 @@ pandoc -o reference.pptx --print-default-data-file reference.pptx
 
 ![](./imgs/tool_pandoc_docx_01.png)
 
+
+
+* **자동 페이지**   
+삽입 → 페이지 번호 → 페이지 아래쪽/위쪽 → “X/Y 형식  
+Page { PAGE } of { NUMPAGES }
+{ PAGE } / { NUMPAGES }
+
+![](./imgs/tool_pandoc_docx_04.png)  
+
 <br/>
 
 ### Modify Reference 
@@ -117,6 +126,7 @@ Reference 파일을 한번에 완성하기는 힘들면, 아래와 같이 반복
 * docx 파일 스타일 수정    
     * 스타일에서 각 pandoc의 **스타일 이름** 찾기  
         * e.g. 제목2, 제목3, Compact, Source Code, Table  
+    * **스타일 적용** 수정으로 모든 포맷 교정  
 
 ![](./imgs/pandoc_docx_00.png)
 ![](./imgs/pandoc_docx_03.png) 
@@ -151,7 +161,10 @@ Reference 파일을 한번에 완성하기는 힘들면, 아래와 같이 반복
     * **스타일기준**: 외부에 이미 설정된 스타일을 가져오는 것으로 수정중이라면 변경하지 않는 것이 좋음       
     * 서식 : 한글 -> 모든언어       
 ![](./imgs/pandoc_docx_06.png)  
+![](./imgs/tool_pandoc_docx_02.png)  
+![](./imgs/tool_pandoc_docx_03.png)  
 
+<br/>
 
 * **스타일 수정-Table-머리글행**    
     * **스타일이름: Table** 
