@@ -68,7 +68,7 @@
             ],
         },
         {
-            "label": "Pandoc: Tool Pandoc to DOCX",
+            "label": "Pandoc: tool_pandoc.md to DOCX",
             "type": "shell",
             "command": "pandoc",
             "args": [
