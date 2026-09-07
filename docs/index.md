@@ -417,6 +417,18 @@ https://code.visualstudio.com/docs/remote/remote-overview
 
 ### SSH 
 
+<br/>
+
+VS Code에서 SSH로 연결한 다음 각 Diretory를 Project file로 읽어서 진행 개발  
+
+!!! warning "SSH "
+    - SSH Server에 따라 OS 변경이 가능 
+
+<br/>
+
+* **SSH 기반으로 원격 Repository 이용** 
+    1. SSH Server  추가 id@192.168.1.1    
+    2. PW 입력 
 ![](./imgs/vscode_remote_00.png)
 
 
@@ -425,6 +437,13 @@ https://code.visualstudio.com/docs/remote/remote-overview
 ---
 
 ### WSL
+
+<br/>
+
+VS Code에서 WSL로 연결한 다음 각 Diretory를 Project file로 읽어서 진행 개발  
+
+!!! warning "SSH "
+    - WSL에 따라 Linux 변경이 가능 
 
 ![](./imgs/vscode_remote_01.png)
 
