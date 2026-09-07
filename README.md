@@ -3,26 +3,35 @@
 
 
 
-## Setup Envs
+## Setup Python venv Envs
 
 ```
 python -m venv .venv
 ```
 
 ```
+.\.venv\Scripts\Activate.ps1
+```
+
+or
+
+```powershell 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 .\.venv\Scripts\Activate.ps1
 ```
 
-```
-(.venv) PS D:\Works\git\Info_jetson> pip install -r requirements.txt
-```
-
-## Check mkdcos 
-
 
 ```
-(.venv) PS D:\Works\git\Info_jetson> pip list
+(.venv) PS D:\Works\git\vscode_doc> pip install -r requirements.txt
+```
+
+## Check Python Packages for Mkdcos 
+
+<br/>
+
+![](./docs/imgs/vscode_ex_python_00.png)  
+```
+(.venv) PS D:\Works\git\vscode_doc> pip list
 Package                    Version
 -------------------------- -----------
 babel                      2.18.0
@@ -64,8 +73,13 @@ urllib3                    2.7.0
 watchdog                   6.0.0
 ```
 
-## Build mkdocs 
+## Mkdocs Build/Serve
 
+<br/>
+
+Check .vscode/tasks.json 
+
+<br/>
 
 ``` 
 mkdocs serve
@@ -77,12 +91,22 @@ mkdocs build
 ```
 ...
 
+<br/>
 
-## Electron 
+## Mkdoc Packaged by using Electron 
 
+<br/>
 
-* Setting   
-electron_package.ps1
+need to install node.js 
+
+<br/>
+
+Check .vscode/tasks.json 
+
+<br/>
+
+* **Packageing HTML to Electron**   
+refer to electron_package.ps1
 ```
 cp main.js site/
 cp package.json site/
@@ -92,14 +116,20 @@ npm install
 npm run dist  or npm start 
 ```
 
-* node.js 
+<br/>
+
+* **Node.js**    
+반드시 필요   
 ```
 main.js
 package.json
 ```
 
+<br/>
 
 ## pandoc
+
+<br/>
 
 Step 1: Install pandoc in Window
 ```
@@ -109,6 +139,8 @@ winget install --id JohnMacFarlane.Pandoc -e
 pandoc --version
 ```
 
+<br/>
+
 Step 2: Setup refrece.docx or pptx in Window
 
 ```
@@ -117,6 +149,8 @@ pandoc -o reference.docx --print-default-data-file reference.docx
 ```
 pandoc -o reference.pptx --print-default-data-file reference.pptx
 ```
+
+<br/>
 
 docx/pptx 의 경우, zip으로 되어있으며, 이를 풀면 XML 기반으로 확인  
 ```
@@ -136,7 +170,7 @@ word/numbering.xml
 ```
 
 
-
+<br/>
 
 
 Step 3: Convert markdown to pptx 
@@ -147,6 +181,8 @@ pandoc .\docs\index.md `
   --resource-path=".;.\docs" `
   -o .\output\index.pptx
 ```
+
+<br/>
 
 Step 3: Convert markdown to docx 
 ```
@@ -159,7 +195,10 @@ pandoc `
   -o .\output\index.docx
 ```
 
-## mermaid 
+<br/>
+<br/>
+
+## Mermaid to SVG
 
 
 Convert markdown to svg
