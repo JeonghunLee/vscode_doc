@@ -205,6 +205,8 @@ ms-settings:defaultapps
 
 ---
 
+
+
 ### VSCode AI 
 
 <br/>
@@ -234,6 +236,19 @@ ms-settings:defaultapps
 <br/>
 
 ---
+
+### Continue(Ollama)   
+
+<br/>
+
+상위 Github Copliot 기반의 창과는 같이 사용할 수 없으며, 반드시 Continue 별도로 사용   
+
+Ollama 내부 LLM 사용가능하나, [Continue](index.md#continue) 통해 가능  
+
+<br/>
+
+---
+
 
 ## VSCode Souce Control 
 

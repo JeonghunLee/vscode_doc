@@ -411,6 +411,11 @@ vscjava.migrate-java-to-azure@1.22.0
 
 https://code.visualstudio.com/docs/remote/remote-overview  
 
+<br/>
+
+---
+
+### SSH 
 
 ![](./imgs/vscode_remote_00.png)
 
@@ -419,7 +424,14 @@ https://code.visualstudio.com/docs/remote/remote-overview
 
 ---
 
+### WSL
 
+![](./imgs/vscode_remote_01.png)
+
+
+<br/>
+
+---
 
 ## VSCode Testing
 
