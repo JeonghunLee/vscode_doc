@@ -80,7 +80,23 @@
                 "-o",``
                 ".\\docx\\tool_pandoc.docx"
             ]
-        },     
+        },    
+        {
+            "label": "Pandoc: tool_pandoc.md (Lua filter) to DOCX",
+            "type": "shell",
+            "command": "pandoc",
+            "args": [
+                ".\\docs\\tool_pandoc.md",
+                "--toc",
+                "--lua-filter=.\\docx\\lua\\signature.lua",
+                "--lua-filter=.\\docx\\lua\\information.lua",                  
+                "--number-sections",
+                "--reference-doc=.\\docx\\reference.docx",
+                "--resource-path=.\\docs",
+                "-o",``
+                ".\\docx\\tool_pandoc_lua.docx"
+            ]
+        },             
         {
             "label": "Mermaid: Convert test.md to SVG",
             "type": "shell",

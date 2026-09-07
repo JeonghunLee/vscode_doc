@@ -409,3 +409,83 @@ npx -p @mermaid-js/mermaid-cli mmdc `
   -o .\docx\imgs\test_handdrawn.svg `
   -b transparent
 ```
+<br/>
+
+## Lua Filter 
+
+<br/>
+
+* Check Pandoc Version and Lua Filter Engine
+```
+pandoc --version
+pandoc 3.10
+Features: +server +lua
+Scripting engine: Lua 5.4
+User data directory: C:\Users\LeeJeongHun\AppData\Roaming\pandoc
+Copyright (C) 2006-2025 John MacFarlane. Web:  https://pandoc.org
+This is free software; see the source for copying conditions. There is no
+warranty, not even for merchantability or fitness for a particular purpose.
+```
+
+<br/>
+
+* **Markdown**    
+아래와 같이 Lua Filter 와 **인식자/구분자** 정하고, 그에 맞게 Lua filter Script 작성  
+꼭 **:::** 필요는 없으며 각 부분을 정하고 하면 됨 
+
+<br/>
+
+아니면, 인식자/구분자 없이 무조건적으로 넣는 것을 해도 될 듯하다. 
+
+<br/>
+
+가급적 **Markdown에서 사용하는 것을 피하는 것** 이 좋은 것 같다.  
+
+<br/>
+
+Lua Filter Script을 보면 div 기반으로 사용하므로, DOCX가 아니라면,   
+HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다. 
+
+<br/>
+
+### Lua Filter Script-A
+
+
+* **TEST Lua Filter-1**
+
+::: {.signature name="Jeonghun Lee" title="TEST " date="2026-09-07" image="test.png"}
+:::
+
+<br/>
+
+### Lua Filter Script-B
+
+
+* **TEST Lua Filter-2**
+
+아래 소스 위치를 --resource-path 찾지 못하고, Project Root 에서 찾음 
+
+::: {.information source=".gitignore" title="Git Ignore"}
+:::
+
+<br/>
+
+### Pandoc Args
+
+<br/>
+
+* **VS Code Task**   
+Pandoc args에 아래와 같이 각 Lua filter 적용  
+```
+                ".\\docs\\tool_pandoc.md",
+                "--toc",
+                "--number-sections",
+                "--lua-filter=.\\docx\\lua\\signature.lua",
+                "--lua-filter=.\\docx\\lua\\information.lua",                
+                "--reference-doc=.\\docx\\reference.docx",
+                "--resource-path=.\\docs",
+                "-o",``
+                ".\\docx\\tool_pandoc.docx"
+```
+
+
