@@ -387,6 +387,19 @@
       
     </span>
 </a>
+<nav aria-label="Pandoc" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocs-to-pandoc">
+<span class="md-ellipsis">
+      
+        Mkdocs to Pandoc
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#install-pandoc">
@@ -536,6 +549,46 @@
 <span class="md-ellipsis">
       
         Convert Mermaid to SVG
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter">
+<span class="md-ellipsis">
+      
+        Lua Filter
+      
+    </span>
+</a>
+<nav aria-label="Lua Filter" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter-script-a">
+<span class="md-ellipsis">
+      
+        Lua Filter Script-A
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter-script-b">
+<span class="md-ellipsis">
+      
+        Lua Filter Script-B
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pandoc-args">
+<span class="md-ellipsis">
+      
+        Pandoc Args
       
     </span>
 </a>
@@ -607,6 +660,19 @@
       
     </span>
 </a>
+<nav aria-label="Pandoc" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocs-to-pandoc">
+<span class="md-ellipsis">
+      
+        Mkdocs to Pandoc
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#install-pandoc">
@@ -763,6 +829,46 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter">
+<span class="md-ellipsis">
+      
+        Lua Filter
+      
+    </span>
+</a>
+<nav aria-label="Lua Filter" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter-script-a">
+<span class="md-ellipsis">
+      
+        Lua Filter Script-A
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter-script-b">
+<span class="md-ellipsis">
+      
+        Lua Filter Script-B
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pandoc-args">
+<span class="md-ellipsis">
+      
+        Pandoc Args
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -783,30 +889,47 @@ Pandoc를 이용하여 문서를 만들고자 하면 각 Mermaid 나 UML는 우�
 </p>
 </blockquote>
 <p><br/></p>
+<h3 id="mkdocs-to-pandoc">Mkdocs to Pandoc</h3>
+<p><br/></p>
+<blockquote>
+<p>NOTE</p>
+<p>가능하면, "&gt;" 기반으로 경고문을 작성 
+</p>
+</blockquote>
+<p><br/></p>
+<blockquote>
+<p>NOTE</p>
+<p>A. !!! tips/success/note "" 대신 전부 &gt; 변경  </p>
+<p>"<br/>" 
+   " --- "    : HTML 괜찮으나, --- 로 문서의 질이 떨어짐 
+</p>
+</blockquote>
+<p><br/></p>
 <h2 id="install-pandoc">Install pandoc</h2>
 <p><br/></p>
 <p>현재 Window에서만 사용을 주로해서 아래와 같이 Window에서 쉽게 설치 </p>
 <p><br/></p>
 <h3 id="windows">Windows</h3>
+<p><br/></p>
 <ul>
-<li>
-<p>Install pandoc in Windows
+<li>Install pandoc in Windows
 <div class="highlight"><pre><span></span><code>winget install --id JohnMacFarlane.Pandoc -e
-</code></pre></div></p>
-</li>
-<li>
-<p>Check pandoc
-<div class="highlight"><pre><span></span><code>pandoc --version
-</code></pre></div></p>
-</li>
+</code></pre></div></li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Markdown to Docx/PPTx 변경</p>
+<p><br/></p>
 <ul>
-<li>쉽게 Docx 와 PPTx 변경  </li>
-<li>DOCX/PPTX 은 XML 기반이므로 가능하지만, 뒤에 X가 빠지면 안됨 </li>
+<li>Check pandoc
+<div class="highlight"><pre><span></span><code>pandoc --version
+</code></pre></div></li>
 </ul>
-</div>
+<blockquote>
+<p>NOTE</p>
+<p>Markdown to Docx/PPTx 변경"
+    쉽게 Docx 와 PPTx 변경<br/>
+    DOCX/PPTX 은 XML 기반이므로 가능하지만, 뒤에 X가 빠지면 안됨 </p>
+</blockquote>
+<p><br/></p>
+<p><strong>아래 TEST 를 위해서 --- 추가함</strong> </p>
 <p><br/></p>
 <hr/>
 <h2 id="make-reference">Make Reference</h2>
@@ -814,12 +937,14 @@ Pandoc를 이용하여 문서를 만들고자 하면 각 Mermaid 나 UML는 우�
 <p>Reference docx 와 pptx 파일생성 방법이지만, <strong>솔직히 Reference 파일은 필요 없을 듯하다.</strong> </p>
 <p><br/></p>
 <ul>
-<li><strong>Reference docx/pptx file</strong><br/>
+<li><strong>Reference docx/pptx file</strong> </li>
+</ul>
+<p><br/></p>
 <div class="highlight"><pre><span></span><code>pandoc -o reference.docx --print-default-data-file reference.docx
 </code></pre></div>
+<p><br/></p>
 <div class="highlight"><pre><span></span><code>pandoc -o reference.pptx --print-default-data-file reference.pptx
-</code></pre></div></li>
-</ul>
+</code></pre></div>
 <p><br/></p>
 <ul>
 <li>Reference File<ul>
@@ -1099,11 +1224,71 @@ Pandoc는 Mermaid가 미지원하므로, 이를 SVG를 변경 후 진행    </li
   -o .\docx\imgs\test_general.svg `
   -b transparent
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>npx -p @mermaid-js/mermaid-cli mmdc `
+<p><div class="highlight"><pre><span></span><code>npx -p @mermaid-js/mermaid-cli mmdc `
   -i .\docx\mmd\test_handdrawn.md `
   -o .\docx\imgs\test_handdrawn.svg `
   -b transparent
 </code></pre></div>
+<br/></p>
+<h2 id="lua-filter">Lua Filter</h2>
+<p><br/></p>
+<ul>
+<li>Check Pandoc Version and Lua Filter Engine
+<div class="highlight"><pre><span></span><code>pandoc --version
+pandoc 3.10
+Features: +server +lua
+Scripting engine: Lua 5.4
+User data directory: C:\Users\LeeJeongHun\AppData\Roaming\pandoc
+Copyright (C) 2006-2025 John MacFarlane. Web:  https://pandoc.org
+This is free software; see the source for copying conditions. There is no
+warranty, not even for merchantability or fitness for a particular purpose.
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<ul>
+<li><strong>Markdown</strong> <br/>
+아래와 같이 Lua Filter 와 <strong>인식자/구분자</strong> 정하고, 그에 맞게 Lua filter Script 작성<br/>
+꼭 <strong>:::</strong> 필요는 없으며 각 부분을 정하고 하면 됨 </li>
+</ul>
+<p><br/></p>
+<p>아니면, 인식자/구분자 없이 무조건적으로 넣는 것을 해도 될 듯하다. </p>
+<p><br/></p>
+<p>가급적 <strong>Markdown에서 사용하는 것을 피하는 것</strong> 이 좋은 것 같다.  </p>
+<p><br/></p>
+<p>Lua Filter Script을 보면 div 기반으로 사용하므로, DOCX가 아니라면, <br/>
+HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다. </p>
+<p><br/></p>
+<h3 id="lua-filter-script-a">Lua Filter Script-A</h3>
+<ul>
+<li><strong>TEST Lua Filter-1</strong></li>
+</ul>
+<p>::: {.signature name="Jeonghun Lee" title="TEST " date="2026-09-07" image="test.png"}
+:::</p>
+<p><br/></p>
+<h3 id="lua-filter-script-b">Lua Filter Script-B</h3>
+<ul>
+<li><strong>TEST Lua Filter-2</strong></li>
+</ul>
+<p>아래 소스 위치를 --resource-path 찾지 못하고, Project Root 에서 찾음 </p>
+<p>::: {.information source=".gitignore" title="Git Ignore"}
+:::</p>
+<p><br/></p>
+<h3 id="pandoc-args">Pandoc Args</h3>
+<p><br/></p>
+<ul>
+<li><strong>VS Code Task</strong> <br/>
+Pandoc args에 아래와 같이 각 Lua filter 적용<br/>
+<div class="highlight"><pre><span></span><code>                ".\\docs\\tool_pandoc.md",
+                "--toc",
+                "--number-sections",
+                "--lua-filter=.\\docx\\lua\\signature.lua",
+                "--lua-filter=.\\docx\\lua\\information.lua",                
+                "--reference-doc=.\\docx\\reference.docx",
+                "--resource-path=.\\docs",
+                "-o",``
+                ".\\docx\\tool_pandoc.docx"
+</code></pre></div></li>
+</ul>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
