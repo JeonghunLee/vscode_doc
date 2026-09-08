@@ -259,10 +259,28 @@
 <nav aria-label="Github Mutiple Accounts" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-github-accounts">
+<a class="md-nav__link" href="#add-github-account">
 <span class="md-ellipsis">
       
-        Check Github Accounts
+        Add Github Account
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-a-github-accounts">
+<span class="md-ellipsis">
+      
+        Check-A Github Accounts
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-b-github-accounts">
+<span class="md-ellipsis">
+      
+        Check-B Github Accounts
       
     </span>
 </a>
@@ -592,10 +610,28 @@
 <nav aria-label="Github Mutiple Accounts" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#check-github-accounts">
+<a class="md-nav__link" href="#add-github-account">
 <span class="md-ellipsis">
       
-        Check Github Accounts
+        Add Github Account
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-a-github-accounts">
+<span class="md-ellipsis">
+      
+        Check-A Github Accounts
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-b-github-accounts">
+<span class="md-ellipsis">
+      
+        Check-B Github Accounts
       
     </span>
 </a>
@@ -841,7 +877,7 @@ VS Code 의 Github 연결사항 확인 <br/>
 <tr>
 <th>항목</th>
 <th>역할</th>
-<th style="text-align: center;">1개 계정</th>
+<th style="text-align: center;">여러 계정 중 선택</th>
 </tr>
 </thead>
 <tbody>
@@ -877,40 +913,113 @@ VS Code 의 Github 연결사항 확인 <br/>
 <h2 id="github-mutiple-accounts">Github Mutiple Accounts</h2>
 <p><br/></p>
 <ul>
+<li><strong>VS Code 내의 Github</strong> </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>역할</th>
+<th style="text-align: center;">여러 계정 중 선택</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub</strong></td>
+<td>기본 GitHub 인증 (Authentication)</td>
+<td style="text-align: center;">✅ 예</td>
+</tr>
+<tr>
+<td><strong>GitHub Repository</strong></td>
+<td>저장소 탐색</td>
+<td style="text-align: center;">✅ 예</td>
+</tr>
+<tr>
+<td><strong>GitHub Pull Requests</strong></td>
+<td>PR, Issue 관리</td>
+<td style="text-align: center;">✅ 예</td>
+</tr>
+<tr>
+<td><strong>GitHub Actions</strong></td>
+<td>Actions 실행 및 로그 조회</td>
+<td style="text-align: center;">✅ 예</td>
+</tr>
+<tr>
+<td><strong>GitHub Copilot</strong></td>
+<td>Copilot 인증</td>
+<td style="text-align: center;">✅ 예</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title"><strong>VS Code 내의 Github</strong></p>
+<ul>
+<li>2개 이상 계정이면, Copilot 인증 한곳으로 쓰는 게 거의 맞을 듯하다. </li>
+</ul>
+</div>
+<p><br/></p>
+<hr/>
+<h3 id="add-github-account">Add Github Account</h3>
+<p><br/></p>
+<ul>
 <li><strong>Github Account-&gt; Multiple Account</strong> <ul>
-<li><strong>Manage Extension Account Preference</strong> 개별 로그인 </li>
-<li>new account 추가 가능 
-<img alt="" src="imgs/vscode_ex_github_02.png"/>
+<li><strong>Manage Extension Account Preference</strong> 개별 로그인 
+<img alt="" src="imgs/vscode_ex_github_02.png"/></li>
+<li><strong>각 Github 계정의 VS Code 의 Github 기능 선택</strong>
 <img alt="" src="imgs/vscode_ex_github_03.png"/></li>
+<li><strong>new account (Github 계정) 추가 가능</strong>
+<img alt="" src="imgs/vscode_ex_github_06.png"/></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">GitHub Copilot</p>
+<ul>
+<li>2개 계정 다 1 개의 Copilot 인증으로 사용 </li>
+</ul>
+</div>
+<p><br/></p>
+<h3 id="check-a-github-accounts">Check-A Github Accounts</h3>
+<p><br/></p>
+<div class="admonition tip">
+<p class="admonition-title">Check GitHub Accounts</p>
+<ul>
+<li>VSCode 계정 </li>
+<li><strong>Manage Extension Accounts Preference</strong> </li>
+<li><strong>Manage Truested Extension</strong> </li>
+</ul>
+</div>
+<p><br/></p>
+<ul>
+<li><strong>Github Account-&gt; Multiple Account 확인</strong> <ul>
+<li><strong>Manage Extension Accounts Preference</strong> </li>
+<li>각 Github로 <strong>Manage Truested Extension</strong> 확인 가능 
+<img alt="" src="imgs/vscode_ex_github_04.png"/></li>
+<li>각 <strong>Github 기능 선택 (Github Copilot) 확인</strong> 및 변경<br/>
+<img alt="" src="imgs/vscode_ex_github_05.png"/></li>
+<li><strong>각 Github Extension  로그인 확인 (옵션:로그인 변경 및 로그인 추가)</strong> <br/>
+<img alt="" src="imgs/vscode_ex_github_06.png"/></li>
 </ul>
 </li>
 </ul>
 <p><br/></p>
 <hr/>
-<h3 id="check-github-accounts">Check Github Accounts</h3>
+<h3 id="check-b-github-accounts">Check-B Github Accounts</h3>
 <p><br/></p>
 <div class="admonition tip">
-<p class="admonition-title">GitHub Account Check</p>
+<p class="admonition-title">Check GitHub Accounts</p>
 <ul>
 <li>아래와 같이 Sign Out 통해 쉽게 각 인증되어진 Github Extension 확인 가능 </li>
+<li><strong>비효율적이며, 상위 권장</strong> </li>
 </ul>
 </div>
 <ul>
 <li><strong>Check Github Account-&gt; Sing Out</strong> <ul>
 <li><strong>Manage Extension Account Preference</strong> 확인 가능 </li>
-<li>Github Account-&gt; Sing Out 확인 가능 
-<img alt="" src="imgs/vscode_01.png"/>
+<li>Github Account-&gt; Sign Out 확인 가능 
+<img alt="" src="imgs/vscode_01.png"/></li>
+<li><strong>Sign Out하면 사용중이었던 Github 계정확인</strong>
 <img alt="" src="imgs/vscode_02.png"/></li>
-</ul>
-</li>
-</ul>
-<p><br/>
-<br/></p>
-<ul>
-<li><strong>Github Account-&gt; Multiple Account 확인</strong> <ul>
-<li>각 Github로 Manage Truested Extension 확인 가능 
-<img alt="" src="imgs/vscode_ex_github_04.png"/>
-<img alt="" src="imgs/vscode_ex_github_05.png"/></li>
 </ul>
 </li>
 </ul>
@@ -986,11 +1095,43 @@ VS Code 의 Github 연결사항 확인 <br/>
 <hr/>
 <h3 id="continueollama">Continue(Ollama)</h3>
 <p><br/></p>
-<p>상위 Github Copliot 기반의 창과는 같이 사용할 수 없으며, 반드시 Continue 별도로 사용   </p>
-<p>Ollama 내부 LLM 사용가능하나, <a href="index.html#continue">Continue</a> 통해 가능  </p>
+<p>상위 Github Copliot 기반의 창과는 같이 사용할 수 없으며, 반드시 Continue 별도로 사용 <br/>
+Ollama 내부 LLM 사용가능하나, <a href="index.html#continue">Continue</a> 통해 가능  </p>
+<p><strong>솔직히 크게 권장하지 않으며, Ollama를 그냥 직접 내부 통신으로 하는 것이 더 낫은듯하다.</strong> <br/>
+이유는 Nsight 와 충돌 뿐만 아니라, 다른 VS Code Extension 과 말썽이 나에게 발생하기 때문이다.   </p>
+<p><br/></p>
+<ul>
+<li><strong>권장사항</strong> </li>
+</ul>
+<p>아래처럼 직접 Python 기반으로 간단히 Ollama을 연결해서 구축해서 사용하는게 왠지 더 편하다.  </p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Current value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runtime</td>
+<td>Ollama</td>
+</tr>
+<tr>
+<td>Default endpoint</td>
+<td><code>http://127.0.0.1:11434</code></td>
+</tr>
+<tr>
+<td>Default model</td>
+<td><code>deepseek-r1:7b</code></td>
+</tr>
+</tbody>
+</table>
 <p><br/></p>
 <hr/>
 <h2 id="vscode-souce-control">VSCode Souce Control</h2>
+<p><br/></p>
+<p>VSCode 가 업데이트 되면서 좀 더 안 좋아졌는데, 그래도 무료로 사용가능한 Git history 와 Control 기능이 좋은 기능이다.  <br/>
+이전에는 Remote 영역이 별도로 분리되어서 보였는데, 그게 없어진게 아쉽다.  </p>
 <p><br/></p>
 <div class="admonition warning">
 <p class="admonition-title">VSCode Github 와 Source Control</p>
@@ -1042,15 +1183,28 @@ Hi JeonghunLee! You've successfully authenticated, but GitHub does not provide s
 <li><strong>VS Code - Source Control</strong>
 <img alt="VSCode Source Control" src="imgs/vscode_sc_00.png"/></li>
 </ul>
-<p>이전에는 Remote 기능이 있었으나, 현재 삭제되고, 아래와 같이 확인만 가능  </p>
+<p>이전에는 Remote 기능이 있어서, 별도로 같이 동시에 볼수 있었으나, 현재 삭제되고, 아래와 같이 확인만 가능  </p>
+<p><br/></p>
 <ul>
-<li>Remote 정보   <ul>
-<li>orgin/main : remote  </li>
-<li>main : local<br/>
+<li><strong>Souce Control -&gt; Repositories</strong> : Remote 정보 확인 (각 이름으로 파악)   <ul>
+<li><strong>orgin/main</strong> : remote  </li>
+<li><strong>main</strong> : local<br/>
 <img alt="VSCode Source Control" src="imgs/vscode_sc_01.png"/></li>
 </ul>
 </li>
 </ul>
+<p><br/></p>
+<ul>
+<li><strong>Souce Control -&gt; Graph</strong> : Remote 정보 확인 (각 이름으로 파악)   <ul>
+<li><strong>auto</strong> : 좀 가끔마다 혼동이 되므로, 명확하게 확인하기 위해, 아래와 같이 선택하여 확인 가능  </li>
+<li><strong>orgin/main</strong> : remote  </li>
+<li><strong>main</strong> : local<br/>
+<img alt="VSCode Source Control" src="imgs/vscode_sc_02.png"/></li>
+</ul>
+</li>
+</ul>
+<p><br/></p>
+<p>Go To <a href="index.html#git-graph">Git Graph</a></p>
 <p><br/></p>
 <hr/>
 </article>
