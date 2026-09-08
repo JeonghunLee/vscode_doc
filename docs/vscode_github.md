@@ -109,7 +109,7 @@ ms-settings:defaultapps
 
 * **VS Code 내의 Github**    
 
-| 항목 | 역할 |  1개 계정  |
+| 항목 | 역할 |  여러 계정 중 선택  |
 |------|------|:-------------------------:|
 | **GitHub** | 기본 GitHub 인증 (Authentication) | ✅ 예  |
 | **GitHub Repository** | 저장소 탐색 | ✅ 예   |
@@ -128,44 +128,89 @@ ms-settings:defaultapps
 
 <br/>
 
-* **Github Account-> Multiple Account**     
-    * **Manage Extension Account Preference** 개별 로그인 
-    *  new account 추가 가능 
-![](./imgs/vscode_ex_github_02.png)
-![](./imgs/vscode_ex_github_03.png)
+* **VS Code 내의 Github**    
+
+| 항목 | 역할 |  여러 계정 중 선택  |
+|------|------|:-------------------------:|
+| **GitHub** | 기본 GitHub 인증 (Authentication) | ✅ 예  |
+| **GitHub Repository** | 저장소 탐색 | ✅ 예   |
+| **GitHub Pull Requests** | PR, Issue 관리 | ✅ 예  |
+| **GitHub Actions** | Actions 실행 및 로그 조회 | ✅ 예 |
+| **GitHub Copilot** | Copilot 인증 | ✅ 예  |
+
+!!! note "**VS Code 내의 Github**" 
+    - 2개 이상 계정이면, Copilot 인증 한곳으로 쓰는 게 거의 맞을 듯하다. 
+
 
 <br/>
 
 ---
 
-### Check Github Accounts 
+### Add Github Account
 
+<br/>
+
+* **Github Account-> Multiple Account**     
+    * **Manage Extension Account Preference** 개별 로그인 
+![](./imgs/vscode_ex_github_02.png)
+    * **각 Github 계정의 VS Code 의 Github 기능 선택** 
+![](./imgs/vscode_ex_github_03.png)
+    *  **new account (Github 계정) 추가 가능** 
+![](./imgs/vscode_ex_github_06.png)
+
+!!! note "GitHub Copilot" 
+    - 2개 계정 다 1 개의 Copilot 인증으로 사용 
 
 
 <br/>
 
-!!! tip "GitHub Account Check"
+### Check-A Github Accounts 
+
+<br/>
+
+!!! tip "Check GitHub Accounts"
+    - VSCode 계정 
+    - **Manage Extension Accounts Preference** 
+    - **Manage Truested Extension**   
+
+<br/>
+
+
+* **Github Account-> Multiple Account 확인**          
+    * **Manage Extension Accounts Preference** 
+    *  각 Github로 **Manage Truested Extension** 확인 가능 
+![](./imgs/vscode_ex_github_04.png)
+    * 각 **Github 기능 선택 (Github Copilot) 확인** 및 변경  
+![](./imgs/vscode_ex_github_05.png)
+    * **각 Github Extension  로그인 확인 (옵션:로그인 변경 및 로그인 추가)**   
+![](./imgs/vscode_ex_github_06.png)
+
+<br/>
+
+---
+
+### Check-B Github Accounts 
+
+<br/>
+
+!!! tip "Check GitHub Accounts"
     - 아래와 같이 Sign Out 통해 쉽게 각 인증되어진 Github Extension 확인 가능 
+    - **비효율적이며, 상위 권장** 
 
 
 * **Check Github Account-> Sing Out**     
     * **Manage Extension Account Preference** 확인 가능 
-    * Github Account-> Sing Out 확인 가능 
+    * Github Account-> Sign Out 확인 가능 
 ![](./imgs/vscode_01.png)
+    * **Sign Out하면 사용중이었던 Github 계정확인**
 ![](./imgs/vscode_02.png)
 
 
 <br/>
-<br/>
-
-* **Github Account-> Multiple Account 확인**          
-    *  각 Github로 Manage Truested Extension 확인 가능 
-![](./imgs/vscode_ex_github_04.png)
-![](./imgs/vscode_ex_github_05.png)
-
-<br/>
 
 ---
+
+
 
 ## Github Copliot   
 
@@ -242,8 +287,22 @@ ms-settings:defaultapps
 <br/>
 
 상위 Github Copliot 기반의 창과는 같이 사용할 수 없으며, 반드시 Continue 별도로 사용   
-
 Ollama 내부 LLM 사용가능하나, [Continue](index.md#continue) 통해 가능  
+
+**솔직히 크게 권장하지 않으며, Ollama를 그냥 직접 내부 통신으로 하는 것이 더 낫은듯하다.**   
+이유는 Nsight 와 충돌 뿐만 아니라, 다른 VS Code Extension 과 말썽이 나에게 발생하기 때문이다.   
+
+<br>
+
+* **권장사항** 
+
+아래처럼 직접 Python 기반으로 간단히 Ollama을 연결해서 구축해서 사용하는게 왠지 더 편하다.  
+
+| Item | Current value |
+|---|---|
+| Runtime | Ollama |
+| Default endpoint | `http://127.0.0.1:11434` |
+| Default model | `deepseek-r1:7b` |
 
 <br/>
 
@@ -253,6 +312,12 @@ Ollama 내부 LLM 사용가능하나, [Continue](index.md#continue) 통해 가�
 ## VSCode Souce Control 
 
 <br/>
+
+VSCode 가 업데이트 되면서 좀 더 안 좋아졌는데, 그래도 무료로 사용가능한 Git history 와 Control 기능이 좋은 기능이다.    
+이전에는 Remote 영역이 별도로 분리되어서 보였는데, 그게 없어진게 아쉽다.  
+
+<br/>
+
 
 !!! warning "VSCode Github 와 Source Control"     
     *  **Git의 기본기능 과 VS Code Extesion Github 인증는 별개로 동작**          
@@ -295,15 +360,28 @@ Hi JeonghunLee! You've successfully authenticated, but GitHub does not provide s
 
 
 * **VS Code - Source Control** 
-    ![VSCode Source Control](./imgs/vscode_sc_00.png)
+![VSCode Source Control](./imgs/vscode_sc_00.png)
 
-이전에는 Remote 기능이 있었으나, 현재 삭제되고, 아래와 같이 확인만 가능  
+이전에는 Remote 기능이 있어서, 별도로 같이 동시에 볼수 있었으나, 현재 삭제되고, 아래와 같이 확인만 가능  
 
-* Remote 정보   
-    * orgin/main : remote  
-    * main : local  
-    ![VSCode Source Control](./imgs/vscode_sc_01.png)
+<br/>
 
+* **Souce Control -> Repositories** : Remote 정보 확인 (각 이름으로 파악)   
+    * **orgin/main** : remote  
+    * **main** : local  
+![VSCode Source Control](./imgs/vscode_sc_01.png)
+
+<br/>
+
+* **Souce Control -> Graph** : Remote 정보 확인 (각 이름으로 파악)   
+    * **auto** : 좀 가끔마다 혼동이 되므로, 명확하게 확인하기 위해, 아래와 같이 선택하여 확인 가능  
+    * **orgin/main** : remote  
+    * **main** : local  
+![VSCode Source Control](./imgs/vscode_sc_02.png)
+
+<br>
+
+Go To [Git Graph](index.md#git-graph)
 
 <br/>
 

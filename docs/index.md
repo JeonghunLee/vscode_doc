@@ -44,19 +44,45 @@
 
 <br/>
 
-* Git Graph Extension  
+![](./imgs/vscode_ex_install_06.png)
+
+<br/>
+
+* **Source Control > Git Graph**  
+![](./imgs/vscode_ex_gitgraph_03.png) 
+
+* **Git Graph Extension**  
 ![](./imgs/vscode_ex_gitgraph_00.png) 
 ![](./imgs/vscode_ex_gitgraph_01.png) 
 
 
-* Git Graph Remote   
+* **Git Graph Remote/Local**
+    - Remote : orgin/main 
+    - Local : main    
 ![](./imgs/vscode_ex_gitgraph_02.png) 
+
+<br/>
+
+Go To [Git Graph](index.md#git-graph)
 
 <br/>
 
 ---
 
+###  Git History
 
+<br/>
+
+
+* **Git Graph 와 거의 동일**
+    * Git History 의 기능이 거의 다 Git Graph 있음 
+![](./imgs/vscode_ex_githistory_00.png) 
+
+Go To [Git Graph](index.md#git-graph)
+
+<br/>
+
+---
 
 ###  Github  
 
@@ -89,6 +115,7 @@ VS Code에서 쉽게 사용가능한 Github 의 기능
 ![](./imgs/vscode_ex_github_01.png) 
 
 !!! warning "Github 인증 다중으로 변경" 
+    - [VS Code - Github](./vscode_github.md)  
 
 <br/>
 
@@ -196,6 +223,21 @@ models:
 <br/>
 
 ---
+
+### Google Colab 
+
+<br/>
+
+* **Google Colab 사용**     
+*.ipynb 파일 
+![](./imgs/vscode_ex_install_07.png)  
+
+
+
+<br/>
+
+---
+
 
 ### RST 
 
