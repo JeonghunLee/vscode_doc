@@ -35,6 +35,15 @@
 git config --global user.name "이름"
 git config --global user.email "이메일"
 ```
+
+<br/>
+
+* **Git SSH Program/설정파일 설정**    
+SSH 가 제대로 동작되지 않을 경우 , Window에서 강제설정     
+```
+git config --local core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe -F C:/Users/LeeJeongHun/.ssh/config"
+```
+
 <br/>
 
 * **Git Global 확인**    
