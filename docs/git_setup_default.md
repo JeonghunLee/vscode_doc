@@ -35,11 +35,17 @@
 git config --global user.name "이름"
 git config --global user.email "이메일"
 ```
+<br/>
 
-* 확인  
+* **Git Global 확인**    
+user.name  
+user.email  
+core.sshcommand  
 ```
 git config --global --list
 ```
+
+아래 [설정 확인](#git-config) 
 
 <br/>
 
@@ -89,6 +95,10 @@ e.g. B
 [init]
         defaultBranch = main
 ```
+
+<br/>
+<br/>
+
 * **Check Git lfs version**
 ```
 git lfs version
@@ -106,7 +116,7 @@ git-lfs/3.7.1 (GitHub; windows amd64; go 1.25.1; git b84b3384)
 
 <br/>
 
-* HTTPS
+* **HTTPS**
 ```
 Git → Git Credential Manager → OAuth 토큰 → GitHub
 ```
@@ -126,7 +136,7 @@ Git → Git Credential Manager → OAuth 토큰 → GitHub
 
 <br/>
 
-* SSH
+* **SSH**
 ```
 Git → SSH 클라이언트 → 개인키 → GitHub
 ```
@@ -192,9 +202,10 @@ ssh -T git@github.com
 !!! tip "SSH Key 2개 생성 "
     - RSA 보다는 기본적은 ed25519
 
-!!! warning "미권장"
+!!! warning "**SSH Multi Accounts** 미권장"
     - [Github Action 미동작](./git_setup_default.md#ssh-config-a)
     - 1개의 SSH로 그냥 사용하길 권장   
+    - 1개 SSH 와 1개 HTTPS 권장 
 
 <br/>      
 
@@ -372,9 +383,14 @@ Git → Git Credential Manager → OAuth 토큰 → GitHub
 <br/>
 
 !!! tip "Browser 인증"
-    - Git Credential Manager 의 경우, Browser로 인증     
+    - VSCode에서 HTTPS 인증할 경우, 기본 Browser로 Github 로그인하여 인증을 진행   
+    - Git Credential Manager 의 경우, **Browser로 인증**       
+    - Browser를 2개 이상 사용할 경우, 아래와 같이 기본 Browser 설정변경  
+        - [Browser 기본앱 변경](./vscode_github.md#default-browser)   
 
-[Browser 기본앱 변경](./vscode_github.md#default-browser)   
+
+![](./imgs/github_setting_https_02.png)  
+https://github.com/settings/security
 
 <br/>
 
@@ -384,8 +400,18 @@ Git → Git Credential Manager → OAuth 토큰 → GitHub
 
 <br/>
 
-GCM: Git Credential Manager 
+* **Credential**  
+PAT/SSH Key/OAuth 
+![](./imgs/github_setting_https_01.png)  
+https://github.com/settings/credentials 
 
+<br/>
+
+**Credential -> OAuth -> GCM: Git Credential Manager**  
+![](./imgs/github_setting_https_00.png)  
+https://github.com/settings/applications 
+
+<br/>
 
 * **GCM Log Out**      
 계정이 다를 경우, 다시 Brwser 기반으로 다시 인증 
