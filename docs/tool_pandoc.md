@@ -502,16 +502,27 @@ HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다.
 
 ### Lua Filter Script-A
 
+<br/>
 
 * **TEST Lua Filter-1**
 
-::: {.signature name="Jeonghun Lee" title="TEST " date="2026-09-07" image="test.png"}
+::: {.signature}
 :::
+
+<br/>
+
+> Lua Filter and Metadata    
+>
+> signature.yaml     // Metafile 에서 각 데이타 정보 추출     
+> lua/signature.lua  // 상위 Metafile 정보 기반으로 적용      
+>
+>
 
 <br/>
 
 ### Lua Filter Script-B
 
+<br/>
 
 * **TEST Lua Filter-2**
 
@@ -532,6 +543,7 @@ Pandoc args에 아래와 같이 각 Lua filter 적용
                 ".\\docs\\tool_pandoc.md",
                 "--toc",
                 "--number-sections",
+                "--metadata-file=.\\docx\\lua\\signature.yaml", //signature.lua meta data 
                 "--lua-filter=.\\docx\\lua\\signature.lua",
                 "--lua-filter=.\\docx\\lua\\information.lua",                
                 "--reference-doc=.\\docx\\reference.docx",

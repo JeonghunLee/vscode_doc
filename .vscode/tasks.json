@@ -88,6 +88,7 @@
             "args": [
                 ".\\docs\\tool_pandoc.md",
                 "--toc",
+                "--metadata-file=.\\docx\\lua\\signature.yaml",
                 "--lua-filter=.\\docx\\lua\\signature.lua",
                 "--lua-filter=.\\docx\\lua\\information.lua",                  
                 "--number-sections",
