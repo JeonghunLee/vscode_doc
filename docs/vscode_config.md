@@ -502,8 +502,94 @@ C:\Users\jhlee\.vscode\extensions\espressif.esp-idf-extension-1.10.1\dist\views
 * **Terminal -> Run Task**     
 자신이 원하는 모든 자동화 기능을 Build 부터 TEST 까지 가능 
 
-**Manaul**     
+
+**VSCode task.json Manaul**     
 https://code.visualstudio.com/docs/debugtest/tasks   
+
+<br/>
+
+task.json (Typescript)
+```
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
+```
+
+<br/>
+
+task.json (npm)   
+```
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "lint",
+      "problemMatcher": ["$eslint-stylish"]
+    }
+  ]
+}
+```
+
+<br/>
+
+
+* **가장 많이 사용하는 방식**    
+tasks.json (Window)     
+https://code.visualstudio.com/docs/debugtest/tasks#_custom-tasks  
+
+내부변수 활용법   
+https://code.visualstudio.com/docs/debugtest/tasks#_variable-substitution   
+
+각 기본변수    
+https://code.visualstudio.com/docs/reference/variables-reference   
+
+Input 값 분리 Go To [Task 3](#tasks-3)   
+https://code.visualstudio.com/docs/reference/variables-reference#_input-variables
+
+```
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": "./scripts/test.sh",
+      "windows": {
+        "command": ".\\scripts\\test.cmd"
+      },
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
+}
+```
+
+
+<br/>
+
+
+
 
 
 <br/>
