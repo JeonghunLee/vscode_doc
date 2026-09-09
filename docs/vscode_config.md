@@ -860,7 +860,42 @@ https://code.visualstudio.com/docs/debugtest/tasks
 !!! tip "TEST 자동화 (Input 분리)"
     - TEST 의 거의 자동화를 위해 Task를 적극적 이용     
     - 자동은 다른 Tool를 별도로 사용  
-    - ${input:fixtureMode} 이용하여, Input를 분리   
+    - ${input:testCaseId} /${input:fixtureMode} 이용하여, Input를 분리   
+
+* **input section**   
+Task에서 args에서 변수로 전달 가능 
+```
+    // Inputs section (Test case and fixture mode inputs)
+    // "TEST CASE: TEST ID", and "TEST CASE: ALL" 
+    "inputs": [
+        {
+            "id": "testCaseId",
+            "type": "pickString",
+            "description": "TEST ID",
+            "options": [
+                "CT-UART-001",
+                "CT-USB-001",
+                "CT-NETWORK-001"
+            ],
+            "default": "CT-UART-001"
+        },
+        {
+            "id": "fixtureMode",
+            "type": "pickString",
+            "description": "Fixture mode",
+            "options": [
+                "marker",
+                "mock",
+                "hil"
+            ],
+            "default": "marker"
+        }
+    ]
+```
+
+
+* **tasks.json**    
+전체구조를 파악  
 ```
 {
     "version": "2.0.0",
