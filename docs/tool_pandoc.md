@@ -491,12 +491,20 @@ warranty, not even for merchantability or fitness for a particular purpose.
 
 <br/>
 
-가급적 **Markdown에서 사용하는 것을 피하는 것** 이 좋은 것 같다.  
+가급적 **Markdown에서 사용하는 인식자/구분자 중복을 피하는 것** 이 좋은 것 같다.  
 
 <br/>
 
-Lua Filter Script을 보면 div 기반으로 사용하므로, DOCX가 아니라면,   
-HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다. 
+> **DOCX**  
+>
+> **아래의 예제는 DOCX 기준이나 HTML 기준으로 작성할 수 있다.**     
+
+<br/>
+
+> **HTML**
+>
+> Lua Filter Script을 보면 div 기반으로 사용하므로, DOCX가 아니라면,   
+> HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다. 
 
 <br/>
 
