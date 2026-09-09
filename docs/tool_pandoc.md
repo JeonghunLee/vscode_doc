@@ -509,14 +509,22 @@ HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다.
 ::: {.signature}
 :::
 
+
 <br/>
 
-> Lua Filter and Metadata    
+> 상위 구분자 와 Lua Filter and Metadata    
 >
-> signature.yaml     // Metafile 에서 각 데이타 정보 추출     
-> lua/signature.lua  // 상위 Metafile 정보 기반으로 적용      
+> 1. **lua/signature.yaml**     // Metafile 에서 각 데이타 정보 추출     
+> 2. **lua/signature.lua**  // 상위 Metafile 정보 기반으로 적용      
+>   
+> **즉 yaml 정보파일 과 정보 image path 이용** 
 >
->
+
+<br/>
+
+* docx/tool_pandoc_lua.docx    
+**pandoc result**   // pandoc 실행 결과 
+![](./imgs/pandoc_docx_16.png)
 
 <br/>
 
@@ -531,6 +539,16 @@ HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다.
 ::: {.information source=".gitignore" title="Git Ignore"}
 :::
 
+> 상위 구분자 와 information.lua    
+>  
+>  간단히 lua filter만 이용하여 외부파일 읽기  
+>
+
+<br/>
+
+* docx/tool_pandoc_lua.docx    
+**pandoc result**   // pandoc 실행 결과 
+![](./imgs/pandoc_docx_17.png)
 <br/>
 
 ### Pandoc Args
