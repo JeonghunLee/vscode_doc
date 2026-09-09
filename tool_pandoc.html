@@ -461,6 +461,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#modify-style-font">
+<span class="md-ellipsis">
+      
+        Modify Style-Font
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#modify-matrix">
 <span class="md-ellipsis">
       
@@ -580,6 +589,15 @@
 <span class="md-ellipsis">
       
         Lua Filter Script-B
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter-script-c">
+<span class="md-ellipsis">
+      
+        Lua Filter Script-C
       
     </span>
 </a>
@@ -734,6 +752,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#modify-style-font">
+<span class="md-ellipsis">
+      
+        Modify Style-Font
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#modify-matrix">
 <span class="md-ellipsis">
       
@@ -853,6 +880,15 @@
 <span class="md-ellipsis">
       
         Lua Filter Script-B
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter-script-c">
+<span class="md-ellipsis">
+      
+        Lua Filter Script-C
       
     </span>
 </a>
@@ -1019,6 +1055,34 @@ Page { PAGE } of { NUMPAGES }
 </li>
 </ul>
 <p><br/></p>
+<h3 id="modify-style-font">Modify Style-Font</h3>
+<p><br/></p>
+<p><strong>Pandoc에서 사용하는 스타일 서식을 본인 스타일의 서식으로 변경</strong></p>
+<blockquote>
+<p>중요사항 </p>
+<p>아래의 스타일에서 폰트가 겹치면 안됨 </p>
+</blockquote>
+<ul>
+<li><strong>스타일 수정-&gt;제목 2</strong> <br/>
+아래와 같이 폰트가 겹치는 경우가 발생 <br/>
+<img alt="" src="imgs/pandoc_docx_11.png"/> <ul>
+<li><strong>글꼴 -&gt; 원하는 글꼴 설정</strong>
+<img alt="" src="imgs/pandoc_docx_12.png"/> </li>
+<li><strong>폰트 충돌 없음</strong>
+<img alt="" src="imgs/pandoc_docx_13.png"/> </li>
+</ul>
+</li>
+</ul>
+<p><br/></p>
+<ul>
+<li><strong>TOC 문제</strong> <ul>
+<li>제목 1 하이퍼링크   </li>
+<li>제목 2 하이퍼링크<br/>
+상위를 수정을 했다고 해서, TOC의 하이퍼링크도 개별로 적용해서 해야한다. </li>
+</ul>
+</li>
+</ul>
+<p><br/></p>
 <h3 id="modify-matrix">Modify Matrix</h3>
 <p><br/></p>
 <ul>
@@ -1095,11 +1159,35 @@ Page { PAGE } of { NUMPAGES }
 </ul>
 </li>
 <li>
-<p><strong>TOC 제목</strong> <br/>
-Table of Contents 수정 </p>
+<p><strong>목차 1 -&gt; 단락</strong> <br/>
+단락을 선택하여 각 간격 조절<br/>
+<img alt="" src="imgs/pandoc_docx_15.png"/> </p>
 </li>
 </ul>
-<p><img alt="" src="imgs/pandoc_docx_09.png"/> </p>
+<p><br/></p>
+<ul>
+<li><strong>TOC 제목</strong> <br/>
+Table of Contents 수정 
+<img alt="" src="imgs/pandoc_docx_09.png"/> </li>
+</ul>
+<p><br/></p>
+<ul>
+<li><strong>하이퍼링크</strong> <br/>
+각 항목은 각 제목의 하이퍼 링크로 되어있어, 각 제목의 폰트를 그대로 적용되어진다. 
+<strong>같은 하이퍼 링크지만, 각 제목 1,2에 따라 다 확인</strong> <ul>
+<li>제목 1 -&gt; 하이퍼 링크  </li>
+<li>제목 2 -&gt; 하이퍼 링크 
+<img alt="" src="imgs/pandoc_docx_14.png"/> </li>
+</ul>
+</li>
+</ul>
+<p><br/></p>
+<p><br/></p>
+<ul>
+<li><strong>목차업데이트</strong> <br/>
+각 폰트 변경을 재확인을 해야함. 즉 1개의 <strong>제목 1</strong> 스타일 수정을 했다고, 전체 제목 1의 스타일 변경되지 않는다. 
+<img alt="" src="imgs/pandoc_docx_10.png"/> </li>
+</ul>
 <p><br/></p>
 <h2 id="check-docxpptx">Check DOCX/PPTX</h2>
 <p><br/></p>
@@ -1253,25 +1341,87 @@ warranty, not even for merchantability or fitness for a particular purpose.
 <p><br/></p>
 <p>아니면, 인식자/구분자 없이 무조건적으로 넣는 것을 해도 될 듯하다. </p>
 <p><br/></p>
-<p>가급적 <strong>Markdown에서 사용하는 것을 피하는 것</strong> 이 좋은 것 같다.  </p>
+<p>가급적 <strong>Markdown에서 사용하는 인식자/구분자 중복을 피하는 것</strong> 이 좋은 것 같다.  </p>
 <p><br/></p>
+<blockquote>
+<p><strong>DOCX</strong> </p>
+<p><strong>아래의 예제는 DOCX 기준이나 HTML 기준으로 작성할 수 있다.</strong> </p>
+</blockquote>
+<p><br/></p>
+<blockquote>
+<p><strong>HTML</strong></p>
 <p>Lua Filter Script을 보면 div 기반으로 사용하므로, DOCX가 아니라면, <br/>
 HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다. </p>
+</blockquote>
 <p><br/></p>
 <h3 id="lua-filter-script-a">Lua Filter Script-A</h3>
+<p><br/></p>
 <ul>
 <li><strong>TEST Lua Filter-1</strong></li>
 </ul>
-<p>::: {.signature name="Jeonghun Lee" title="TEST " date="2026-09-07" image="test.png"}
+<p>::: {.signature}
 :::</p>
 <p><br/></p>
+<blockquote>
+<p>상위 구분자 와 Lua Filter and Metadata    </p>
+<ol>
+<li><strong>lua/signature.yaml</strong>     // Metafile 에서 각 데이타 정보 추출     </li>
+<li><strong>lua/signature.lua</strong>  // 상위 Metafile 정보 기반으로 적용      </li>
+</ol>
+<p><strong>즉 yaml 정보파일 (Metafile은 YAML로 이용) 과 정보 image path 이용</strong> <br/>
+<strong>yaml 내의 이미지 위치 PATH는 반드시 Project 기반</strong> 이유는 Task에서 실행하기 때문에  </p>
+</blockquote>
+<p><br/></p>
+<ul>
+<li><strong>docx/tool_pandoc_lua.docx</strong> <br/>
+<strong>pandoc result</strong>   // pandoc 실행 결과 
+<img alt="" src="imgs/pandoc_docx_16.png"/></li>
+</ul>
+<p><br/></p>
 <h3 id="lua-filter-script-b">Lua Filter Script-B</h3>
+<p><br/></p>
 <ul>
 <li><strong>TEST Lua Filter-2</strong></li>
 </ul>
 <p>아래 소스 위치를 --resource-path 찾지 못하고, Project Root 에서 찾음 </p>
 <p>::: {.information source=".gitignore" title="Git Ignore"}
 :::</p>
+<blockquote>
+<p>상위 구분자 와 information.lua    </p>
+<p>간단히 lua filter만 이용하여 외부파일 읽기<br/>
+<strong>.gitignore 파일의 위치 PATH는 반드시 Project 기반</strong> 이유는 Task에서 실행하기 때문에  </p>
+</blockquote>
+<p><br/></p>
+<ul>
+<li><strong>docx/tool_pandoc_lua.docx</strong> <br/>
+<strong>pandoc result</strong>   // pandoc 실행 결과 
+<img alt="" src="imgs/pandoc_docx_17.png"/></li>
+</ul>
+<p><br/></p>
+<h3 id="lua-filter-script-c">Lua Filter Script-C</h3>
+<p><br/></p>
+<ul>
+<li><strong>TEST Lua Filter-3</strong></li>
+</ul>
+<p>::: {.test-result source="docx/lua/test_result.json"}
+:::</p>
+<p><br/></p>
+<blockquote>
+<p>상위 구분자 와 test_result.lua       </p>
+<ol>
+<li><strong>test_result.json</strong> </li>
+<li><strong>test_result.lua</strong> </li>
+</ol>
+<p>Json 파일을 읽어서, lua filter로 처리하여, Table 생성   <br/>
+<strong>json 파일의 위치 PATH는 반드시 Project 기반</strong> 이유는 Task에서 실행하기 때문에    <br/>
+</p>
+</blockquote>
+<p><br/></p>
+<ul>
+<li><strong>docx/tool_pandoc_lua.docx</strong> <br/>
+<strong>pandoc result</strong>   // pandoc 실행 결과 (test_result.lua/test_result.json)    <br/>
+<img alt="" src="imgs/pandoc_docx_18.png"/></li>
+</ul>
 <p><br/></p>
 <h3 id="pandoc-args">Pandoc Args</h3>
 <p><br/></p>
@@ -1281,8 +1431,10 @@ Pandoc args에 아래와 같이 각 Lua filter 적용<br/>
 <div class="highlight"><pre><span></span><code>                ".\\docs\\tool_pandoc.md",
                 "--toc",
                 "--number-sections",
+                "--metadata-file=.\\docx\\lua\\signature.yaml", //signature.lua meta data 
                 "--lua-filter=.\\docx\\lua\\signature.lua",
-                "--lua-filter=.\\docx\\lua\\information.lua",                
+                "--lua-filter=.\\docx\\lua\\information.lua",  
+                "--lua-filter=.\\docx\\lua\\test_result.lua",                                
                 "--reference-doc=.\\docx\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``

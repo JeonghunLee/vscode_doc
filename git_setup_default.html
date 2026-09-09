@@ -710,19 +710,29 @@
 <p>아래와 같이 HTTPS or SSH로 Git을 설정을하는데, 주로 SSH로 진행을 많이 한다. </p>
 <p><br/></p>
 <ul>
-<li>
-<p><strong>Git User 설정</strong> <br/>
+<li><strong>Git User 설정</strong> <br/>
 모든 곳에 기본설정  local -&gt; global -&gt; system    <br/>
 <div class="highlight"><pre><span></span><code>git config --global user.name "이름"
 git config --global user.email "이메일"
-</code></pre></div></p>
-</li>
-<li>
-<p>확인<br/>
-<div class="highlight"><pre><span></span><code>git config --global --list
-</code></pre></div></p>
-</li>
+</code></pre></div></li>
 </ul>
+<p><br/></p>
+<ul>
+<li><strong>Git SSH Program/설정파일 설정</strong> <br/>
+SSH 가 제대로 동작되지 않을 경우 , Window에서 강제설정   <br/>
+<div class="highlight"><pre><span></span><code>git config --local core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe -F C:/Users/LeeJeongHun/.ssh/config"
+</code></pre></div></li>
+</ul>
+<p><br/></p>
+<ul>
+<li><strong>Git Global 확인</strong> <br/>
+user.name<br/>
+user.email<br/>
+core.sshcommand<br/>
+<div class="highlight"><pre><span></span><code>git config --global --list
+</code></pre></div></li>
+</ul>
+<p>아래 <a href="#git-config">설정 확인</a> </p>
 <p><br/></p>
 <hr/>
 <h3 id="git-config">Git Config</h3>
@@ -767,6 +777,10 @@ e.g. B
 </code></pre></div></li>
 </ul>
 </li>
+</ul>
+<p><br/>
+<br/></p>
+<ul>
 <li><strong>Check Git lfs version</strong>
 <div class="highlight"><pre><span></span><code>git lfs version
 </code></pre></div>
@@ -779,7 +793,7 @@ e.g.
 <h3 id="git-https">Git HTTPS</h3>
 <p><br/></p>
 <ul>
-<li>HTTPS
+<li><strong>HTTPS</strong>
 <div class="highlight"><pre><span></span><code>Git → Git Credential Manager → OAuth 토큰 → GitHub
 </code></pre></div>
 <br/></li>
@@ -798,7 +812,7 @@ e.g.
 <h3 id="git-ssh">Git SSH</h3>
 <p><br/></p>
 <ul>
-<li>SSH
+<li><strong>SSH</strong>
 <div class="highlight"><pre><span></span><code>Git → SSH 클라이언트 → 개인키 → GitHub
 </code></pre></div></li>
 </ul>
@@ -860,10 +874,11 @@ cat ~\.gitconfig
 </ul>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">미권장</p>
+<p class="admonition-title"><strong>SSH Multi Accounts</strong> 미권장</p>
 <ul>
 <li><a href="git_setup_default.html#ssh-config-a">Github Action 미동작</a></li>
 <li>1개의 SSH로 그냥 사용하길 권장   </li>
+<li>1개 SSH 와 1개 HTTPS 권장 </li>
 </ul>
 </div>
 <p><br/> </p>
@@ -1022,15 +1037,31 @@ git ls-remote git@github.com:Jeonghun-DYNE/Mono-Distortion-Vector-Depth.git
 <div class="admonition tip">
 <p class="admonition-title">Browser 인증</p>
 <ul>
-<li>Git Credential Manager 의 경우, Browser로 인증     </li>
+<li>VSCode에서 HTTPS 인증할 경우, 기본 Browser로 Github 로그인하여 인증을 진행   </li>
+<li>Git Credential Manager 의 경우, <strong>Browser로 인증</strong> </li>
+<li>Browser를 2개 이상 사용할 경우, 아래와 같이 기본 Browser 설정변경  <ul>
+<li><a href="vscode_github.html#default-browser">Browser 기본앱 변경</a> </li>
+</ul>
+</li>
 </ul>
 </div>
-<p><a href="vscode_github.html#default-browser">Browser 기본앱 변경</a> </p>
+<p><img alt="" src="imgs/github_setting_https_02.png"/><br/>
+<a href="https://github.com/settings/security">https://github.com/settings/security</a></p>
 <p><br/></p>
 <hr/>
 <h3 id="gcm">GCM</h3>
 <p><br/></p>
-<p>GCM: Git Credential Manager </p>
+<ul>
+<li><strong>Credential</strong><br/>
+PAT/SSH Key/OAuth 
+<img alt="" src="imgs/github_setting_https_01.png"/><br/>
+<a href="https://github.com/settings/credentials">https://github.com/settings/credentials</a> </li>
+</ul>
+<p><br/></p>
+<p><strong>Credential -&gt; OAuth -&gt; GCM: Git Credential Manager</strong><br/>
+<img alt="" src="imgs/github_setting_https_00.png"/><br/>
+<a href="https://github.com/settings/applications">https://github.com/settings/applications</a> </p>
+<p><br/></p>
 <ul>
 <li><strong>GCM Log Out</strong> <br/>
 계정이 다를 경우, 다시 Brwser 기반으로 다시 인증 
