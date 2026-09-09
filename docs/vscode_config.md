@@ -4,12 +4,20 @@
 
 <br/>
 
-* **CMD Extension 이름 파악**     
-설치되어진 extension 이름 확인가능하면 쉽게 들어가서 package.json 파일을 찾을 수 있음  
+* **PS/CMD Extension 이름 파악**     
+설치되어진 extension 이름 확인가능   
 ```
 code --list-extensions
+```
+```
 code --list-extensions --show-versions
 ```
+<br/>
+
+* **Config 설정 확인**   
+상위 이름 파악한 후, [Config Global](#config-global) 들어가서 package.json 파일을 찾을 수 있음   
+Project는 이용자는  [Config Local](#config-local) 가서 각 .vscode 폴더 내에서 설정   
+
 <br/>
 
 !!! tip  "global / local config"
@@ -28,21 +36,48 @@ code --list-extensions --show-versions
     - ~/.vscode/extesions  
     - global extensions 들의 구조 와 package.json 파악  
 
+<br/>
 
-* VSCode Config 기본구조 
+* **VSCode Config 기본구조**     
+ls ~/.vscode/extensions   
 ```
 ~/.vscode
 ├── agent-plugins   
 ├── cli       
 ├── extensions   // 주로 분석할 곳 package.json         
 └── argv.json  
-
-~/.vscode-shared
-└── sharedStorage  
 ```
 <br/>
 
-* ESPIDF Config 연결 
+* **VSCode-Shared**     
+ls ~/.vscode-shared\sharedStorage\    
+보면 db형태로 저장되어지것으로 파악되며, backup 존재   
+```
+~/.vscode-shared
+└── sharedStorage  
+```
+
+<br/>
+
+---
+
+### Config Extension 
+
+<br/>
+
+* **VSCode Extension 연결방법**      
+    * **VSCode Extension-> Continue-> setting.json** 
+
+<br/>
+
+* **사용방법**    
+각 필요 Extension 의 setting.json 을 이용하여 [Config Global](#config-global) 에 적용되어짐  
+이 변수를 다시 [Config Local](#config-local)  에서 중복 적용하여 각 프로젝트 마다 다르게 사용가능  
+
+<br/>
+
+
+* **ESPIDF Config 연결** 
 ```
 ~/.espressif
 ├── dist          // 배포 
@@ -53,6 +88,8 @@ code --list-extensions --show-versions
 └── esp_idf.json  // 중요 각 설정 
 ```
 
+<br/>
+
 * 이외 다른 연결도 확인  
 ```
 ls ~/
@@ -60,17 +97,19 @@ ls ~/
 
 <br/>
 
-* Json 파일 찾기 
-    ```
-    Get-ChildItem ~\.vscode -Recurse -File -Filter *.json
-    ``` 
-    ```
-    Get-ChildItem ~\.vscode -Recurse -File -Filter package.json
-    ```
+* **Json 파일 찾기**   
+package.json 비롯하여, 각 settting.json 찾기  
+```
+Get-ChildItem ~\.vscode -Recurse -File -Filter *.json
+``` 
+```
+Get-ChildItem ~\.vscode -Recurse -File -Filter package.json
+```
 <br/>
 
-* package.json 기반의 특정 설정 찾기      
-Linux의 파이프 기반의 Grep 과 유사  
+* **package.json 기반의 특정 설정 찾기**      
+package.json 을 우선 찾고, 그 안에서 다시 grep 처럼 다른 Pattern을 찾기   
+Linux의 파이프 기반의 Grep 과 유사함     
 ```
 Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "package.json" | Select-String -Pattern "terminal.activateEnvironment"
 ```
@@ -78,6 +117,8 @@ Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "package.json" |
 <br/>
 
 ---
+
+
 
 ### Config Local 
 
@@ -111,6 +152,8 @@ Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "package.json" |
 <br/>
 
 ---
+
+
 
 ## settings 
 
@@ -159,12 +202,15 @@ Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "package.json" |
 
 ---
 
-### settings 2
+### settings-ESP-IDF 
 
 <br/>
 
+ESP-IDF Extension 의 package.json 과 각 연결부분을 찾고, 이를 변경할 부분을 Local에서 변경해보자. 
 
-* Global package.json 찾기    
+<br/>
+
+* **Global package.json 찾기**    
 만약, 모른다면, 아래 처럼 모든 Package 의 이름 찾으며 유사이름으로 보기   
 ```
 Get-ChildItem ~\.vscode -Recurse -File -Filter package.json
@@ -173,7 +219,7 @@ Get-ChildItem ~\.vscode -Recurse -File -Filter package.json
 
 <br/>
 
-* Global 모드 Package.json 과 중복 문자 넣기     
+* **Global 모드 Package.json 과 중복 문자 넣기**        
     1. idf  쉽게 찾음 
     2. esp
     3. espressif
@@ -184,7 +230,9 @@ Get-ChildItem ~\.vscode -Recurse -File -Filter package.json |  Select-String '"i
 Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "package.json" | Select-String -Pattern "idf"
 ```
 
-* 상위 파일 분석  
+<br/>
+
+* **상위 파일 분석**    
 ~\.vscode\extensions\espressif.esp-idf-extension-2.1.0\package.json
 ```
 		"configuration": [
@@ -232,7 +280,10 @@ Get-ChildItem -Path "$HOME\.vscode\extensions" -Recurse -Filter "package.json" |
 				"category": "ESP-IDF"
 			},
 ```
-* 상위 idf 중복 검색  
+
+<br/>
+
+* **상위 idf 중복 검색**     
 여러개의 extensions 을 사용   
 ```
 ls ~/.vscode\extensions\espressif.esp-idf-extension-2.1.0   // Main 
@@ -242,7 +293,7 @@ ls ~/.vscode\extensions\ms-vscode.cmake-tools-1.23.52       // Cmake 연결
 
 <br/>
 
-* 상위 특정 Command    
+* **상위 특정 Command**    
     1. Ctrl+Shift P  : ESP-IDF: Flash Partition 찾음   
     2. 이걸 package.json 
     3. *.json 확장찾기 
@@ -396,7 +447,7 @@ idfToolsPath 기반으로 어디 연결되었는지 다시 확인
 
 <br/>
 
-* 예전의 ESP-IDF 구조 
+* **예전의 ESP-IDF 구조** 
 
 ESP-IDF Termianl 실행하면 실행됨 
 아래 소스 확인 
@@ -801,6 +852,295 @@ https://code.visualstudio.com/docs/debugtest/tasks
 <br/>
 
 ---
+
+### tasks 3
+
+<br/>
+
+!!! tip "TEST 자동화 (Input 분리)"
+    - TEST 의 거의 자동화를 위해 Task를 적극적 이용     
+    - 자동은 다른 Tool를 별도로 사용  
+    - ${input:fixtureMode} 이용하여, Input를 분리   
+```
+{
+    "version": "2.0.0",
+    "tasks": [
+        //Setup Task Section
+        // This section contains tasks for setting up the development environment, including selecting the OS, installing Python virtual environment, and installing Ollama and local LLM.
+        // Each task is labeled with a "SETUP" prefix for easy identification.
+        {
+            "label": "SETUP 1: Select Operating System",
+            "type": "process",
+            "command": "python",
+            "args": [
+                "-m",
+                "test_envs.tools.configuration",
+                "select-os"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "SETUP 2: Install Python Virtual Environment",
+            "type": "process",
+            "command": "python",
+            "args": [
+                "-m",
+                "test_envs.tools.environment_setup",
+                "python"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "SETUP 3: Install Ollama and Local LLM",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "test_envs.tools.environment_setup",
+                "ollama"
+            ],
+            "problemMatcher": []
+        },
+        // Check Task Section
+        // This section contains tasks for checking the environment and running the Ollama server.
+        // Each task is labeled with a "CHECK" prefix for easy identification.
+        {
+            "label": "CHECK 1: Refresh Environment Check File",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "test_envs.tools.configuration",
+                "check"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "CHECK 2: Show Environment Configuration",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "test_envs.tools.configuration",
+                "config"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "CHECK 3: Run Ollama Server (Foreground)",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "test_envs.tools.environment_setup",
+                "serve"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        // Test Case Task Section
+        // "TEST CASE" prefix for easy identification and Input Section for test case ID and fixture mode        
+        {
+            "label": "TEST CASE: ALL",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "pytest",
+                "-p",
+                "no:cacheprovider",
+                "test_envs/tests/pytest/test_cases",
+                "--fixture-mode",
+                "${input:fixtureMode}"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "TEST CASE: TEST ID",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "pytest",
+                "-p",
+                "no:cacheprovider",
+                "test_envs/tests/pytest/test_cases",
+                "--test-id",
+                "${input:testCaseId}",
+                "--fixture-mode",
+                "${input:fixtureMode}"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        // Report Task Section
+        // This section contains tasks for generating and converting test reports.
+        // Each task is labeled with a "REPORT" prefix for easy identification.
+        {
+            "label": "REPORT-Mkdocs: Generate Markdown to Pytest/Unittest",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "test_envs.tools.test_result",
+                "--pending",
+                "--docs"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "REPORT-Pandoc: Convert Latest Markdown to HTML",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "test_envs.tools.pandoc_reporter",
+                "--latest",
+                "--format",
+                "html"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "REPORT-Pandoc: Convert Latest Markdown to DOCX",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "test_envs.tools.pandoc_reporter",
+                "--latest",
+                "--format",
+                "docx"
+            ],
+            "problemMatcher": []
+        },
+        // MkDocs Task Section
+        // This section contains tasks for serving and building MkDocs documentation.
+        // Each task is labeled with a "MkDocs" prefix for easy identification.
+        {
+            "label": "MkDocs: Serve Local 8000",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "mkdocs",
+                "serve"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "MkDocs: Serve Local 8080",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "mkdocs",
+                "serve",
+                "-a",
+                "0.0.0.0:8080"
+            ],
+            "problemMatcher": []
+        },        
+        {
+            "label": "MkDocs: Serve Remote ",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "mkdocs",
+                "serve",
+                "-a",
+                "0.0.0.0:8000"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "MkDocs: Build",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "mkdocs",
+                "build"
+            ]
+        },
+        {
+            "label": "MkDocs: Build Strict",
+            "type": "process",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "mkdocs",
+                "build",
+                "--strict"
+            ]
+        },
+        {
+            "label": "Git: Show Local Config",
+            "type": "shell",
+            "command": "git config --local --list",
+            "problemMatcher": []
+        },
+        {
+            "label": "Git: Show Remotes",
+            "type": "shell",
+            "command": "git remote -v",
+            "problemMatcher": []
+        },        
+    ],
+    // End of tasks array
+    // End of tasks section
+    
+    // Inputs section (Test case and fixture mode inputs)
+    // "TEST CASE: TEST ID", and "TEST CASE: ALL" 
+    "inputs": [
+        {
+            "id": "testCaseId",
+            "type": "pickString",
+            "description": "TEST ID",
+            "options": [
+                "CT-UART-001",
+                "CT-USB-001",
+                "CT-NETWORK-001"
+            ],
+            "default": "CT-UART-001"
+        },
+        {
+            "id": "fixtureMode",
+            "type": "pickString",
+            "description": "Fixture mode",
+            "options": [
+                "marker",
+                "mock",
+                "hil"
+            ],
+            "default": "marker"
+        }
+    ]
+}
+
+```
+
+<br/>
+
+---
+
 
 ## launch
 
