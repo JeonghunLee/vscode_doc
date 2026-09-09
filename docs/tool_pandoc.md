@@ -517,12 +517,12 @@ HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다.
 > 1. **lua/signature.yaml**     // Metafile 에서 각 데이타 정보 추출     
 > 2. **lua/signature.lua**  // 상위 Metafile 정보 기반으로 적용      
 >   
-> **즉 yaml 정보파일 과 정보 image path 이용** 
->
+> **즉 yaml 정보파일 (Metafile은 YAML로 이용) 과 정보 image path 이용**    
+> **yaml 내의 이미지 위치 PATH는 반드시 Project 기반** 이유는 Task에서 실행하기 때문에  
 
 <br/>
 
-* docx/tool_pandoc_lua.docx    
+* **docx/tool_pandoc_lua.docx**     
 **pandoc result**   // pandoc 실행 결과 
 ![](./imgs/pandoc_docx_16.png)
 
@@ -540,15 +540,47 @@ HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다.
 :::
 
 > 상위 구분자 와 information.lua    
->  
+>    
+>   
 >  간단히 lua filter만 이용하여 외부파일 읽기  
->
+>  **.gitignore 파일의 위치 PATH는 반드시 Project 기반** 이유는 Task에서 실행하기 때문에  
 
 <br/>
 
-* docx/tool_pandoc_lua.docx    
+* **docx/tool_pandoc_lua.docx**    
 **pandoc result**   // pandoc 실행 결과 
 ![](./imgs/pandoc_docx_17.png)
+
+<br/>
+
+
+
+### Lua Filter Script-C
+
+<br/>
+
+* **TEST Lua Filter-3**
+
+::: {.test-result source="docx/lua/test_result.json"}
+:::
+
+<br/>
+
+> 상위 구분자 와 test_result.lua       
+>   
+>  1. **test_result.json**     
+>  2. **test_result.lua**    
+>
+>  Json 파일을 읽어서, lua filter로 처리하여, Table 생성     
+>  **json 파일의 위치 PATH는 반드시 Project 기반** 이유는 Task에서 실행하기 때문에      
+> 
+
+<br/>
+
+* **docx/tool_pandoc_lua.docx**      
+**pandoc result**   // pandoc 실행 결과 (test_result.lua/test_result.json)      
+![](./imgs/pandoc_docx_18.png)
+
 <br/>
 
 ### Pandoc Args
@@ -563,7 +595,8 @@ Pandoc args에 아래와 같이 각 Lua filter 적용
                 "--number-sections",
                 "--metadata-file=.\\docx\\lua\\signature.yaml", //signature.lua meta data 
                 "--lua-filter=.\\docx\\lua\\signature.lua",
-                "--lua-filter=.\\docx\\lua\\information.lua",                
+                "--lua-filter=.\\docx\\lua\\information.lua",  
+                "--lua-filter=.\\docx\\lua\\test_result.lua",                                
                 "--reference-doc=.\\docx\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
