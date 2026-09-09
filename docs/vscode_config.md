@@ -860,7 +860,7 @@ https://code.visualstudio.com/docs/debugtest/tasks
 !!! tip "TEST 자동화 (Input 분리)"
     - TEST 의 거의 자동화를 위해 Task를 적극적 이용     
     - 자동은 다른 Tool를 별도로 사용  
-    - ${input:testCaseId} /${input:fixtureMode} 이용하여, Input를 분리   
+    - \${input:testCaseId} , \${input:fixtureMode} 이용하여, Input를 분리   
 
 * **input section**   
 Task에서 args에서 변수로 전달 가능 
@@ -870,7 +870,7 @@ Task에서 args에서 변수로 전달 가능
     "inputs": [
         {
             "id": "testCaseId",
-            "type": "pickString",
+            "type": "pickString",  //pickString : 다중선택 , promptString 
             "description": "TEST ID",
             "options": [
                 "CT-UART-001",
