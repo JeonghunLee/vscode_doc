@@ -198,6 +198,19 @@ models:
 
 ---
 
+### QT Python 
+
+<br/>
+
+* Python 기반의 QML 의 QT GUI 
+![](./imgs/ex_qt_00.png)  
+
+
+
+<br/>
+
+---
+
 
 ###  Better Comments
 
@@ -219,7 +232,9 @@ models:
 ![](./imgs/ex_jupyter_00.png)  
 
 
-
+!!! tips "Jupyter" 
+    - Python 기반으로 본인의 PC에서 실행 
+      
 <br/>
 
 ---
@@ -232,7 +247,9 @@ models:
 *.ipynb 파일 
 ![](./imgs/vscode_ex_install_07.png)  
 
-
+!!! tips "Colab vs Jupyter" 
+    - 요즘은 거의 Colab 보다 Jupyter를 더 사용하는 것 같다 
+    - Colab 은 Google Server에서 하기에 제약이 있으므로 주의  
 
 <br/>
 
@@ -245,6 +262,49 @@ models:
 
 * Sphinx 사용할 경우 
 ![](./imgs/ex_restructuredText_00.png)  
+
+
+
+<br/>
+
+---
+
+### Remote Series
+
+<br/>
+
+* [Remote Explorer](#vscode-remote-explore)
+    * Remote SSH 
+    * Remote Repistories
+![](./imgs/ex_remote_00.png)  
+
+
+
+<br/>
+
+---
+
+### WSL and PowerShell
+
+<br/>
+
+* Window 환경 - WSL and PowerShell 
+![](./imgs/ex_powershell_00.png)
+![](./imgs/ex_wsl_00.png) 
+
+
+
+<br/>
+
+---
+
+
+### Serial Monitor
+
+<br/>
+
+* Serial Console 사용할 경우 
+![](./imgs/ex_serialmonitor_00.png)  
 
 
 
@@ -486,9 +546,30 @@ VS Code에서 WSL로 연결한 다음 각 Diretory를 Project file로 읽어서 
 
 !!! warning "SSH "
     - WSL에 따라 Linux 변경이 가능 
+    - WSL 실행시 WSL 에서 VS Code Extension 설치가 되어야 하므로 좌측 Extetion 변경 
 
 ![](./imgs/vscode_remote_01.png)
 
+
+!!! tips "WSL Bash"
+    - Bash 실행 
+    - 자동으로 좌측 Extension Linux 환경으로 변경   
+    - WSL 과 연결된 Port 확인 
+    - WSL 기반으로 별도의 Project 진행 가능 
+
+![](./imgs/vscode_remote_02.png)
+![](./imgs/vscode_remote_03.png)
+
+
+!!! tips "Project 가능 "
+    - WSL 기반으로 별도의 폴더/Directory 기반의 **Project 진행 가능** 
+    - vi 대신 편집기로도 쉽게 이용 
+   
+* Directory 기반의 **Project 진행 가능**  
+![](./imgs/vscode_remote_04.png)
+
+* **Serial Console 도 가능** 
+![](./imgs/vscode_remote_05.png)
 
 <br/>
 

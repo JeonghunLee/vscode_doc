@@ -234,6 +234,23 @@ ms-settings:defaultapps
 
 ---
 
+### Application 
+
+<br/>
+
+!!! tip "Github Setting -> Application"
+    - 각 사용가능한 Application 확인   
+
+* **Codex/Claude**
+![](./imgs/github_setting_application_00.png)
+
+
+<br/>
+
+---
+
+
+
 ### Copliot Codex/Claude   
 
 <br/>

@@ -11,9 +11,10 @@
 
 <br/>
 
-* Check Git 우선순위
-    * [Check GIT Remote](./git_setup_project.md#check-git-remote) : Git Remote Repository 확인 
-    * [Check GIT Local](./git_setup_project.md#check-git-local) : Git Local 설정 확인 (User 확인)
+* Check Git 사항 우선순위
+    * [Check GIT Local](./git_setup_project.md#check-git-local) : Git Local 설정 확인 **(Local/Remote 필수)**
+    * [Check GIT Remote](./git_setup_project.md#check-git-remote) : Git Remote Repository 만확인 **(옵션)**
+
 
 
 <br/>
@@ -50,6 +51,14 @@ branch.main.vscode-merge-base=origin/main
 branch.main.merge=refs/heads/main
 ```
 
+SSH 경우,    
+Remote URL SSH 형태   
+User 정보 .ssh 보관가능   
+```
+remote.origin.url=git@github.com:JeonghunLee/vscode_doc.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+```
+
 <br/>
 
 * **Check HTTPS**   
@@ -73,6 +82,16 @@ user.name=JeonghunLee
 user.email=xxxx
 ```
 
+
+HTTPS 경우,    
+Remote URL HTTPS 형태   
+User 정보 확인 , 나의 경우 주로 Local 로 사용하며 만약 없다면, [Global 확인](#resetup-git)   
+```
+remote.origin.url=https://github.com/JeonghunLee/vscode_doc
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+user.name=JeonghunLee
+user.email=xxxx
+```
 
 <br/>
 
