@@ -335,6 +335,8 @@ https://learn.chatgpt.com/docs/codex/ide
 
 * Codex 인증   
 반드시 브라우저 기반  
+Remote 일 경우, SSH 와 WSL 별도로 설치   
+상위 OpenAI만 설치  
 Go To [Default Browser](./vscode_github.md#default-browser)    
 ![](./imgs/ex_codex_02.png) 
 
@@ -586,6 +588,8 @@ VisionTune/
 * [Remote Explorer](#vscode-remote-explore)
     * Remote SSH 
     * Remote Repistories
+    * 세부사항 상위 링크 
+    * 각 개발환경 확장가능   
 ![](./imgs/ex_remote_00.png)  
 
 
