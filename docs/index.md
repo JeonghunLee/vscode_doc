@@ -821,7 +821,23 @@ vscjava.migrate-java-to-azure@1.22.0
 
 <br/>
 
+* VS Code Remote overview    
+VS Code Remote 개발환경의 확장     
 https://code.visualstudio.com/docs/remote/remote-overview  
+
+
+SSH   
+https://code.visualstudio.com/docs/remote/ssh-tutorial 
+
+WSL   
+https://code.visualstudio.com/docs/remote/wsl-tutorial  
+
+Docker Container.    
+https://code.visualstudio.com/docs/devcontainers/tutorial  
+
+Github CodeSpace   
+https://docs.github.com/ko/codespaces/developing-in-a-codespace/using-github-codespaces-in-visual-studio-code     
+
 
 <br/>
 
@@ -841,8 +857,10 @@ VS Code에서 SSH로 연결한 다음 각 Diretory를 Project file로 읽어서 
 * **SSH 기반으로 원격 Repository 이용** 
     1. SSH Server  추가 id@192.168.1.1    
     2. PW 입력 
-![](./imgs/vscode_remote_00.png)
 
+![](./imgs/vscode_remote_00.png)   
+
+![](./imgs/vscode_remote_06.png)  
 
 <br/>
 
