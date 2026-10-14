@@ -305,7 +305,12 @@ OpenAI 에서만 제공한 것만 동작함 주의
 1번째 것은 설치 미권장  
 ![](./imgs/ex_codex_00.png) 
 
-1 번째 Codex 쓸모가 없음 (disable)   
+<br/>
+
+* 주의사항  
+1 번째 Codex enable 되어 로그인되는 기능으로, 쓸모가 없음 (disable)      
+삭제해도 되며, 아래와 같이 disable해도 됨   
+OpenAI에서 제공한 Codex만 사용   
 ![](./imgs/ex_codex_01.png) 
 ```
 code --disable-extension codexbuild.codex-build
@@ -323,7 +328,7 @@ openai.codex-audio@26.1007.21434
 <br/>
 
 * VS Code Extension Manaul   
-Github Chat 과 동일한 화면 구성   
+Github Chat 과 동일한 화면 구성    
 https://learn.chatgpt.com/docs/codex/ide     
 
 <br/>
