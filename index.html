@@ -1371,29 +1371,39 @@ OpenAI 에서만 제공한 것만 동작함 주의  <br/>
 1번째 것은 설치 미권장<br/>
 <img alt="" src="imgs/ex_codex_00.png"/> </li>
 </ul>
-<p>1 번째 Codex 쓸모가 없음 (disable) <br/>
+<p><br/></p>
+<ul>
+<li>
+<p>주의사항<br/>
+1 번째 Codex enable 되어 로그인되는 기능으로, 쓸모가 없음 (disable)    <br/>
+삭제해도 되며, 아래와 같이 disable해도 됨 <br/>
+OpenAI에서 제공한 Codex만 사용 <br/>
 <img alt="" src="imgs/ex_codex_01.png"/>
 <div class="highlight"><pre><span></span><code>code --disable-extension codexbuild.codex-build
 </code></pre></div>
 <br/></p>
-<ul>
-<li>CMD or Powershell 확인 <br/>
+</li>
+<li>
+<p>CMD or Powershell 확인 <br/>
 <div class="highlight"><pre><span></span><code>code --list-extensions --show-versions | findstr /i "codex openai chatgpt"
 codexbuild.codex-build@0.5.7    // 상위 Codex 제조사 (동작이 안됨)
 openai.chatgpt@26.1007.21434
 openai.codex-audio@26.1007.21434
-</code></pre></div></li>
+</code></pre></div></p>
+</li>
 </ul>
 <p><br/></p>
 <ul>
 <li>VS Code Extension Manaul <br/>
-Github Chat 과 동일한 화면 구성 <br/>
+Github Chat 과 동일한 화면 구성  <br/>
 <a href="https://learn.chatgpt.com/docs/codex/ide">https://learn.chatgpt.com/docs/codex/ide</a> </li>
 </ul>
 <p><br/></p>
 <ul>
 <li>Codex 인증 <br/>
 반드시 브라우저 기반<br/>
+Remote 일 경우, SSH 와 WSL 별도로 설치 <br/>
+상위 OpenAI만 설치<br/>
 Go To <a href="vscode_github.html#default-browser">Default Browser</a> <br/>
 <img alt="" src="imgs/ex_codex_02.png"/> </li>
 </ul>
@@ -1607,7 +1617,9 @@ models:
 <ul>
 <li><a href="#vscode-remote-explore">Remote Explorer</a><ul>
 <li>Remote SSH </li>
-<li>Remote Repistories
+<li>Remote Repistories</li>
+<li>세부사항 상위 링크 </li>
+<li>각 개발환경 확장가능 <br/>
 <img alt="" src="imgs/ex_remote_00.png"/> </li>
 </ul>
 </li>
@@ -1814,7 +1826,19 @@ vscjava.migrate-java-to-azure@1.22.0
 </ul>
 </div>
 <p><br/></p>
-<p><a href="https://code.visualstudio.com/docs/remote/remote-overview">https://code.visualstudio.com/docs/remote/remote-overview</a> </p>
+<ul>
+<li>VS Code Remote overview  <br/>
+VS Code Remote 개발환경의 확장   <br/>
+<a href="https://code.visualstudio.com/docs/remote/remote-overview">https://code.visualstudio.com/docs/remote/remote-overview</a> </li>
+</ul>
+<p>SSH <br/>
+<a href="https://code.visualstudio.com/docs/remote/ssh-tutorial">https://code.visualstudio.com/docs/remote/ssh-tutorial</a> </p>
+<p>WSL <br/>
+<a href="https://code.visualstudio.com/docs/remote/wsl-tutorial">https://code.visualstudio.com/docs/remote/wsl-tutorial</a> </p>
+<p>Docker Container.  <br/>
+<a href="https://code.visualstudio.com/docs/devcontainers/tutorial">https://code.visualstudio.com/docs/devcontainers/tutorial</a> </p>
+<p>Github CodeSpace <br/>
+<a href="https://docs.github.com/ko/codespaces/developing-in-a-codespace/using-github-codespaces-in-visual-studio-code">https://docs.github.com/ko/codespaces/developing-in-a-codespace/using-github-codespaces-in-visual-studio-code</a> </p>
 <p><br/></p>
 <hr/>
 <h3 id="ssh">SSH</h3>
@@ -1830,11 +1854,12 @@ vscjava.migrate-java-to-azure@1.22.0
 <ul>
 <li><strong>SSH 기반으로 원격 Repository 이용</strong> <ol>
 <li>SSH Server  추가 id@192.168.1.1    </li>
-<li>PW 입력 
-<img alt="" src="imgs/vscode_remote_00.png"/></li>
+<li>PW 입력 </li>
 </ol>
 </li>
 </ul>
+<p><img alt="" src="imgs/vscode_remote_00.png"/> </p>
+<p><img alt="" src="imgs/vscode_remote_06.png"/> </p>
 <p><br/></p>
 <hr/>
 <h3 id="wsl">WSL</h3>
