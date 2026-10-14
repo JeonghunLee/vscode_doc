@@ -119,6 +119,268 @@ VS Code에서 쉽게 사용가능한 Github 의 기능
 
 <br/>
 
+#### QT Action   
+
+<br/>
+
+* QT Python 
+```
+name: Build and Release VisionTune
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing release tag (vMAJOR.MINOR.PATCH)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+
+    steps:
+      - name: Checkout tagged source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Apply Git tag version
+        id: version
+        shell: pwsh
+        run: |
+          $version = python -m scripts.stamp_version --tag $env:RELEASE_TAG
+          "version=$version" >> $env:GITHUB_OUTPUT
+          python -m scripts.check_version `
+            --expected $env:RELEASE_TAG `
+            --require-build-match
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Install Pandoc
+        shell: pwsh
+        run: choco install pandoc --yes --no-progress
+
+      - name: Build user manual
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force "output" | Out-Null
+          pandoc `
+            ".\docs\user_eng.md" `
+            --toc `
+            --number-sections `
+            --reference-doc=".\docx\reference_a.docx" `
+            --resource-path=".\docs" `
+            -o `
+            ".\output\visiontune_usermanul_eng_v${{ steps.version.outputs.version }}.docx"
+          pandoc `
+            ".\docs\user_kor.md" `
+            --toc `
+            --number-sections `
+            --reference-doc=".\docx\reference_a.docx" `
+            --resource-path=".\docs" `
+            -o `
+            ".\output\visiontune_usermanul_kor_v${{ steps.version.outputs.version }}.docx"
+          if (-not (Test-Path ".\output\visiontune_usermanul_eng_v${{ steps.version.outputs.version }}.docx")) {
+            throw "English VisionTune manual was not generated."
+          }
+          if (-not (Test-Path ".\output\visiontune_usermanul_kor_v${{ steps.version.outputs.version }}.docx")) {
+            throw "Korean VisionTune manual was not generated."
+          }
+
+      - name: Build Windows application
+        shell: pwsh
+        run: |
+          python -m PyInstaller `
+            --noconfirm `
+            --clean `
+            --windowed `
+            --onedir `
+            --name VisionTune `
+            --add-data "qml:qml" `
+            app.py
+          if (-not (Test-Path "dist\VisionTune\VisionTune.exe")) {
+            throw "VisionTune.exe was not generated."
+          }
+
+      - name: Package release files
+        shell: pwsh
+        run: |
+          $version = "${{ steps.version.outputs.version }}"
+          $package = "dist\VisionTune-v$version-windows-x64"
+          $archive = "dist\VisionTune-v$version-windows-x64.zip"
+          New-Item -ItemType Directory -Force $package | Out-Null
+          Copy-Item "dist\VisionTune\*" $package -Recurse
+          New-Item -ItemType Directory -Force "$package\data" | Out-Null
+          New-Item -ItemType Directory -Force "$package\configs" | Out-Null
+          Copy-Item `
+            "data\input_260806_001_1min.mp4" `
+            "$package\data\input_260806_001_1min.mp4"
+          Copy-Item `
+            "data\color_test_ramp_20s.mp4" `
+            "$package\data\color_test_ramp_20s.mp4"
+          Copy-Item `
+            "data\colorchecker_from_pixls_24colors.mp4" `
+            "$package\data\colorchecker_from_pixls_24colors.mp4"
+          Copy-Item `
+            "configs\default.yaml" `
+            "$package\configs\default.yaml"
+          Compress-Archive -Path "$package\*" -DestinationPath $archive
+
+      #    
+      #   now, free billing (https://github.com/settings/billing)
+      #   so can't use the upload-artifact action for free billing accounts.
+      #   need to limit retention days for artifacts.
+      #
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: VisionTune-v${{ steps.version.outputs.version }}-windows-x64
+          path: |
+            dist/VisionTune-v${{ steps.version.outputs.version }}-windows-x64.zip            
+            output/visiontune_usermanul_eng_v${{ steps.version.outputs.version }}.docx
+            output/visiontune_usermanul_kor_v${{ steps.version.outputs.version }}.docx
+          if-no-files-found: error
+          retention-days: 1 
+
+
+      - name: Create GitHub Release
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: VisionTune ${{ github.ref_name }}
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            dist/VisionTune-v${{ steps.version.outputs.version }}-windows-x64.zip
+            output/visiontune_usermanul_eng_v${{ steps.version.outputs.version }}.docx
+            output/visiontune_usermanul_kor_v${{ steps.version.outputs.version }}.docx
+          body: |
+            🚀 VisionTune Release
+            ------------------------------------------
+            * **Version**: ${{ github.ref_name }}            
+            * **Release Date**: ${{ github.event.head_commit.timestamp }}  
+
+            VisionTune ${{ github.ref_name }} Windows release.
+            📄 **Documentation: (Supported User Manual)**  
+
+            <br/>
+
+            The application version is generated automatically from this Git tag.
+
+```
+
+<br/>
+
+---
+
+### Codex  
+
+<br/>
+
+* Codex 설치     
+WSL에서 사용한다면 Window 말고 별도로 WSL 별도 설치를 진행해야함   
+OpenAI 에서만 제공한 것만 동작함 주의    
+1번째 것은 설치 미권장  
+![](./imgs/ex_codex_00.png) 
+
+1 번째 Codex 쓸모가 없음 (disable)   
+![](./imgs/ex_codex_01.png) 
+```
+code --disable-extension codexbuild.codex-build
+```
+<br/>
+
+* CMD or Powershell 확인   
+```
+code --list-extensions --show-versions | findstr /i "codex openai chatgpt"
+codexbuild.codex-build@0.5.7    // 상위 Codex 제조사 (동작이 안됨)
+openai.chatgpt@26.1007.21434
+openai.codex-audio@26.1007.21434
+```
+
+<br/>
+
+* VS Code Extension Manaul   
+Github Chat 과 동일한 화면 구성   
+https://learn.chatgpt.com/docs/codex/ide     
+
+<br/>
+
+* Codex 인증   
+반드시 브라우저 기반  
+Go To [Default Browser](./vscode_github.md#default-browser)    
+![](./imgs/ex_codex_02.png) 
+
+<br/>
+
+
+#### Codex Command 
+
+<br/>
+
+!!! tip "codex command" 
+    - 현재 주로 테스트 용도로 사용하며, 상위 VS Codex Extension 과 별도로 설치를 하는 것임   
+    - VS Code Extension으로만 충분히 가능  
+    - 옵션으로 사용함 
+
+<br/>
+
+* Codex CLI 설치 및 사용법   
+VS Code Extesion 이 아니라 codex 명령어 설치       
+https://learn.chatgpt.com/docs/codex/cli   
+
+<br/>
+
+* CMD or Powershell     
+Codex 명령어 기본 명령어 및 버전 
+```
+C:\Users\LeeJeongHun>codex --version
+codex-cli 0.147.0
+```
+LogIn
+login 시 브라우저로 진행  Google Login 으로 진행    
+Go To [Default Browser](./vscode_github.md#default-browser)  
+```
+C:\Users\LeeJeongHun>codex login
+....
+```
+LogIN 확인 (Local LogIn)
+```
+C:\Users\LeeJeongHun>codex login status
+Logged in using ChatGPT
+```
+LogOut 
+```
+C:\Users\LeeJeongHun>codex logout
+Successfully logged out
+```
+
+
+
+<br/>
+
 ---
 
 ###  Continue   
@@ -202,10 +464,53 @@ models:
 
 <br/>
 
-* Python 기반의 QML 의 QT GUI 
+* Python 기반의 QML 의 QT GUI   
+
 ![](./imgs/ex_qt_00.png)  
 
+<br/>
 
+####  QT Example 
+
+<br/>
+
+QML 기반으로 쉽게 Python으로 개발하고 Pyinsallter로 개발진행  
+가능하다면 venv 기반으로 개발 
+
+Go To [github_release.yaml](#qt-action)   
+
+```text
+VisionTune/
+├── .github/workflows/github_release.yaml    // 모든 QT를 자동화 배포 
+├── .vscode/
+│   ├── extensions.json
+│   ├── settings.json
+│   └── tasks.json
+├── app.py                    // QT Python Main 
+├── configs/default.yaml      // QT Program, 환경변수 저장 yaml로 저장 
+├── data/                     // Data
+├── docs/                     // Pandoc Manaul (한국/영어)
+│   ├── index.md
+│   ├── user_kor.md
+│   └── user_eng.md
+├── docx/reference.docx       // Pandoc Reference
+├── qml/Main.qml              // QML
+├── scripts/                  // Scripts 
+│   ├── check_version.py
+│   └── stamp_version.py
+├── tests/                   //unittest 용 
+│   ├── __init__.py
+│   ├── test_controller.py
+│   ├── test_manuals.py
+│   ├── test_tuning.py
+│   └── test_version.py
+└── visiontune/                  // QT Python Main Module
+    ├── _build_version.py
+    ├── controller.py
+    ├── image_provider.py
+    ├── tuning.py
+    └── version.py
+```
 
 <br/>
 

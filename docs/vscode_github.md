@@ -64,14 +64,15 @@ VS Code 의 Github 연결사항 확인
 
 !!! tip "기본 Browser로 변경"
     - Github 가 Window 의 기본 Browser로 인증하기 때문에 중요   
-    - **Github 의 OAuth 인증** 
+    - **Github 의 OAuth 인증**   
+        - Github HTTPS 계정일 경우에도 필요       
       
 <br/>
 
 
 
 
-* **Browser 기본앱 변경** 
+* **Window Browser 기본앱 변경** 
     1. 설정(Settings) 열기
     2. 앱(Apps) → 기본 앱(Default apps)
     3. 검색창에 브라우저 이름 입력   

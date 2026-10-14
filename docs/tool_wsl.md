@@ -8,7 +8,18 @@
 wsl --help
 ```
 
-Go To [Remote Explorer](./index.md#wsl)  
+<br/>
+
+### VS Code 
+
+<br/>
+
+* VS Code에서 WSL 실행   
+Window에서 설치한 Extension 이 동작이 안되어지며, 별도로 WSL 에 내부에 다시 설치를 진행해야 한다.   
+
+<br/>
+
+Go To [VS Code Remote Explorer](./index.md#wsl)  
 
 <br/>
 

@@ -3,14 +3,15 @@
 <br/>
 
 
-**복수 계정을 위해서 설명**
+* **Github 복수 계정을 위해서 설명**    
+Go To [Github Multiple Accounts](./vscode_github.md#github-mutiple-accounts)      
 
 <br/>
 
-* **테스트 결론**     
+* **Github Multiple Accounts 테스트 결론**     
     1. HTTPS 1개 설정 : 개인 설정   
     2. SSH 1개 설정 : 공용 설정   
-        - SSH 2개 설정 : 미권장  
+        - **SSH 2개 설정 : 미권장**  
 
 !!! success "VSCode Source Control"
     - Git 설정은 오직 [VSCode Source Control](./vscode_github.md#vscode-souce-control) 만 연관  
@@ -214,11 +215,15 @@ ssh -T git@github.com
 !!! warning "**SSH Multi Accounts** 미권장"
     - [Github Action 미동작](./git_setup_default.md#ssh-config-a)
     - 1개의 SSH로 그냥 사용하길 권장   
-    - 1개 SSH 와 1개 HTTPS 권장 
+    - Github 계정 2개 
+        - Github 계정 1개 SSH  권장  
+        - Github 계정 1개 HTTPS 권장 
 
 <br/>      
 
-[Setup SSH - STEP.2 동작과 동일](git_setup_default.md#setup-ssh) 
+[Github Multiple Accounts](./vscode_github.md#github-mutiple-accounts)   
+
+[Setup SSH - STEP.2 동작과 동일](git_setup_default.md#setup-ssh)  
 
 * Key A 생성 
 ```
@@ -244,7 +249,7 @@ ssh-keygen -t ed25519 -C "your_personal@email.com" -f ~/.ssh/id_ed25519_personal
 
 
 
-### SSH Config A    
+#### SSH Config A    
 
 <br/>
 
@@ -281,7 +286,7 @@ Host github-company
 
 ---
 
-### SSH Config B    
+#### SSH Config B    
 
 <br/>
 
@@ -409,6 +414,10 @@ https://github.com/settings/security
 
 <br/>
 
+Go To [Default Browser](./vscode_github.md#default-browser)     
+
+<br/>  
+
 * **Credential**  
 PAT/SSH Key/OAuth 
 ![](./imgs/github_setting_https_01.png)  
@@ -423,7 +432,7 @@ https://github.com/settings/applications
 <br/>
 
 * **GCM Log Out**      
-계정이 다를 경우, 다시 Brwser 기반으로 다시 인증 
+계정이 다를 경우, 다시 Browser 기반으로 다시 인증 
 ```
 git credential-manager github logout "JeonghunLee"
 ```
