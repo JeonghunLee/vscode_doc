@@ -257,6 +257,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#qt-python">
+<span class="md-ellipsis">
+      
+        QT Python
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#better-comments">
 <span class="md-ellipsis">
       
@@ -288,6 +297,33 @@
 <span class="md-ellipsis">
       
         RST
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-series">
+<span class="md-ellipsis">
+      
+        Remote Series
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wsl-and-powershell">
+<span class="md-ellipsis">
+      
+        WSL and PowerShell
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#serial-monitor">
+<span class="md-ellipsis">
+      
+        Serial Monitor
       
     </span>
 </a>
@@ -731,6 +767,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#qt-python">
+<span class="md-ellipsis">
+      
+        QT Python
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#better-comments">
 <span class="md-ellipsis">
       
@@ -762,6 +807,33 @@
 <span class="md-ellipsis">
       
         RST
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remote-series">
+<span class="md-ellipsis">
+      
+        Remote Series
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#wsl-and-powershell">
+<span class="md-ellipsis">
+      
+        WSL and PowerShell
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#serial-monitor">
+<span class="md-ellipsis">
+      
+        Serial Monitor
       
     </span>
 </a>
@@ -1097,6 +1169,14 @@ models:
 </ul>
 <p><br/></p>
 <hr/>
+<h3 id="qt-python">QT Python</h3>
+<p><br/></p>
+<ul>
+<li>Python 기반의 QML 의 QT GUI 
+<img alt="" src="imgs/ex_qt_00.png"/> </li>
+</ul>
+<p><br/></p>
+<hr/>
 <h3 id="better-comments">Better Comments</h3>
 <p><br/></p>
 <ul>
@@ -1111,6 +1191,12 @@ models:
 <li>Jupyter 관리 와 Mermaid View <br/>
 <img alt="" src="imgs/ex_jupyter_00.png"/> </li>
 </ul>
+<div class="admonition tips">
+<p class="admonition-title">Jupyter</p>
+<ul>
+<li>Python 기반으로 본인의 PC에서 실행 </li>
+</ul>
+</div>
 <p><br/></p>
 <hr/>
 <h3 id="google-colab">Google Colab</h3>
@@ -1120,6 +1206,13 @@ models:
 *.ipynb 파일 
 <img alt="" src="imgs/vscode_ex_install_07.png"/> </li>
 </ul>
+<div class="admonition tips">
+<p class="admonition-title">Colab vs Jupyter</p>
+<ul>
+<li>요즘은 거의 Colab 보다 Jupyter를 더 사용하는 것 같다 </li>
+<li>Colab 은 Google Server에서 하기에 제약이 있으므로 주의  </li>
+</ul>
+</div>
 <p><br/></p>
 <hr/>
 <h3 id="rst">RST</h3>
@@ -1127,6 +1220,35 @@ models:
 <ul>
 <li>Sphinx 사용할 경우 
 <img alt="" src="imgs/ex_restructuredText_00.png"/> </li>
+</ul>
+<p><br/></p>
+<hr/>
+<h3 id="remote-series">Remote Series</h3>
+<p><br/></p>
+<ul>
+<li><a href="#vscode-remote-explore">Remote Explorer</a><ul>
+<li>Remote SSH </li>
+<li>Remote Repistories
+<img alt="" src="imgs/ex_remote_00.png"/> </li>
+</ul>
+</li>
+</ul>
+<p><br/></p>
+<hr/>
+<h3 id="wsl-and-powershell">WSL and PowerShell</h3>
+<p><br/></p>
+<ul>
+<li>Window 환경 - WSL and PowerShell 
+<img alt="" src="imgs/ex_powershell_00.png"/>
+<img alt="" src="imgs/ex_wsl_00.png"/> </li>
+</ul>
+<p><br/></p>
+<hr/>
+<h3 id="serial-monitor">Serial Monitor</h3>
+<p><br/></p>
+<ul>
+<li>Serial Console 사용할 경우 
+<img alt="" src="imgs/ex_serialmonitor_00.png"/> </li>
 </ul>
 <p><br/></p>
 <hr/>
@@ -1343,9 +1465,38 @@ vscjava.migrate-java-to-azure@1.22.0
 <p class="admonition-title">SSH </p>
 <ul>
 <li>WSL에 따라 Linux 변경이 가능 </li>
+<li>WSL 실행시 WSL 에서 VS Code Extension 설치가 되어야 하므로 좌측 Extetion 변경 </li>
 </ul>
 </div>
 <p><img alt="" src="imgs/vscode_remote_01.png"/></p>
+<div class="admonition tips">
+<p class="admonition-title">WSL Bash</p>
+<ul>
+<li>Bash 실행 </li>
+<li>자동으로 좌측 Extension Linux 환경으로 변경   </li>
+<li>WSL 과 연결된 Port 확인 </li>
+<li>WSL 기반으로 별도의 Project 진행 가능 </li>
+</ul>
+</div>
+<p><img alt="" src="imgs/vscode_remote_02.png"/>
+<img alt="" src="imgs/vscode_remote_03.png"/></p>
+<div class="admonition tips">
+<p class="admonition-title">Project 가능 </p>
+<ul>
+<li>WSL 기반으로 별도의 폴더/Directory 기반의 <strong>Project 진행 가능</strong> </li>
+<li>vi 대신 편집기로도 쉽게 이용 </li>
+</ul>
+</div>
+<ul>
+<li>
+<p>Directory 기반의 <strong>Project 진행 가능</strong><br/>
+<img alt="" src="imgs/vscode_remote_04.png"/></p>
+</li>
+<li>
+<p><strong>Serial Console 도 가능</strong>
+<img alt="" src="imgs/vscode_remote_05.png"/></p>
+</li>
+</ul>
 <p><br/></p>
 <hr/>
 <h2 id="vscode-testing">VSCode Testing</h2>

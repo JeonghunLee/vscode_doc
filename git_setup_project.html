@@ -638,9 +638,9 @@
 </div>
 <p><br/></p>
 <ul>
-<li>Check Git 우선순위<ul>
-<li><a href="git_setup_project.html#check-git-remote">Check GIT Remote</a> : Git Remote Repository 확인 </li>
-<li><a href="git_setup_project.html#check-git-local">Check GIT Local</a> : Git Local 설정 확인 (User 확인)</li>
+<li>Check Git 사항 우선순위<ul>
+<li><a href="git_setup_project.html#check-git-local">Check GIT Local</a> : Git Local 설정 확인 <strong>(Local/Remote 필수)</strong></li>
+<li><a href="git_setup_project.html#check-git-remote">Check GIT Remote</a> : Git Remote Repository 만확인 <strong>(옵션)</strong></li>
 </ul>
 </li>
 </ul>
@@ -677,6 +677,12 @@ branch.main.vscode-merge-base=origin/main
 branch.main.merge=refs/heads/main
 </code></pre></div></li>
 </ul>
+<p>SSH 경우,  <br/>
+Remote URL SSH 형태 <br/>
+User 정보 .ssh 보관가능 <br/>
+<div class="highlight"><pre><span></span><code>remote.origin.url=git@github.com:JeonghunLee/vscode_doc.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+</code></pre></div></p>
 <p><br/></p>
 <ul>
 <li><strong>Check HTTPS</strong> <br/>
@@ -698,6 +704,14 @@ user.name=JeonghunLee
 user.email=xxxx
 </code></pre></div></li>
 </ul>
+<p>HTTPS 경우,  <br/>
+Remote URL HTTPS 형태 <br/>
+User 정보 확인 , 나의 경우 주로 Local 로 사용하며 만약 없다면, <a href="#resetup-git">Global 확인</a> <br/>
+<div class="highlight"><pre><span></span><code>remote.origin.url=https://github.com/JeonghunLee/vscode_doc
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+user.name=JeonghunLee
+user.email=xxxx
+</code></pre></div></p>
 <p><br/></p>
 <hr/>
 <h3 id="check-git-user">Check Git User</h3>

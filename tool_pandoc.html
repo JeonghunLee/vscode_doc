@@ -398,6 +398,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown">
+<span class="md-ellipsis">
+      
+        Markdown
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -598,6 +607,15 @@
 <span class="md-ellipsis">
       
         Lua Filter Script-C
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter-script-d">
+<span class="md-ellipsis">
+      
+        Lua Filter Script-D
       
     </span>
 </a>
@@ -689,6 +707,15 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown">
+<span class="md-ellipsis">
+      
+        Markdown
+      
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -894,6 +921,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#lua-filter-script-d">
+<span class="md-ellipsis">
+      
+        Lua Filter Script-D
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#pandoc-args">
 <span class="md-ellipsis">
       
@@ -940,6 +976,58 @@ Pandoc를 이용하여 문서를 만들고자 하면 각 Mermaid 나 UML는 우�
    " --- "    : HTML 괜찮으나, --- 로 문서의 질이 떨어짐 
 </p>
 </blockquote>
+<h3 id="markdown">Markdown</h3>
+<p><br/></p>
+<p>모든 Markdown이 되는 것이 아니며, Mkdocs 와 좀 많이 다르다. <br/>
+일부 HTML을 허용하나, 모두 허용하는 것은 아니다.   </p>
+<ul>
+<li>
+<p>Image 사이즈 강제 조절 <br/>
+<div class="highlight"><pre><span></span><code>![](./imgs/20261004_164207.jpg)
+![](./imgs/20261004_164207.jpg){width=10cm height=6cm} 
+![](./imgs/20261004_164207.jpg){width=50% height=50%} 
+</code></pre></div></p>
+</li>
+<li>
+<p>TEST Table  미 조절 </p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>| 구분 | A | B |
+|---|---|---|
+| 1|  A.1 | A.1  |
+| 2 | A.2 | A.1  |
+| 3 | A.1  | A.1  |
+| 4 | A.1  | A.1  |
+| 5 | A.1  | A.1  |
+</code></pre></div>
+<p><br/></p>
+<ul>
+<li>TEST Table 정렬 </li>
+</ul>
+<div class="highlight"><pre><span></span><code>| 구분 | A | B |
+|:---:|:---|---:|
+| 1 | A.1 | A.1 |
+| 2 | A.2 | A.1 |
+| 3 | A.1 | A.1 |
+</code></pre></div>
+<ul>
+<li>TEST Table 사이즈 조절 <br/>
+아래 Lua Filter로도 가능<br/>
+<div class="highlight"><pre><span></span><code>+------+----------------+------------------------+
+| 구분 | A              | B                      |
++======+================+========================+
+| 1    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 2    | A.2            | A.1                    |
++------+----------------+------------------------+
+| 3    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 4    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 5    | A.1            | A.1                    |
++------+----------------+------------------------+
+</code></pre></div></li>
+</ul>
 <p><br/></p>
 <h2 id="install-pandoc">Install pandoc</h2>
 <p><br/></p>
@@ -970,7 +1058,8 @@ Pandoc를 이용하여 문서를 만들고자 하면 각 Mermaid 나 UML는 우�
 <hr/>
 <h2 id="make-reference">Make Reference</h2>
 <p><br/></p>
-<p>Reference docx 와 pptx 파일생성 방법이지만, <strong>솔직히 Reference 파일은 필요 없을 듯하다.</strong> </p>
+<p>Reference docx 와 pptx 파일생성 방법이지만, <strong>솔직히 Reference 파일은 필요 없을 듯하다.</strong> <br/>
+왜냐하면, 본인 스타일 이나, 회사 문서 서식기반으로 한다음 Reference 파일을 수정해 나가는 것이 빠르다     </p>
 <p><br/></p>
 <ul>
 <li><strong>Reference docx/pptx file</strong> </li>
@@ -983,9 +1072,9 @@ Pandoc를 이용하여 문서를 만들고자 하면 각 Mermaid 나 UML는 우�
 </code></pre></div>
 <p><br/></p>
 <ul>
-<li>Reference File<ul>
-<li>상위 파일을 만든 후, 각 폰트를 변경하고 본인 스타일로 수정</li>
-<li>docx 와 pptx 가능한 이유는 XML기반</li>
+<li>Reference File  <ul>
+<li>상위 파일을 만든 후, 각 폰트를 변경하고 본인 스타일로 수정   </li>
+<li>docx 와 pptx 가능한 이유는 XML기반  </li>
 </ul>
 </li>
 </ul>
@@ -1423,24 +1512,92 @@ HTML 로 한다면, CSS까지 나중에 고려 해도 될 듯하다. </p>
 <img alt="" src="imgs/pandoc_docx_18.png"/></li>
 </ul>
 <p><br/></p>
+<h3 id="lua-filter-script-d">Lua Filter Script-D</h3>
+<p><br/></p>
+<blockquote>
+<p>table-width.lua  이용하여 각 width를 세부적으로 조절 
+ 이 방법 말고 별도로<br/>
+</p>
+</blockquote>
+<ul>
+<li>TEST Table Size Lua Filter로 조절  </li>
+</ul>
+<p>::: {.table-width widths="10,45,45"}</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A.1</td>
+<td>A.1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A.2</td>
+<td>A.1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A.1</td>
+<td>A.1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A.1</td>
+<td>A.1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A.1</td>
+<td>A.1</td>
+</tr>
+</tbody>
+</table>
+<p>:::</p>
+<p><br/></p>
+<ul>
+<li>TEST Table 사이즈 조절   </li>
+</ul>
+<p>이 방법으로 도 사이즈 조절 가능 하지만 좀 불편  </p>
+<p>+------+----------------+------------------------+
+| 구분 | A              | B                      |
++<mark><mark><mark>+</mark></mark></mark><mark><mark><mark><mark><mark>+</mark></mark></mark></mark></mark>==============+
+| 1    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 2    | A.2            | A.1                    |
++------+----------------+------------------------+
+| 3    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 4    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 5    | A.1            | A.1                    |
++------+----------------+------------------------+</p>
+<p><br/></p>
 <h3 id="pandoc-args">Pandoc Args</h3>
 <p><br/></p>
 <ul>
 <li><strong>VS Code Task</strong> <br/>
-Pandoc args에 아래와 같이 각 Lua filter 적용<br/>
+Pandoc args에 아래와 같이 각 Lua filter 적용  </li>
+</ul>
 <div class="highlight"><pre><span></span><code>                ".\\docs\\tool_pandoc.md",
                 "--toc",
                 "--number-sections",
                 "--metadata-file=.\\docx\\lua\\signature.yaml", //signature.lua meta data 
                 "--lua-filter=.\\docx\\lua\\signature.lua",
                 "--lua-filter=.\\docx\\lua\\information.lua",  
-                "--lua-filter=.\\docx\\lua\\test_result.lua",                                
-                "--reference-doc=.\\docx\\reference.docx",
+                "--lua-filter=.\\docx\\lua\\test_result.lua",   
+                "--lua-filter=.\\docx\\lua\\table-width.lua",                                                 
+                "--reference-doc=.\\docx\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
                 ".\\docx\\tool_pandoc.docx"
-</code></pre></div></li>
-</ul>
+</code></pre></div>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
