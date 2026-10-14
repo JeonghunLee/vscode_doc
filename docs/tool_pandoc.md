@@ -35,6 +35,61 @@ Mkdocs 중 문서 중 Markdown으로 된 문서를 쉽게 DOCX / PPTX 혹은 다
 >    " --- "    : HTML 괜찮으나, --- 로 문서의 질이 떨어짐 
 >
 
+### Markdown 
+
+<br/>
+
+모든 Markdown이 되는 것이 아니며, Mkdocs 와 좀 많이 다르다.   
+일부 HTML을 허용하나, 모두 허용하는 것은 아니다.   
+
+* Image 사이즈 강제 조절   
+```
+![](./imgs/20261004_164207.jpg)
+![](./imgs/20261004_164207.jpg){width=10cm height=6cm} 
+![](./imgs/20261004_164207.jpg){width=50% height=50%} 
+```
+
+* TEST Table  미 조절 
+
+```
+| 구분 | A | B |
+|---|---|---|
+| 1|  A.1 | A.1  |
+| 2 | A.2 | A.1  |
+| 3 | A.1  | A.1  |
+| 4 | A.1  | A.1  |
+| 5 | A.1  | A.1  |
+```
+
+<br/>
+
+* TEST Table 정렬 
+
+```
+| 구분 | A | B |
+|:---:|:---|---:|
+| 1 | A.1 | A.1 |
+| 2 | A.2 | A.1 |
+| 3 | A.1 | A.1 |
+```
+
+* TEST Table 사이즈 조절   
+아래 Lua Filter로도 가능  
+```
++------+----------------+------------------------+
+| 구분 | A              | B                      |
++======+================+========================+
+| 1    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 2    | A.2            | A.1                    |
++------+----------------+------------------------+
+| 3    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 4    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 5    | A.1            | A.1                    |
++------+----------------+------------------------+
+```
 
 <br/>
 
@@ -81,7 +136,8 @@ pandoc --version
 <br/>
 
 
-Reference docx 와 pptx 파일생성 방법이지만, **솔직히 Reference 파일은 필요 없을 듯하다.**   
+Reference docx 와 pptx 파일생성 방법이지만, **솔직히 Reference 파일은 필요 없을 듯하다.**     
+왜냐하면, 본인 스타일 이나, 회사 문서 서식기반으로 한다음 Reference 파일을 수정해 나가는 것이 빠르다     
 
 <br/>
 
@@ -101,10 +157,10 @@ pandoc -o reference.pptx --print-default-data-file reference.pptx
 
 <br/>
 
-* Reference File
-    * 상위 파일을 만든 후, 각 폰트를 변경하고 본인 스타일로 수정
-    * docx 와 pptx 가능한 이유는 XML기반
-
+* Reference File  
+    * 상위 파일을 만든 후, 각 폰트를 변경하고 본인 스타일로 수정   
+    * docx 와 pptx 가능한 이유는 XML기반  
+    
 <br/>
 
 ![](./imgs/tool_pandoc_docx_00.png)
@@ -591,12 +647,57 @@ warranty, not even for merchantability or fitness for a particular purpose.
 
 <br/>
 
+### Lua Filter Script-D
+
+<br/>
+
+> table-width.lua  이용하여 각 width를 세부적으로 조절 
+>  이 방법 말고 별도로  
+> 
+
+* TEST Table Size Lua Filter로 조절  
+
+::: {.table-width widths="10,45,45"}
+
+| 구분 | A | B |
+|---|---|---|
+| 1 | A.1 | A.1 |
+| 2 | A.2 | A.1 |
+| 3 | A.1 | A.1 |
+| 4 | A.1 | A.1 |
+| 5 | A.1 | A.1 |
+
+:::
+
+<br/>
+
+* TEST Table 사이즈 조절   
+
+이 방법으로 도 사이즈 조절 가능 하지만 좀 불편  
+
++------+----------------+------------------------+
+| 구분 | A              | B                      |
++======+================+========================+
+| 1    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 2    | A.2            | A.1                    |
++------+----------------+------------------------+
+| 3    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 4    | A.1            | A.1                    |
++------+----------------+------------------------+
+| 5    | A.1            | A.1                    |
++------+----------------+------------------------+
+
+<br/>
+
 ### Pandoc Args
 
 <br/>
 
 * **VS Code Task**   
 Pandoc args에 아래와 같이 각 Lua filter 적용  
+
 ```
                 ".\\docs\\tool_pandoc.md",
                 "--toc",
@@ -604,8 +705,9 @@ Pandoc args에 아래와 같이 각 Lua filter 적용
                 "--metadata-file=.\\docx\\lua\\signature.yaml", //signature.lua meta data 
                 "--lua-filter=.\\docx\\lua\\signature.lua",
                 "--lua-filter=.\\docx\\lua\\information.lua",  
-                "--lua-filter=.\\docx\\lua\\test_result.lua",                                
-                "--reference-doc=.\\docx\\reference.docx",
+                "--lua-filter=.\\docx\\lua\\test_result.lua",   
+                "--lua-filter=.\\docx\\lua\\table-width.lua",                                                 
+                "--reference-doc=.\\docx\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
                 ".\\docx\\tool_pandoc.docx"

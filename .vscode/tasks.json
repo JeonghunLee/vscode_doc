@@ -75,7 +75,7 @@
                 ".\\docs\\tool_pandoc.md",
                 "--toc",
                 "--number-sections",
-                "--reference-doc=.\\docx\\reference.docx",
+                "--reference-doc=.\\docx\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
                 ".\\docx\\tool_pandoc.docx"
@@ -91,9 +91,10 @@
                 "--metadata-file=.\\docx\\lua\\signature.yaml",
                 "--lua-filter=.\\docx\\lua\\signature.lua",
                 "--lua-filter=.\\docx\\lua\\information.lua",  
-                "--lua-filter=.\\docx\\lua\\test_result.lua",                                  
+                "--lua-filter=.\\docx\\lua\\test_result.lua",    
+                "--lua-filter=.\\docx\\lua\\table-width.lua",                                                 
                 "--number-sections",
-                "--reference-doc=.\\docx\\reference.docx",
+                "--reference-doc=.\\docx\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
                 ".\\docx\\tool_pandoc_lua.docx"
