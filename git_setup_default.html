@@ -313,7 +313,8 @@
       
     </span>
 </a>
-</li>
+<nav aria-label="SSH Multi Accounts" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ssh-config-a">
 <span class="md-ellipsis">
@@ -331,6 +332,9 @@
       
     </span>
 </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ssh-test-git">
@@ -613,7 +617,8 @@
       
     </span>
 </a>
-</li>
+<nav aria-label="SSH Multi Accounts" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ssh-config-a">
 <span class="md-ellipsis">
@@ -631,6 +636,9 @@
       
     </span>
 </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ssh-test-git">
@@ -684,13 +692,16 @@
 <article class="md-content__inner md-typeset">
 <h1 id="setup-git-default">Setup GIT Default</h1>
 <p><br/></p>
-<p><strong>복수 계정을 위해서 설명</strong></p>
+<ul>
+<li><strong>Github 복수 계정을 위해서 설명</strong> <br/>
+Go To <a href="vscode_github.html#github-mutiple-accounts">Github Multiple Accounts</a> </li>
+</ul>
 <p><br/></p>
 <ul>
-<li><strong>테스트 결론</strong> <ol>
+<li><strong>Github Multiple Accounts 테스트 결론</strong> <ol>
 <li>HTTPS 1개 설정 : 개인 설정   </li>
 <li>SSH 1개 설정 : 공용 설정   <ul>
-<li>SSH 2개 설정 : 미권장  </li>
+<li><strong>SSH 2개 설정 : 미권장</strong> </li>
 </ul>
 </li>
 </ol>
@@ -878,10 +889,15 @@ cat ~\.gitconfig
 <ul>
 <li><a href="git_setup_default.html#ssh-config-a">Github Action 미동작</a></li>
 <li>1개의 SSH로 그냥 사용하길 권장   </li>
-<li>1개 SSH 와 1개 HTTPS 권장 </li>
+<li>Github 계정 2개 <ul>
+<li>Github 계정 1개 SSH  권장  </li>
+<li>Github 계정 1개 HTTPS 권장 </li>
+</ul>
+</li>
 </ul>
 </div>
 <p><br/> </p>
+<p><a href="vscode_github.html#github-mutiple-accounts">Github Multiple Accounts</a> </p>
 <p><a href="git_setup_default.html#setup-ssh">Setup SSH - STEP.2 동작과 동일</a> </p>
 <ul>
 <li>Key A 생성 
@@ -902,7 +918,7 @@ ssh-keygen -t ed25519 -C "your_personal@email.com" -f ~/.ssh/id_ed25519_personal
 <br/></li>
 </ul>
 <hr/>
-<h3 id="ssh-config-a">SSH Config A</h3>
+<h4 id="ssh-config-a">SSH Config A</h4>
 <p><br/></p>
 <p>기본적으로 SSH Config 존재하지 않으며, 2개의 설정할 경우 별도로 생성 <br/>
 <strong>Github Action 동작이 안됨</strong> </p>
@@ -938,7 +954,7 @@ Host github-company
 </div>
 <p><br/></p>
 <hr/>
-<h3 id="ssh-config-b">SSH Config B</h3>
+<h4 id="ssh-config-b">SSH Config B</h4>
 <p><br/></p>
 <p>기본적으로 SSH Config 존재하지 않으며, 2개의 설정할 경우 별도로 생성<br/>
 <strong>1개의 SSH 로 사용하는 것은 권장</strong> </p>
@@ -1051,6 +1067,8 @@ git ls-remote git@github.com:Jeonghun-DYNE/Mono-Distortion-Vector-Depth.git
 <hr/>
 <h3 id="gcm">GCM</h3>
 <p><br/></p>
+<p>Go To <a href="vscode_github.html#default-browser">Default Browser</a> </p>
+<p><br/> </p>
 <ul>
 <li><strong>Credential</strong><br/>
 PAT/SSH Key/OAuth 
@@ -1064,7 +1082,7 @@ PAT/SSH Key/OAuth
 <p><br/></p>
 <ul>
 <li><strong>GCM Log Out</strong> <br/>
-계정이 다를 경우, 다시 Brwser 기반으로 다시 인증 
+계정이 다를 경우, 다시 Browser 기반으로 다시 인증 
 <div class="highlight"><pre><span></span><code>git credential-manager github logout "JeonghunLee"
 </code></pre></div></li>
 </ul>
