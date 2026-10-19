@@ -15,6 +15,15 @@
 
 <br/>
 
+많은 무료 Terminal 존재하며, 편한 것을 사용  
+
+* **이외 Terminal**  
+    * Tera Term 
+    * Putty 
+
+
+<br/>
+
 ---
 
 

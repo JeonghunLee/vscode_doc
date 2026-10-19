@@ -22,12 +22,17 @@ nav:
     - Mermaid: node_mermaid.md 
     - Electron: tool_electron.md    
   - Tools:
-    - Tabby: tool_tabby.md
+    - Slack/MSTeams: tool_msteams.md
+    - Tabby/TeraTerm: tool_tabby.md
     - Pandoc: tool_pandoc.md
     - VNC: tool_vnc.md
     - WSL: tool_wsl.md
-    - MSTeams: tool_msteams.md
-                    
+    - Wireshark: tool_wireshark.md
+    - WinSCP: tool_winscp.md
+    - WinMerge: tool_winmerge.md
+    - Etcher/Rufus: tool_etcher.md 
+
+
 plugins:
   - search
   - mermaid2
