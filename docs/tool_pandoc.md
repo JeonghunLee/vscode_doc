@@ -16,17 +16,68 @@ Mkdocs 중 문서 중 Markdown으로 된 문서를 쉽게 DOCX / PPTX 혹은 다
 
 <br/>
 
-### Mkdocs to Pandoc
+## Install pandoc 
 
 <br/>
 
+현재 Window에서만 사용을 주로해서 아래와 같이 Window에서 쉽게 설치 
+
+<br/>
+
+
+### Windows
+
+<br/>
+
+* Install pandoc in Windows
+```
+winget install --id JohnMacFarlane.Pandoc -e
+```
+
+<br/>
+
+* Check pandoc
+```
+pandoc --version
+```
+
+> NOTE
+>
+> Markdown to Docx/PPTx 변경"
+>     쉽게 Docx 와 PPTx 변경  
+>     DOCX/PPTX 은 XML 기반이므로 가능하지만, 뒤에 X가 빠지면 안됨 
+
+<br/>
+
+**아래 TEST 를 위해서 --- 추가함**   
+
+<br/>
+
+---
+
+## Markdown 
+
+<br/>
+
+
+<br/>
+
+### Markdown To DOCX
+
+<br/>
+
+
+
+```
 > NOTE
 >
 > 가능하면, ">" 기반으로 경고문을 작성 
 >
+```
 
 <br/>
 
+```
 > NOTE
 > 
 >   A. !!! tips/success/note "" 대신 전부 > 변경  
@@ -34,10 +85,13 @@ Mkdocs 중 문서 중 Markdown으로 된 문서를 쉽게 DOCX / PPTX 혹은 다
 >    "<br/>" 
 >    " --- "    : HTML 괜찮으나, --- 로 문서의 질이 떨어짐 
 >
+```
 
-### Markdown 
+**아래 TEST 를 위해서 --- 추가함**   
 
 <br/>
+
+
 
 모든 Markdown이 되는 것이 아니며, Mkdocs 와 좀 많이 다르다.   
 일부 HTML을 허용하나, 모두 허용하는 것은 아니다.   
@@ -93,43 +147,46 @@ Mkdocs 중 문서 중 Markdown으로 된 문서를 쉽게 DOCX / PPTX 혹은 다
 
 <br/>
 
-## Install pandoc 
+### Markdown To PPTX 
 
 <br/>
 
-현재 Window에서만 사용을 주로해서 아래와 같이 Window에서 쉽게 설치 
-
-<br/>
-
-### Windows
-
-<br/>
-
-* Install pandoc in Windows
+* Example  
+--- 로 쉽게 각 Slide 구분 
 ```
-winget install --id JohnMacFarlane.Pandoc -e
-```
+---
+title: "Pandoc PPTx"
+author: "TEST 이정훈"
+date: "2026-10-19"
+toc-title: "목차"
+---
 
-<br/>
+# Slide 1: 프로젝트 소개
 
-* Check pandoc
-```
-pandoc --version
-```
-
-> NOTE
->
-> Markdown to Docx/PPTx 변경"
->     쉽게 Docx 와 PPTx 변경  
->     DOCX/PPTX 은 XML 기반이므로 가능하지만, 뒤에 X가 빠지면 안됨 
-
-<br/>
-
-**아래 TEST 를 위해서 --- 추가함**   
-
-<br/>
+Pandoc
+- 개발 목적
+- 시스템 개요
 
 ---
+
+# Slide 2: 시스템 아키텍처
+
+- Pandoc
+- PPTX
+
+
+---
+
+# Slide 3: 개발 일정
+
+| 단계 | 작업 |
+|---|---|
+| 1 | System Driver 개발 |
+| 2 | Application 개발 |
+| 3 | 통합 테스트 |
+```
+
+<br/>
 
 ## Make Reference
 
@@ -166,6 +223,14 @@ pandoc -o reference.pptx --print-default-data-file reference.pptx
 ![](./imgs/tool_pandoc_docx_00.png)
 ![](./imgs/tool_pandoc_ppt_00.png)
 
+
+<br/>
+
+## DOCX File Edit
+
+<br/>
+
+상위 reference 기반으로 각 Docx 파일의 Style을 수정   
 
 <br/>
 
@@ -346,6 +411,42 @@ Table of Contents 수정
 
 <br/>
 
+## PPTX File Edit
+
+<br/>
+
+상위 reference 기반으로 각 Docx 파일의 Style을 수정   
+
+보기 -> 슬라이드 마스터  
+![](./imgs/tool_pandoc_ppt_01.png)
+
+
+* 슬라이드 노트 마스터  
+생략 
+
+| 구분 | 슬라이드 마스터 | 슬라이드 노트 마스터 |
+|---|---|---|
+| 목적 | 발표 화면 디자인 | 발표자 노트 인쇄 |
+| 제목·본문 | 글꼴·크기·위치 | 노트 서식 |
+| 머리글 | 기본 지원 없음 | 지원 |
+| 바닥글 | 슬라이드 하단 | 노트 페이지 하단 |
+| 번호 | 슬라이드 번호 | 노트 페이지 번호 |
+| 로고·배경 | 슬라이드 전체 | 노트 페이지 |
+| Pandoc | reference.pptx 적용 | 일반적으로 불필요 |
+| 설정 | 보기 → 슬라이드 마스터 | 보기 → 노트 마스터 |
+
+<br/>
+
+### Style 수정
+
+<br/>
+
+* 글꼴 수정   
+각 구조 변경 및 각 Size 변경   
+![](./imgs/tool_pandoc_ppt_02.png)
+
+<br/>
+
 ## Check DOCX/PPTX
 
 <br/>
@@ -430,7 +531,42 @@ pandoc .\docs\index.md `
 
 <br/>
 
+* Convert markdown to pptx   
+Reference 
+```
+pandoc .\docs\test_pptx.md `
+  --standalone `
+  --toc `
+  --toc-depth=1 `  
+  --slide-level=0 `
+  --reference-doc=.\docx\reference.pptx `
+  --resource-path=".;.\docs" `
+  -o .\docx\output\test_pptx.pptx
+```
 
+<br/>
+
+* task.json 
+```
+        {
+            "label": "Pandoc: test_ppt.md to PPTX",
+            "type": "shell",
+            "command": "pandoc",
+            "args": [
+                ".\\docx\\test_ppt.md",
+                "--standalone",
+                "--toc",
+                "--toc-depth=1",
+                "--slide-level=0",      
+                "--reference-doc=.\\docx\\reference\\reference.pptx",
+                "--resource-path=.\\docx",
+                "-o",``
+                ".\\docx\\output\\test_ppt.pptx"
+            ]
+        },   
+```
+
+<br/>
 
 
 
@@ -461,6 +597,31 @@ pandoc `
   --reference-doc=.\docx\tool_pandoc.docx `
   --resource-path=".;.\docs" `
   -o .\output\tool_pandoc.docx
+```
+
+<br/>
+
+* task.json 
+```
+        {
+            "label": "Pandoc: tool_pandoc.md (Lua filter) to DOCX",
+            "type": "shell",
+            "command": "pandoc",
+            "args": [
+                ".\\docs\\tool_pandoc.md",
+                "--toc",
+                "--metadata-file=.\\docx\\lua\\signature.yaml",
+                "--lua-filter=.\\docx\\lua\\signature.lua",
+                "--lua-filter=.\\docx\\lua\\information.lua",  
+                "--lua-filter=.\\docx\\lua\\test_result.lua",    
+                "--lua-filter=.\\docx\\lua\\table-width.lua",                                                 
+                "--number-sections",
+                "--reference-doc=.\\docx\\reference\\reference.docx",
+                "--resource-path=.\\docs",
+                "-o",``
+                ".\\docx\\output\\tool_pandoc_lua.docx"
+            ]
+        },   
 ```
 
 <br/>

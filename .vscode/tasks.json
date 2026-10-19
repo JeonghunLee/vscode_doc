@@ -78,7 +78,7 @@
                 "--reference-doc=.\\docx\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
-                ".\\docx\\tool_pandoc.docx"
+                ".\\docx\\output\\tool_pandoc.docx"
             ]
         },    
         {
@@ -97,9 +97,25 @@
                 "--reference-doc=.\\docx\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
-                ".\\docx\\tool_pandoc_lua.docx"
+                ".\\docx\\output\\tool_pandoc_lua.docx"
             ]
-        },             
+        },      
+        {
+            "label": "Pandoc: test_ppt.md to PPTX",
+            "type": "shell",
+            "command": "pandoc",
+            "args": [
+                ".\\docx\\test_ppt.md",
+                "--standalone",
+                "--toc",
+                "--toc-depth=1",
+                "--slide-level=0",      
+                "--reference-doc=.\\docx\\reference\\reference.pptx",
+                "--resource-path=.\\docx",
+                "-o",``
+                ".\\docx\\output\\test_ppt.pptx"
+            ]
+        },                  
         {
             "label": "Mermaid: Convert test.md to SVG",
             "type": "shell",
