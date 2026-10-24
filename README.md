@@ -197,7 +197,7 @@ pandoc `
   .\docs\index.md `
   --toc `
   --number-sections `
-  --reference-doc=.\docx\reference.docx `
+  --reference-doc=.\pandoc\reference.docx `
   --resource-path=".;.\docs" `
   -o .\output\index.docx
 ```
@@ -212,7 +212,7 @@ Convert markdown to svg
 
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
-  -i .\docx\mmd\test.md `
-  -o .\docx\imgs\test.svg `
+  -i .\pandoc\mmd\test.md `
+  -o .\pandoc\imgs\test.svg `
   -b transparent
 ```

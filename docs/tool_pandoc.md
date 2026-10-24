@@ -523,7 +523,7 @@ Reference 이용
 ```
 pandoc .\docs\index.md `
   --slide-level=2 `
-  --reference-doc=.\docx\reference.pptx `
+  --reference-doc=.\pandoc\reference.pptx `
   --resource-path=".;.\docs" `
   -o .\output\index.pptx
 ```
@@ -539,9 +539,9 @@ pandoc .\docs\test_pptx.md `
   --toc `
   --toc-depth=1 `  
   --slide-level=0 `
-  --reference-doc=.\docx\reference.pptx `
+  --reference-doc=.\pandoc\reference.pptx `
   --resource-path=".;.\docs" `
-  -o .\docx\output\test_pptx.pptx
+  -o .\pandoc\output\test_pptx.pptx
 ```
 
 <br/>
@@ -553,15 +553,15 @@ pandoc .\docs\test_pptx.md `
             "type": "shell",
             "command": "pandoc",
             "args": [
-                ".\\docx\\test_ppt.md",
+                ".\\pandoc\\test_ppt.md",
                 "--standalone",
                 "--toc",
                 "--toc-depth=1",
                 "--slide-level=0",      
-                "--reference-doc=.\\docx\\reference\\reference.pptx",
-                "--resource-path=.\\docx",
+                "--reference-doc=.\\pandoc\\reference\\reference.pptx",
+                "--resource-path=.\\pandoc",
                 "-o",``
-                ".\\docx\\output\\test_ppt.pptx"
+                ".\\pandoc\\output\\test_ppt.pptx"
             ]
         },   
 ```
@@ -581,7 +581,7 @@ pandoc `
   .\docs\index.md `
   --toc `
   --number-sections `
-  --reference-doc=.\docx\reference.docx `
+  --reference-doc=.\pandoc\reference.docx `
   --resource-path=".;.\docs" `
   -o .\output\index.docx
 ```
@@ -594,7 +594,7 @@ pandoc `
   .\docs\tool_pandoc.md `
   --toc `
   --number-sections `
-  --reference-doc=.\docx\tool_pandoc.docx `
+  --reference-doc=.\pandoc\tool_pandoc.docx `
   --resource-path=".;.\docs" `
   -o .\output\tool_pandoc.docx
 ```
@@ -610,16 +610,16 @@ pandoc `
             "args": [
                 ".\\docs\\tool_pandoc.md",
                 "--toc",
-                "--metadata-file=.\\docx\\lua\\signature.yaml",
-                "--lua-filter=.\\docx\\lua\\signature.lua",
-                "--lua-filter=.\\docx\\lua\\information.lua",  
-                "--lua-filter=.\\docx\\lua\\test_result.lua",    
-                "--lua-filter=.\\docx\\lua\\table-width.lua",                                                 
+                "--metadata-file=.\\pandoc\\lua\\signature.yaml",
+                "--lua-filter=.\\pandoc\\lua\\signature.lua",
+                "--lua-filter=.\\pandoc\\lua\\information.lua",  
+                "--lua-filter=.\\pandoc\\lua\\test_result.lua",    
+                "--lua-filter=.\\pandoc\\lua\\table-width.lua",                                                 
                 "--number-sections",
-                "--reference-doc=.\\docx\\reference\\reference.docx",
+                "--reference-doc=.\\pandoc\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
-                ".\\docx\\output\\tool_pandoc_lua.docx"
+                ".\\pandoc\\output\\tool_pandoc_lua.docx"
             ]
         },   
 ```
@@ -660,22 +660,22 @@ npx --help
 
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
-  -i .\docx\mmd\test.md `
-  -o .\docx\imgs\test.svg `
+  -i .\pandoc\mmd\test.md `
+  -o .\pandoc\imgs\test.svg `
   -b transparent
 ```
 
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
-  -i .\docx\mmd\test_general.md `
-  -o .\docx\imgs\test_general.svg `
+  -i .\pandoc\mmd\test_general.md `
+  -o .\pandoc\imgs\test_general.svg `
   -b transparent
 ```
 
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
-  -i .\docx\mmd\test_handdrawn.md `
-  -o .\docx\imgs\test_handdrawn.svg `
+  -i .\pandoc\mmd\test_handdrawn.md `
+  -o .\pandoc\imgs\test_handdrawn.svg `
   -b transparent
 ```
 <br/>
@@ -747,7 +747,7 @@ warranty, not even for merchantability or fitness for a particular purpose.
 
 <br/>
 
-* **docx/tool_pandoc_lua.docx**     
+* **pandoc/tool_pandoc_lua.docx**     
 **pandoc result**   // pandoc 실행 결과 
 ![](./imgs/pandoc_docx_16.png)
 
@@ -772,7 +772,7 @@ warranty, not even for merchantability or fitness for a particular purpose.
 
 <br/>
 
-* **docx/tool_pandoc_lua.docx**    
+* **pandoc/tool_pandoc_lua.docx**    
 **pandoc result**   // pandoc 실행 결과 
 ![](./imgs/pandoc_docx_17.png)
 
@@ -786,7 +786,7 @@ warranty, not even for merchantability or fitness for a particular purpose.
 
 * **TEST Lua Filter-3**
 
-::: {.test-result source="docx/lua/test_result.json"}
+::: {.test-result source="pandoc/lua/test_result.json"}
 :::
 
 <br/>
@@ -802,7 +802,7 @@ warranty, not even for merchantability or fitness for a particular purpose.
 
 <br/>
 
-* **docx/tool_pandoc_lua.docx**      
+* **pandoc/tool_pandoc_lua.docx**      
 **pandoc result**   // pandoc 실행 결과 (test_result.lua/test_result.json)      
 ![](./imgs/pandoc_docx_18.png)
 
@@ -863,15 +863,15 @@ Pandoc args에 아래와 같이 각 Lua filter 적용
                 ".\\docs\\tool_pandoc.md",
                 "--toc",
                 "--number-sections",
-                "--metadata-file=.\\docx\\lua\\signature.yaml", //signature.lua meta data 
-                "--lua-filter=.\\docx\\lua\\signature.lua",
-                "--lua-filter=.\\docx\\lua\\information.lua",  
-                "--lua-filter=.\\docx\\lua\\test_result.lua",   
-                "--lua-filter=.\\docx\\lua\\table-width.lua",                                                 
-                "--reference-doc=.\\docx\\reference\\reference.docx",
+                "--metadata-file=.\\pandoc\\lua\\signature.yaml", //signature.lua meta data 
+                "--lua-filter=.\\pandoc\\lua\\signature.lua",
+                "--lua-filter=.\\pandoc\\lua\\information.lua",  
+                "--lua-filter=.\\pandoc\\lua\\test_result.lua",   
+                "--lua-filter=.\\pandoc\\lua\\table-width.lua",                                                 
+                "--reference-doc=.\\pandoc\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
-                ".\\docx\\tool_pandoc.docx"
+                ".\\pandoc\\tool_pandoc.docx"
 ```
 
 

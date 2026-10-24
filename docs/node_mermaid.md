@@ -64,12 +64,12 @@ Mkdocs 를 HTML로 변환 후 이를 다시 Electron 으로 이용하여 exe로 
 * Convert markdown to svg
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
-  -i .\docx\mmd\test.md `
-  -o .\docx\imgs\test.svg `
+  -i .\pandoc\mmd\test.md `
+  -o .\pandoc\imgs\test.svg `
   -b transparent
 ```
 Sample Mermaid   
-docx/mmd/test.md
+pandoc/mmd/test.md
 ![](./imgs_mermaid/test.svg) 
 
 <br/>
@@ -90,12 +90,12 @@ docx/mmd/test.md
 * Mermaid 일반 
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
-  -i .\docx\mmd\test_general.md `
-  -o .\docx\imgs\test_general.svg `
+  -i .\pandoc\mmd\test_general.md `
+  -o .\pandoc\imgs\test_general.svg `
   -b transparent
 ```
 Sample Mermaid   
-docx/mmd/test_general.md
+pandoc/mmd/test_general.md
 ![](./imgs_mermaid/test_general.svg) 
 
 <br/>
@@ -104,13 +104,13 @@ docx/mmd/test_general.md
 * Mermaid handDrawn 
 ```
 npx -p @mermaid-js/mermaid-cli mmdc `
-  -i .\docx\mmd\test_handdrawn.md `
-  -o .\docx\imgs\test_handdrawn.svg `
+  -i .\pandoc\mmd\test_handdrawn.md `
+  -o .\pandoc\imgs\test_handdrawn.svg `
   -b transparent
 ```
 
 Sample Mermaid   
-docx/mmd/test_handdrawn.md
+pandoc/mmd/test_handdrawn.md
 ![](./imgs_mermaid/test_handdrawn.svg) 
 
 

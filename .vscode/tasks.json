@@ -75,10 +75,10 @@
                 ".\\docs\\tool_pandoc.md",
                 "--toc",
                 "--number-sections",
-                "--reference-doc=.\\docx\\reference\\reference.docx",
+                "--reference-doc=.\\pandoc\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
-                ".\\docx\\output\\tool_pandoc.docx"
+                ".\\pandoc\\output\\tool_pandoc.docx"
             ]
         },    
         {
@@ -88,16 +88,16 @@
             "args": [
                 ".\\docs\\tool_pandoc.md",
                 "--toc",
-                "--metadata-file=.\\docx\\lua\\signature.yaml",
-                "--lua-filter=.\\docx\\lua\\signature.lua",
-                "--lua-filter=.\\docx\\lua\\information.lua",  
-                "--lua-filter=.\\docx\\lua\\test_result.lua",    
-                "--lua-filter=.\\docx\\lua\\table-width.lua",                                                 
+                "--metadata-file=.\\pandoc\\lua\\signature.yaml",
+                "--lua-filter=.\\pandoc\\lua\\signature.lua",
+                "--lua-filter=.\\pandoc\\lua\\information.lua",  
+                "--lua-filter=.\\pandoc\\lua\\test_result.lua",    
+                "--lua-filter=.\\pandoc\\lua\\table-width.lua",                                                 
                 "--number-sections",
-                "--reference-doc=.\\docx\\reference\\reference.docx",
+                "--reference-doc=.\\pandoc\\reference\\reference.docx",
                 "--resource-path=.\\docs",
                 "-o",``
-                ".\\docx\\output\\tool_pandoc_lua.docx"
+                ".\\pandoc\\output\\tool_pandoc_lua.docx"
             ]
         },      
         {
@@ -105,15 +105,15 @@
             "type": "shell",
             "command": "pandoc",
             "args": [
-                ".\\docx\\test_ppt.md",
+                ".\\pandoc\\test_ppt.md",
                 "--standalone",
                 "--toc",
                 "--toc-depth=1",
                 "--slide-level=0",      
-                "--reference-doc=.\\docx\\reference\\reference.pptx",
-                "--resource-path=.\\docx",
+                "--reference-doc=.\\pandoc\\reference\\reference.pptx",
+                "--resource-path=.\\pandoc",
                 "-o",``
-                ".\\docx\\output\\test_ppt.pptx"
+                ".\\pandoc\\output\\test_ppt.pptx"
             ]
         },                  
         {
@@ -125,9 +125,9 @@
                 "@mermaid-js/mermaid-cli",
                 "mmdc",
                 "-i",
-                ".\\docx\\mmd\\test.md",
+                ".\\pandoc\\mmd\\test.md",
                 "-o",
-                ".\\docx\\imgs\\test.svg",
+                ".\\pandoc\\imgs\\test.svg",
                 "-b",
                 "transparent"
             ],
@@ -147,9 +147,9 @@
                 "@mermaid-js/mermaid-cli",
                 "mmdc",
                 "-i",
-                ".\\docx\\mmd\\test_handdrawn.md",
+                ".\\pandoc\\mmd\\test_handdrawn.md",
                 "-o",
-                ".\\docx\\imgs\\test_handdrawn.svg",
+                ".\\pandoc\\imgs\\test_handdrawn.svg",
                 "-b",
                 "transparent"
             ],
@@ -169,9 +169,9 @@
                 "@mermaid-js/mermaid-cli",
                 "mmdc",
                 "-i",
-                ".\\docx\\mmd\\test_general.md",
+                ".\\pandoc\\mmd\\test_general.md",
                 "-o",
-                ".\\docx\\imgs\\test_general.svg",
+                ".\\pandoc\\imgs\\test_general.svg",
                 "-b",
                 "transparent"
             ],

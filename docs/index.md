@@ -188,7 +188,7 @@ jobs:
             ".\docs\user_eng.md" `
             --toc `
             --number-sections `
-            --reference-doc=".\docx\reference_a.docx" `
+            --reference-doc=".\pandoc\reference_a.docx" `
             --resource-path=".\docs" `
             -o `
             ".\output\visiontune_usermanul_eng_v${{ steps.version.outputs.version }}.docx"
@@ -196,7 +196,7 @@ jobs:
             ".\docs\user_kor.md" `
             --toc `
             --number-sections `
-            --reference-doc=".\docx\reference_a.docx" `
+            --reference-doc=".\pandoc\reference_a.docx" `
             --resource-path=".\docs" `
             -o `
             ".\output\visiontune_usermanul_kor_v${{ steps.version.outputs.version }}.docx"
@@ -500,7 +500,7 @@ VisionTune/
 │   ├── index.md
 │   ├── user_kor.md
 │   └── user_eng.md
-├── docx/reference.docx       // Pandoc Reference
+├── pandoc/reference.docx       // Pandoc Reference
 ├── qml/Main.qml              // QML
 ├── scripts/                  // Scripts 
 │   ├── check_version.py
