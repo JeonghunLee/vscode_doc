@@ -77,7 +77,7 @@
                 "--number-sections",
                 "--reference-doc=.\\pandoc\\reference\\reference.docx",
                 "--resource-path=.\\docs",
-                "-o",``
+                "-o",
                 ".\\pandoc\\output\\tool_pandoc.docx"
             ]
         },    
@@ -96,10 +96,29 @@
                 "--number-sections",
                 "--reference-doc=.\\pandoc\\reference\\reference.docx",
                 "--resource-path=.\\docs",
-                "-o",``
+                "-o",
                 ".\\pandoc\\output\\tool_pandoc_lua.docx"
             ]
         },      
+        {
+            "label": "Pandoc: tool_pandoc.md (Lua filter) to HTML",
+            "type": "shell",
+            "command": "pandoc",
+            "args": [
+                ".\\docs\\tool_pandoc.md",
+                "--standalone",
+                "--toc",
+                "--metadata-file=.\\pandoc\\lua\\signature.yaml",
+                "--lua-filter=.\\pandoc\\lua\\signature.lua",
+                "--lua-filter=.\\pandoc\\lua\\information.lua",
+                "--lua-filter=.\\pandoc\\lua\\test_result.lua",
+                "--lua-filter=.\\pandoc\\lua\\table-width.lua",
+                "--number-sections",
+                "--resource-path=.\\docs",
+                "-o",
+                ".\\pandoc\\output\\tool_pandoc_lua.html"
+            ]
+        },
         {
             "label": "Pandoc: test_ppt.md to PPTX",
             "type": "shell",
@@ -112,7 +131,7 @@
                 "--slide-level=0",      
                 "--reference-doc=.\\pandoc\\reference\\reference.pptx",
                 "--resource-path=.\\pandoc",
-                "-o",``
+                "-o",
                 ".\\pandoc\\output\\test_ppt.pptx"
             ]
         },                  
